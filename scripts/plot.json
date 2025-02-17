@@ -1,6 +1,12 @@
 [
 	{
 		"id": 1,
+		"mainText": "I wake up in Room 404. My head is pounding, and my vision takes a moment to adjust to the dim glow of the bedside lamp. The air is thick with dust, carrying the scent of something old and forgotten. Everything in this room looks like it hasn’t been touched in years—except for me. Something about this place feels wrong.I try to ignore the unease creeping up my spine and make my way to the door. I head out to the lobby, hoping to get some answers.\n",
+
+		"backgroundImage": "image1.png"
+	},
+	{
+		"id": 2,
 		"mainText": "Text on scene 1",
 		"backgroundImage": "image1.png",
 		"options": 
@@ -16,7 +22,7 @@
 		]
 	},
 	{
-		"id": 2,
+		"id": 3,
 		"mainText": "Text on scene 2",
 		"backgroundImage": "image2.png",
 		"options": 
@@ -36,7 +42,7 @@
 		]
 	},
 	{
-		"id": 3,
+		"id": 4,
 		"mainText": "Text on scene 3",
 		"backgroundImage": "image3.png",
 		"options": 
