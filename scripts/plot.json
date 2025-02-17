@@ -1,0 +1,54 @@
+[
+	{
+		"id": 1,
+		"mainText": "Text on scene 1",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Option 1 on scene 1",
+				"leadToId": 2
+			},
+			{
+				"optionText": "Option 2 on scene 1",
+				"leadToId": 3
+			}
+		]
+	},
+	{
+		"id": 2,
+		"mainText": "Text on scene 2",
+		"backgroundImage": "image2.png",
+		"options": 
+		[
+			{
+				"optionText": "Option 1 on scene 2",
+				"leadToId": 4
+			},
+			{
+				"optionText": "Option 1 on scene 2",
+				"leadToId": 5
+			},
+			{
+				"optionText": "Option 3 on scene 2",
+				"leadToId": 20
+			}
+		]
+	},
+	{
+		"id": 3,
+		"mainText": "Text on scene 3",
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Option 1 on scene 3",
+				"leadToId": 16
+			},
+			{
+				"optionText": "Option 1 on scene 3",
+				"leadToId": 10
+			}
+		]
+	}
+]
