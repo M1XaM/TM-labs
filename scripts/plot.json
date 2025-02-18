@@ -15,7 +15,7 @@
 	{
 		"id": 2,
 		"mainText": "What do I do at the front desk?", 
-		"backgroundImage": "image1.png",
+		"backgroundImage": "reception.jpg",
 		"options": 
 		[
 			{
@@ -47,7 +47,7 @@
 	{
 		"id": 3,
 		"mainText": "Receptionist: 'You can’t leave until you understand what’s hidden in the darkness. Keep searching, or you’ll never find the truth.' \n\nI feel a shiver down my spine, but I try to ignore the unsettling feeling and move on. I’m not sure what she means by ‘hidden in the darkness,’ but I’ll have to find out.",
-		"backgroundImage": "image2.png",
+		"backgroundImage": "reception.jpg",
 		"options": 
 		[
 			{
@@ -59,7 +59,7 @@
 	{
 		"id": 4,
 		"mainText": "I go back to my room to search for clues. I look around, especially near the nightstand, and find a note tucked underneath. \n\nWhat do I do with the note?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "bg.jpg",
 		"options": 
 		[
 			{
@@ -79,7 +79,7 @@
 	{
 		"id": 5,
 		"mainText": "I read the note carefully.\n\nIt says: “The truth is hidden in the dark.” \n\nI don’t fully understand it yet, but it feels important.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "bg.jpg",
 		"options": 
 		[
 			{
@@ -91,7 +91,7 @@
 	{
 		"id": 6,
 		"mainText": "I walk into the hallway, feeling drawn to something in the distance. I see a strange glowing symbol on the wall.\n\nWhat do I do about the glowing symbol?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "hallway.jpg",
 		"options": 
 		[
 			{
@@ -111,7 +111,7 @@
 	{
 		"id": 7,
 		"mainText": "I decide to follow the symbol.\n\nIt leads me to a hidden door that I don’t remember seeing before. The door is locked. I wonder if this is where I need to go next.\n\nI head back to my room to think. The night passes, and I fall asleep, but something feels off.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "creepyRoom1.jpg",
 		"options": 
 		[
 			{
@@ -123,7 +123,7 @@
 	{
 		"id": 8,
 		"mainText": "I wake up in Room 404 again. I’m starting to feel like I’m stuck in a loop.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "bg.jpg",
 		"options": 
 		[
 			{
@@ -135,7 +135,7 @@
 	{
 		"id": 9,
 		"mainText": "What do I do this time when I meet the receptionist?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "reception.jpg",
 		"options": 
 		[
 			{
@@ -167,7 +167,7 @@
 	{
 		"id": 10,
 		"mainText": "I ask her again for more information.\n\nReceptionist: “The path you seek is lit by the shadows. Find the light to see what’s hidden.“\n\nWhat does that mean? Shadows? Light? It must be a clue, but I don’t know what to do with it yet.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "reception.jpg",
 		"options": 
 		[
 			{
@@ -179,7 +179,7 @@
 	{
 		"id": 11,
 		"mainText": "I go back to my room. This time, I check the nightstand again, and the same note is there.\n\nWhat do I do with the note this time?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "bg.jpg",
 		"options": 
 		[
 			{
@@ -199,7 +199,7 @@
 	{
 		"id": 12,
 		"mainText": "I read the note again.\n\nIt still says: “The truth is hidden in the dark.”\n\nI can’t help but feel there’s something I’m missing. I’ll need to find something to help me understand the message.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "bg.jpg",
 		"options": 
 		[
 			{
@@ -211,7 +211,7 @@
 	{
 		"id": 13,
 		"mainText": "I head out to the hallway. The symbol is still there, glowing faintly. I follow it down the same path again, leading me to the hidden door.\n\nWhat do I do with the hidden door now that I have a hint?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "hallway.jpg",
 		"options": 
 		[
 			{
@@ -231,7 +231,7 @@
 	{
 		"id": 14,
 		"mainText": "The shadows seem to shift with the lantern’s light, revealing a hidden compartment next to the door. Inside, I find an old key. This must be it.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
 			{
@@ -243,7 +243,7 @@
 	{
 		"id": 15,
 		"mainText": "I feel a surge of hope. Could this be the key to getting out of here?\n\nI walk over to the hidden door, key in hand.\n\nWhat do I do now?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
 			
@@ -264,7 +264,7 @@
 	{
 		"id": 16,
 		"mainText": "I decide to use the key to open the door.\n\nThe door creaks open, and I step through, lantern in hand, heart pounding.\n\nI walk through the door, but I’m not sure what awaits me on the other side. The hotel seems to dissolve behind me, and I take my first real step toward freedom.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
 			{
@@ -276,7 +276,7 @@
 	{
 		"id": 17,
 		"mainText": "I wake up again in Room 404. I can’t believe it. The loop is continuing. But now, I know what I need to do.\n\nWhat do I do when I see the receptionist?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "bg.jpg",
 		"options": 
 		[
 			{
@@ -308,7 +308,7 @@
 	{
 		"id": 18,
 		"mainText": "Receptionist: “The darkness has given you the key. Now you must step through and leave this place forever.“\n\nThe key… I have it! Now I just need to find the door.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "reception.jpg",
 		"options": 
 		[
 			{
@@ -320,7 +320,7 @@
 	{
 		"id": 19,
 		"mainText": "I return to my room, grabbing the lantern. The note still lies on the nightstand, its message unchanged: “The truth is hidden in the dark.”\n\nI head straight to the hallway and follow the symbol one last time.\n\nWhat do I do with the hidden door now that I have the key?",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
 			{
@@ -340,7 +340,7 @@
 	{
 		"id": 20,
 		"mainText": "I use the key and open the door one final time.\n\nThe door opens, and I step through. For the first time, I feel the weight of the hotel’s oppressive atmosphere lift. The walls around me begin to fade, and I realize: I’ve escaped.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
 			{
@@ -352,7 +352,7 @@
 	{
 		"id": 21,
 		"mainText": "I made it. I’m free. I don’t know how I did it, but I’ve broken the cycle. The hotel is gone, and I can breathe again.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "outside.jpg",
 		"options": 
 		[
 			{
