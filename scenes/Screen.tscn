@@ -12,31 +12,32 @@ script = ExtResource( 2 )
 [node name="Background" type="Sprite" parent="."]
 
 [node name="MainText" type="Label" parent="."]
-margin_left = 197.0
-margin_top = 208.0
-margin_right = 789.0
-margin_bottom = 286.0
+margin_left = 181.0
+margin_top = 60.0
+margin_right = 773.0
+margin_bottom = 138.0
 
 [node name="Button1" type="Button" parent="."]
-margin_left = 294.0
-margin_top = 304.0
-margin_right = 735.0
-margin_bottom = 389.0
+margin_left = 937.0
+margin_top = 400.0
+margin_right = 1537.0
+margin_bottom = 530.0
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 301.0
-margin_top = 402.0
-margin_right = 755.0
-margin_bottom = 442.0
+margin_left = 937.0
+margin_top = 590.0
+margin_right = 1534.0
+margin_bottom = 720.0
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 273.0
-margin_top = 456.0
-margin_right = 792.0
-margin_bottom = 490.0
+margin_left = 937.0
+margin_top = 780.0
+margin_right = 1534.0
+margin_bottom = 910.0
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 272.0
-margin_top = 501.0
-margin_right = 791.0
-margin_bottom = 544.0
+visible = false
+margin_left = 1078.0
+margin_top = 1121.0
+margin_right = 1335.0
+margin_bottom = 1197.0

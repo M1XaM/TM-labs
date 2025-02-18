@@ -18,13 +18,40 @@ public class Screen : Node
 		// Get references to child nodes
 		background = GetNode<Sprite>("Background");
 		mainText = GetNode<Label>("MainText"); // Get reference to the Label
+		mainText.Autowrap = true;
+		
 		for (int i = 1; i <= 4; i++)
 		{
 			Button button = GetNode<Button>($"Button{i}");
 			buttons.Add(button);
 		}
 
+		AdjustBackground();
 		LoadScene(1);
+	}
+	
+	private void AdjustBackground()
+	{
+		if (background == null || background.Texture == null)
+			return;
+
+		Vector2 screenSize = GetViewport().Size; // Get screen size
+		Vector2 textureSize = background.Texture.GetSize(); // Get original image size
+
+		// Scale to fit screen
+		float scaleX = screenSize.x / textureSize.x;
+		float scaleY = screenSize.y / textureSize.y;
+
+		background.Scale = new Vector2(scaleX, scaleY);
+		background.Position = screenSize / 2; // Center the background
+	}
+	
+	private void AdjustText()
+	{
+		Vector2 screenSize = GetViewport().Size;
+		
+		mainText.RectMinSize = new Vector2(screenSize.x * 0.8f, 0); // Set max width (80% of screen width)
+		mainText.RectPosition = new Vector2((screenSize.x - mainText.RectSize.x) / 2, screenSize.y * 0.1f); // Center horizontally and move down slightly
 	}
 
 private void LoadScene(int sceneId)
@@ -38,32 +65,38 @@ private void LoadScene(int sceneId)
 
 	Texture texture = GD.Load<Texture>($"res://images/{scene.BackgroundImage}");
 	background.Texture = texture;
+	AdjustBackground();
+
 	mainText.Text = scene.MainText;
-
+	
 	// Update buttons
-	for (int i = 0; i < buttons.Count; i++)
-	{
-		if (i < scene.Options.Count)
-		{
-			buttons[i].Text = scene.Options[i].OptionText;
-			buttons[i].Visible = true;
-			int nextSceneId = scene.Options[i].LeadToId;
-
-			// Disconnect any existing connections before reconnecting to prevent multiple connections
-			if (buttons[i].IsConnected("pressed", this, nameof(OnButtonPressed)))
+		for (int i = 0; i < buttons.Count; i++)
 			{
-				buttons[i].Disconnect("pressed", this, nameof(OnButtonPressed));
-			}
+				if (i < scene.Options.Count)
+				{
+					buttons[i].Text = scene.Options[i].OptionText;
+					buttons[i].Visible = true;
+					int nextSceneId = scene.Options[i].LeadToId;
 
-			// Connect signal using Godot.Collections.Array for passing arguments
-			buttons[i].Connect("pressed", this, nameof(OnButtonPressed), new Godot.Collections.Array() { nextSceneId });
-		}
-		else
-		{
-			buttons[i].Visible = false; // Hide unused buttons
+					// Disconnect any existing connections before reconnecting to prevent multiple connections
+					if (buttons[i].IsConnected("pressed", this, nameof(OnButtonPressed)))
+					{
+						buttons[i].Disconnect("pressed", this, nameof(OnButtonPressed));
+					}
+
+					// Connect signal using Godot.Collections.Array for passing arguments
+					buttons[i].Connect("pressed", this, nameof(OnButtonPressed), new Godot.Collections.Array() { nextSceneId });
+				}
+				else
+				{
+					buttons[i].Visible = false; // Hide unused buttons
+			}
 		}
 	}
-}
+		
+
+
+	
 
 
 	// Button press event handler

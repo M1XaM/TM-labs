@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZAAYuNAxqKIZElt25YYwb8XKZ7AUYAeLsv2Z4t+vMR7fGcF6bChc8bbxjE3HiwtGbyPDQt1qnKCpeyW3l/h+5g==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\user\\Documents\\TM-labs\\storytelling3.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "libraryId": "Newtonsoft.Json"
+    }
+  ]
+}

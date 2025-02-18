@@ -11,10 +11,10 @@
         "projectName": "storytelling3",
         "projectPath": "C:\\Users\\user\\Documents\\TM-labs\\storytelling3.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\TM-labs\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\TM-labs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

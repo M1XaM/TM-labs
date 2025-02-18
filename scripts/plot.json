@@ -3,7 +3,14 @@
 		"id": 1,
 		"mainText": "I wake up in Room 404. My head is pounding, and my vision takes a moment to adjust to the dim glow of the bedside lamp. The air is thick with dust, carrying the scent of something old and forgotten. Everything in this room looks like it hasn’t been touched in years—except for me. Something about this place feels wrong.I try to ignore the unease creeping up my spine and make my way to the door. I head out to the lobby, hoping to get some answers.\n",
 
-		"backgroundImage": "image1.png"
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2
+			}
+		]
 	},
 	{
 		"id": 2,
@@ -13,7 +20,7 @@
 		[
 			{
 				"optionText": "Ignore her and explore the hotel",
-				"leadToId": 100
+				"leadToId": 101
 			},
 			{
 				"optionText": "Talk to the receptionist",
@@ -26,9 +33,28 @@
 		]
 	},
 	{
+		"id": 101,
+		"mainText": "You got kiiled", 
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Continue",
+				"leadToId": 1
+			}
+		]
+	},
+	{
 		"id": 3,
 		"mainText": "Receptionist: 'You can’t leave until you understand what’s hidden in the darkness. Keep searching, or you’ll never find the truth.' \n\nI feel a shiver down my spine, but I try to ignore the unsettling feeling and move on. I’m not sure what she means by ‘hidden in the darkness,’ but I’ll have to find out.",
-		"backgroundImage": "image2.png"
+		"backgroundImage": "image2.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 4
+			}
+		]
 	},
 	{
 		"id": 4,
@@ -38,11 +64,11 @@
 		[
 			{
 				"optionText": "Leave it and ignore it",
-				"leadToId": 100
+				"leadToId": 101
 			},
 			{
 				"optionText": "Shove it in my pocket and forget about it",
-				"leadToId": 100
+				"leadToId": 101
 			},
 			{
 				"optionText": "Read it carefully",
@@ -53,7 +79,14 @@
 	{
 		"id": 5,
 		"mainText": "I read the note carefully.\n\nIt says: “The truth is hidden in the dark.” \n\nI don’t fully understand it yet, but it feels important.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6
+			}
+		]
 	},
 	{
 		"id": 6,
@@ -67,23 +100,37 @@
 			},
 			{
 				"optionText": "Ignore it and explore the hotel ",
-				"leadToId": 100
+				"leadToId": 101
 			},
 			{
 				"optionText": "Run back to my room",
-				"leadToId": 100
+				"leadToId": 101
 			}
 		]
 	},
 	{
 		"id": 7,
 		"mainText": "I decide to follow the symbol.\n\nIt leads me to a hidden door that I don’t remember seeing before. The door is locked. I wonder if this is where I need to go next.\n\nI head back to my room to think. The night passes, and I fall asleep, but something feels off.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 8
+			}
+		]
 	},
 	{
 		"id": 8,
 		"mainText": "I wake up in Room 404 again. I’m starting to feel like I’m stuck in a loop.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 9
+			}
+		]
 	},
 	{
 		"id": 9,
@@ -93,7 +140,7 @@
 		[
 			{
 				"optionText": "Leave the hotel",
-				"leadToId": 8
+				"leadToId": 102
 			},
 			{
 				"optionText": "Ask for more information",
@@ -101,14 +148,33 @@
 			},
 			{
 				"optionText": "Walk away and explore the hotel",
-				"leadToId": 100
+				"leadToId": 102
+			}
+		]
+	},
+	{
+		"id": 102,
+		"mainText": "You got kiiled", 
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Try again",
+				"leadToId": 8
 			}
 		]
 	},
 	{
 		"id": 10,
 		"mainText": "I ask her again for more information.\n\nReceptionist: “The path you seek is lit by the shadows. Find the light to see what’s hidden.“\n\nWhat does that mean? Shadows? Light? It must be a clue, but I don’t know what to do with it yet.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 11
+			}
+		]
 	},
 	{
 		"id": 11,
@@ -118,7 +184,7 @@
 		[
 			{
 				"optionText": "Ignore it again",
-				"leadToId": 100
+				"leadToId": 102
 			},
 			{
 				"optionText": "Read it again carefully",
@@ -126,14 +192,21 @@
 			},
 			{
 				"optionText": "Shove it in my pocket again",
-				"leadToId": 100
+				"leadToId": 102
 			}
 		]
 	},
 	{
 		"id": 12,
 		"mainText": "I read the note again.\n\nIt still says: “The truth is hidden in the dark.”\n\nI can’t help but feel there’s something I’m missing. I’ll need to find something to help me understand the message.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 13
+			}
+		]
 	},
 	{
 		"id": 13,
@@ -147,18 +220,25 @@
 			},
 			{
 				"optionText": "Try to force the door open",
-				"leadToId": 100
+				"leadToId": 102
 			},
 			{
 				"optionText": "Ignore the door for now",
-				"leadToId": 100
+				"leadToId": 102
 			}
 		]
 	},
 	{
 		"id": 14,
 		"mainText": "The shadows seem to shift with the lantern’s light, revealing a hidden compartment next to the door. Inside, I find an old key. This must be it.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 15
+			}
+		]
 	},
 	{
 		"id": 15,
@@ -169,7 +249,7 @@
 			
 			{
 				"optionText": "Go back to my room",
-				"leadToId": 100
+				"leadToId": 102
 			},
 			{
 				"optionText": "Use the key to open the door",
@@ -177,14 +257,21 @@
 			},
 			{
 				"optionText": "Leave the hotel through the front entrance ",
-				"leadToId": 1
+				"leadToId": 102
 			}
 		]
 	},
 	{
 		"id": 16,
 		"mainText": "I decide to use the key to open the door.\n\nThe door creaks open, and I step through, lantern in hand, heart pounding.\n\nI walk through the door, but I’m not sure what awaits me on the other side. The hotel seems to dissolve behind me, and I take my first real step toward freedom.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 17
+			}
+		]
 	},
 	{
 		"id": 17,
@@ -198,18 +285,37 @@
 			},
 			{
 				"optionText": "Ignore her completely",
-				"leadToId": 100
+				"leadToId": 103
 			},
 			{
 				"optionText": "Leave the hotel and try to escape",
-				"leadToId": 1
+				"leadToId": 103
+			}
+		]
+	},
+	{
+		"id": 103,
+		"mainText": "You got kiiled", 
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Try again",
+				"leadToId": 17
 			}
 		]
 	},
 	{
 		"id": 18,
 		"mainText": "Receptionist: “The darkness has given you the key. Now you must step through and leave this place forever.“\n\nThe key… I have it! Now I just need to find the door.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 19
+			}
+		]
 	},
 	{
 		"id": 19,
@@ -223,22 +329,36 @@
 			},
 			{
 				"optionText": "Leave the hotel through the front entrance",
-				"leadToId": 1
+				"leadToId": 103
 			},
 			{
 				"optionText": "Ignore the door and keep searching",
-				"leadToId": 100
+				"leadToId": 103
 			}
 		]
 	},
 	{
 		"id": 20,
 		"mainText": "I use the key and open the door one final time.\n\nThe door opens, and I step through. For the first time, I feel the weight of the hotel’s oppressive atmosphere lift. The walls around me begin to fade, and I realize: I’ve escaped.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 21
+			}
+		]
 	},
 	{
 		"id": 21,
 		"mainText": "I made it. I’m free. I don’t know how I did it, but I’ve broken the cycle. The hotel is gone, and I can breathe again.",
-		"backgroundImage": "image3.png"
+		"backgroundImage": "image3.png",
+		"options": 
+		[
+			{
+				"optionText": "End",
+				"leadToId": -1
+			}
+		]
 	}
 ]
