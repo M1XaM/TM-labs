@@ -1,33 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\TM-labs\\storytelling3.csproj": {}
+    "/home/maxim/myfolder/storytelling3/storytelling3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\TM-labs\\storytelling3.csproj": {
+    "/home/maxim/myfolder/storytelling3/storytelling3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\TM-labs\\storytelling3.csproj",
+        "projectUniqueName": "/home/maxim/myfolder/storytelling3/storytelling3.csproj",
         "projectName": "storytelling3",
-        "projectPath": "C:\\Users\\user\\Documents\\TM-labs\\storytelling3.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\TM-labs\\.mono\\temp\\obj\\",
+        "projectPath": "/home/maxim/myfolder/storytelling3/storytelling3.csproj",
+        "packagesPath": "/home/maxim/.nuget/packages/",
+        "outputPath": "/home/maxim/myfolder/storytelling3/.mono/temp/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/maxim/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\user\\.nuget\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,18 +32,30 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
           "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }
