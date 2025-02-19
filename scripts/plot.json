@@ -28,13 +28,13 @@
 			},
 			{
 				"optionText": "Leave the hotel entirely",
-				"leadToId": 1
+				"leadToId": 3
 			}
 		]
 	},
 	{
 		"id": 101,
-		"mainText": "You got kiiled", 
+		"mainText": "You got killed", 
 		"backgroundImage": "image1.png",
 		"options": 
 		[
@@ -154,12 +154,12 @@
 	},
 	{
 		"id": 102,
-		"mainText": "You got kiiled", 
+		"mainText": "You got killed", 
 		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
-				"optionText": "Try again",
+				"optionText": "Continue",
 				"leadToId": 8
 			}
 		]
@@ -295,12 +295,12 @@
 	},
 	{
 		"id": 103,
-		"mainText": "You got kiiled", 
+		"mainText": "You got killed", 
 		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
-				"optionText": "Try again",
+				"optionText": "Continue",
 				"leadToId": 17
 			}
 		]

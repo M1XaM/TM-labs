@@ -20,12 +20,26 @@ public class Screen : Node
 		mainText = GetNode<Label>("MainText"); // Get reference to the Label
 		mainText.Autowrap = true;
 		
+		var fontMainText = new DynamicFont();
+		var fontButtons = new DynamicFont();
+		fontMainText.FontData = (DynamicFontData)GD.Load("res://fonts/Roboto.ttf"); 
+		fontMainText.Size = 34; 
+		mainText.AddColorOverride("font_color", new Color(1, 1, 1)); // Red color (RGB)
+
+
+		fontButtons.FontData = (DynamicFontData)GD.Load("res://fonts/Roboto.ttf"); 
+		fontButtons.Size = 24; 
+		
+		mainText.AddFontOverride("font", fontMainText);
+
 		for (int i = 1; i <= 4; i++)
 		{
 			Button button = GetNode<Button>($"Button{i}");
+			button.AddFontOverride("font", fontButtons);
 			buttons.Add(button);
 		}
-
+		
+		
 		AdjustBackground();
 		LoadScene(1);
 	}
