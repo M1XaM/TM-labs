@@ -352,13 +352,21 @@
 	{
 		"id": 21,
 		"mainText": "I made it. I’m free. I don’t know how I did it, but I’ve broken the cycle. The hotel is gone, and I can breathe again.",
-		"backgroundImage": "outside.jpg",
+		"backgroundImage": "prelast-background.jpg",
 		"options": 
 		[
 			{
 				"optionText": "End",
 				"leadToId": -1
 			}
+		]
+	},
+	{
+		"id": -1,
+		"mainText": "GoodEnd",
+		"backgroundImage": "image1.png",
+		"options":
+		[
 		]
 	}
 ]
