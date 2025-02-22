@@ -1,49 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Screen.cs" type="Script" id=1]
 [ext_resource path="res://scripts/LoadData.cs" type="Script" id=2]
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.705882, 0.172549, 0.172549, 0.713726 )
-corner_radius_top_left = 35
-corner_radius_top_right = 35
-corner_radius_bottom_right = 35
-corner_radius_bottom_left = 35
-shadow_color = Color( 0.286275, 0.0117647, 0.0117647, 0.941176 )
-shadow_size = 3
-shadow_offset = Vector2( -4, -4 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.439216, 0.0196078, 0.0196078, 1 )
-corner_radius_top_left = 35
-corner_radius_top_right = 35
-corner_radius_bottom_right = 35
-corner_radius_bottom_left = 35
-shadow_color = Color( 0.282353, 0.0156863, 0.0156863, 0.67451 )
-shadow_size = 3
-shadow_offset = Vector2( -4, -4 )
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.427451, 0.0235294, 0.0235294, 0.8 )
-corner_radius_top_left = 35
-corner_radius_top_right = 35
-corner_radius_bottom_right = 35
-corner_radius_bottom_left = 35
-shadow_color = Color( 0.262745, 0.00784314, 0.00784314, 0.478431 )
-shadow_size = 3
-shadow_offset = Vector2( -4, -4 )
-
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="StyleBoxEmpty" id=7]
-
-[sub_resource type="StyleBoxEmpty" id=8]
-
-[sub_resource type="StyleBoxEmpty" id=9]
+[ext_resource path="res://other_assets/text-box.png" type="Texture" id=3]
+[ext_resource path="res://other_assets/button-box.png" type="Texture" id=4]
 
 [node name="Screen" type="Node2D"]
 script = ExtResource( 1 )
@@ -53,48 +13,40 @@ script = ExtResource( 2 )
 
 [node name="Background" type="Sprite" parent="."]
 
-[node name="MainText" type="Label" parent="."]
-margin_left = 293.0
-margin_top = 82.0
-margin_right = 1677.0
-margin_bottom = 355.0
+[node name="MainTextBox" type="Sprite" parent="."]
+position = Vector2( 974.5, 793 )
+texture = ExtResource( 3 )
+
+[node name="MainText" type="Label" parent="MainTextBox"]
+margin_left = -805.0
+margin_top = -70.0
+margin_right = 800.0
+margin_bottom = 72.0
 
 [node name="Button1" type="Button" parent="."]
-margin_left = 1353.0
-margin_top = 814.0
-margin_right = 1844.0
-margin_bottom = 944.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 1 )
+anchor_right = 0.633
+margin_left = 1191.0
+margin_top = 939.5
+margin_right = 1803.0
+margin_bottom = 1026.5
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 92.0
-margin_top = 814.0
-margin_right = 583.0
-margin_bottom = 944.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/disabled = SubResource( 7 )
-custom_styles/normal = SubResource( 1 )
+margin_left = 669.0
+margin_top = 939.5
+margin_right = 1281.0
+margin_bottom = 1026.5
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 736.0
-margin_top = 814.0
-margin_right = 1227.0
-margin_bottom = 944.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 1 )
-
-[node name="Button4" type="Button" parent="."]
-visible = false
-margin_left = 1078.0
-margin_top = 1121.0
-margin_right = 1335.0
-margin_bottom = 1197.0
+margin_left = 146.0
+margin_top = 939.0
+margin_right = 758.0
+margin_bottom = 1026.0
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1

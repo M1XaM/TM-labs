@@ -17,7 +17,7 @@ public class Screen : Node
 		
 		// Get references to child nodes
 		background = GetNode<Sprite>("Background");
-		mainText = GetNode<Label>("MainText"); // Get reference to the Label
+		mainText = GetNode<Label>("MainTextBox/MainText"); // Get reference to the Label
 		mainText.Autowrap = true;
 		
 		var fontMainText = new DynamicFont();
@@ -32,13 +32,12 @@ public class Screen : Node
 		
 		mainText.AddFontOverride("font", fontMainText);
 
-		for (int i = 1; i <= 4; i++)
+		for (int i = 1; i <= 3; i++)
 		{
 			Button button = GetNode<Button>($"Button{i}");
 			button.AddFontOverride("font", fontButtons);
 			buttons.Add(button);
 		}
-		
 		
 		AdjustBackground();
 		LoadScene(1);
@@ -107,12 +106,7 @@ private void LoadScene(int sceneId)
 			}
 		}
 	}
-		
-
-
 	
-
-
 	// Button press event handler
 	private void OnButtonPressed(int nextSceneId)
 	{
