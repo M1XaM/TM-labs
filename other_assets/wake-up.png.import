@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EXIT GAME.png-535a47d2a457a8d38330e9ac5175ccc7.stex"
+path="res://.import/wake-up.png-d2785619d717ba45a7befc982d6984d6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other_assets/EXIT GAME.png"
-dest_files=[ "res://.import/EXIT GAME.png-535a47d2a457a8d38330e9ac5175ccc7.stex" ]
+source_file="res://other_assets/wake-up.png"
+dest_files=[ "res://.import/wake-up.png-d2785619d717ba45a7befc982d6984d6.stex" ]
 
 [params]
 

@@ -18,8 +18,8 @@ public class Start : Node2D
 		_playButton.Hide();
 		_exitButton.Hide();
 
-		_playButton.Connect("pressed", this, "OnPlayButtonPressed");
-		_exitButton.Connect("pressed", this, "OnExitButtonPressed");
+		_playButton.Connect("pressed", this, nameof(OnPlayButtonPressed));
+		_exitButton.Connect("pressed", this, nameof(OnExitButtonPressed));
 	}
 
 	private void OnPlayButtonPressed()

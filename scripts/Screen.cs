@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Screen : Node
 {
-	private LoadData json;
+	private ProcessJson json;
 	private Sprite background;
 	private Label mainText;
 	private List<Button> buttons = new List<Button>();
@@ -12,7 +12,7 @@ public class Screen : Node
 	public override void _Ready()
 	{
 		// Load JSON
-		json = new LoadData();
+		json = new ProcessJson();
 		json.Initialization();
 		
 		// Get references to child nodes
@@ -22,12 +22,12 @@ public class Screen : Node
 		
 		var fontMainText = new DynamicFont();
 		var fontButtons = new DynamicFont();
-		fontMainText.FontData = (DynamicFontData)GD.Load("res://fonts/Roboto.ttf"); 
+		fontMainText.FontData = (DynamicFontData) GD.Load("res://fonts/Roboto.ttf"); 
 		fontMainText.Size = 34; 
 		mainText.AddColorOverride("font_color", new Color(1, 1, 1)); // Red color (RGB)
 
 
-		fontButtons.FontData = (DynamicFontData)GD.Load("res://fonts/Roboto.ttf"); 
+		fontButtons.FontData = (DynamicFontData) GD.Load("res://fonts/Roboto.ttf"); 
 		fontButtons.Size = 24; 
 		
 		mainText.AddFontOverride("font", fontMainText);
@@ -40,7 +40,7 @@ public class Screen : Node
 		}
 		
 		AdjustBackground();
-		LoadScene(1);
+		LoadScene(NextSceneData.Instance.nextScene);
 	}
 	
 	private void AdjustBackground()
@@ -75,34 +75,39 @@ private void LoadScene(int sceneId)
 		GD.PrintErr($"Scene with ID {sceneId} not found.");
 		return;
 	}
+	
+	// Handle You got killed scene separate (because it looks more beautiful)
+	// The scene after is loaded as usual (from plot.json)
+	if (scene.MainText == "You got killed")
+	{
+		NextSceneData.Instance.nextScene = scene.Options[0].LeadToId;
+		GetTree().ChangeScene("res://scenes/Dead.tscn");
+	}
 
 	Texture texture = GD.Load<Texture>($"res://images/{scene.BackgroundImage}");
+	mainText.Text = scene.MainText;
 	background.Texture = texture;
 	AdjustBackground();
-
-	mainText.Text = scene.MainText;
 	
 	// Update buttons
-		for (int i = 0; i < buttons.Count; i++)
+	for (int i = 0; i < buttons.Count; i++)
+		{
+			if (i < scene.Options.Count)
 			{
-				if (i < scene.Options.Count)
-				{
-					buttons[i].Text = scene.Options[i].OptionText;
-					buttons[i].Visible = true;
-					int nextSceneId = scene.Options[i].LeadToId;
+				buttons[i].Text = scene.Options[i].OptionText;
+				buttons[i].Visible = true;
+				int nextSceneId = scene.Options[i].LeadToId;
 
-					// Disconnect any existing connections before reconnecting to prevent multiple connections
-					if (buttons[i].IsConnected("pressed", this, nameof(OnButtonPressed)))
-					{
-						buttons[i].Disconnect("pressed", this, nameof(OnButtonPressed));
-					}
+				// Disconnect any existing connections before reconnecting to prevent multiple connections
+				if (buttons[i].IsConnected("pressed", this, nameof(OnButtonPressed)))
+					buttons[i].Disconnect("pressed", this, nameof(OnButtonPressed));
 
-					// Connect signal using Godot.Collections.Array for passing arguments
-					buttons[i].Connect("pressed", this, nameof(OnButtonPressed), new Godot.Collections.Array() { nextSceneId });
-				}
-				else
-				{
-					buttons[i].Visible = false; // Hide unused buttons
+				// Connect signal using Godot.Collections.Array for passing arguments
+				buttons[i].Connect("pressed", this, nameof(OnButtonPressed), new Godot.Collections.Array() { nextSceneId });
+			}
+			else
+			{
+				buttons[i].Visible = false; // Hide unused buttons
 			}
 		}
 	}

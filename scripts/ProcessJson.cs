@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json; // Add this to use Newtonsoft.Json
 
-public class LoadData : Node
+public class ProcessJson : Node
 {
 	public List<SceneData> Scenes { get; private set; } = new List<SceneData>();
 
