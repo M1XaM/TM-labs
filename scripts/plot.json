@@ -1,9 +1,48 @@
 [
 	{
 		"id": 1,
-		"mainText": "I wake up in Room 404. My head is pounding, and my vision takes a moment to adjust to the dim glow of the bedside lamp. The air is thick with dust, carrying the scent of something old and forgotten. Everything in this room looks like it hasn’t been touched in years—except for me. Something about this place feels wrong.I try to ignore the unease creeping up my spine and make my way to the door. I head out to the lobby, hoping to get some answers.\n",
+		"mainText": "I wake up in Room 404. My head is pounding, and my vision takes a moment to adjust to the dim glow of the bedside lamp.",
 
 		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 111
+			}
+		]
+	},
+	{
+		"id": 111,
+		"mainText": "The air is thick with dust, carrying the scent of something old and forgotten. Everything in this room looks like it hasn’t been touched in years—except for me.",
+
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 112
+			}
+		]
+	},
+	{
+		"id": 112,
+		"mainText": "Something about this place feels wrong.I try to ignore the unease creeping up my spine and make my way to the door.",
+
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 113
+			}
+		]
+	},
+	{
+		"id": 113,
+		"mainText": "I head out to the lobby, hoping to get some answers.",
+
+		"backgroundImage": "hallway.jpg",
 		"options": 
 		[
 			{
@@ -46,7 +85,31 @@
 	},
 	{
 		"id": 3,
-		"mainText": "Receptionist: 'You can’t leave until you understand what’s hidden in the darkness. Keep searching, or you’ll never find the truth.' \n\nI feel a shiver down my spine, but I try to ignore the unsettling feeling and move on. I’m not sure what she means by ‘hidden in the darkness,’ but I’ll have to find out.",
+		"mainText": "Receptionist: 'You can’t leave until you understand what’s hidden in the darkness. Keep searching, or you’ll never find the truth.'",
+		"backgroundImage": "reception.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 331
+			}
+		]
+	},
+	{
+		"id": 331,
+		"mainText": "I feel a shiver down my spine, but I try to ignore the unsettling feeling and move on.",
+		"backgroundImage": "reception.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 332
+			}
+		]
+	},
+	{
+		"id": 332,
+		"mainText": "I’m not sure what she means by ‘hidden in the darkness,’ but I’ll have to find out.",
 		"backgroundImage": "reception.jpg",
 		"options": 
 		[
@@ -58,7 +121,31 @@
 	},
 	{
 		"id": 4,
-		"mainText": "I go back to my room to search for clues. I look around, especially near the nightstand, and find a note tucked underneath. \n\nWhat do I do with the note?",
+		"mainText": "I go back to my room to search for clues.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 441
+			}
+		]
+	},
+	{
+		"id": 441,
+		"mainText": "I look around, especially near the nightstand, and find a note tucked underneath.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 442
+			}
+		]
+	},
+	{
+		"id": 442,
+		"mainText": "What do I do with the note?",
 		"backgroundImage": "bg.jpg",
 		"options": 
 		[
@@ -78,7 +165,19 @@
 	},
 	{
 		"id": 5,
-		"mainText": "I read the note carefully.\n\nIt says: “The truth is hidden in the dark.” \n\nI don’t fully understand it yet, but it feels important.",
+		"mainText": "I read the note carefully.\n\nIt says: “The truth is hidden in the dark.”",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 551
+			}
+		]
+	},
+	{
+		"id": 551,
+		"mainText": "I don’t fully understand it yet, but it feels important.",
 		"backgroundImage": "bg.jpg",
 		"options": 
 		[
@@ -90,7 +189,31 @@
 	},
 	{
 		"id": 6,
-		"mainText": "I walk into the hallway, feeling drawn to something in the distance. I see a strange glowing symbol on the wall.\n\nWhat do I do about the glowing symbol?",
+		"mainText": "I walk into the hallway, feeling drawn to something in the distance.",
+		"backgroundImage": "hallway.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 661
+			}
+		]
+	},
+	{
+		"id": 661,
+		"mainText": "I see a strange glowing symbol on the wall.",
+		"backgroundImage": "hallway.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 662
+			}
+		]
+	},
+	{
+		"id": 662,
+		"mainText": "What do I do about the glowing symbol?",
 		"backgroundImage": "hallway.jpg",
 		"options": 
 		[
@@ -110,8 +233,44 @@
 	},
 	{
 		"id": 7,
-		"mainText": "I decide to follow the symbol.\n\nIt leads me to a hidden door that I don’t remember seeing before. The door is locked. I wonder if this is where I need to go next.\n\nI head back to my room to think. The night passes, and I fall asleep, but something feels off.",
+		"mainText": "I decide to follow the symbol.",
 		"backgroundImage": "creepyRoom1.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 771
+			}
+		]
+	},
+	{
+		"id": 771,
+		"mainText": "It leads me to a hidden door that I don’t remember seeing before.",
+		"backgroundImage": "creepyRoom1.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 772
+			}
+		]
+	},
+	{
+		"id": 772,
+		"mainText": "The door is locked. I wonder if this is where I need to go next.",
+		"backgroundImage": "creepyRoom1.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 773
+			}
+		]
+	},
+	{
+		"id": 773,
+		"mainText": "I head back to my room to think. The night passes, and I fall asleep, but something feels off.",
+		"backgroundImage": "bg.jpg",
 		"options": 
 		[
 			{
@@ -166,7 +325,43 @@
 	},
 	{
 		"id": 10,
-		"mainText": "I ask her again for more information.\n\nReceptionist: “The path you seek is lit by the shadows. Find the light to see what’s hidden.“\n\nWhat does that mean? Shadows? Light? It must be a clue, but I don’t know what to do with it yet.",
+		"mainText": "I ask her again for more information.",
+		"backgroundImage": "reception.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1011
+			}
+		]
+	},
+	{
+		"id": 1011,
+		"mainText": "Receptionist: “The path you seek is lit by the shadows. Find the light to see what’s hidden.“",
+		"backgroundImage": "reception.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1012
+			}
+		]
+	},
+	{
+		"id": 1012,
+		"mainText": "What does that mean? Shadows? Light?",
+		"backgroundImage": "reception.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1013
+			}
+		]
+	},
+	{
+		"id": 1013,
+		"mainText": "It must be a clue, but I don’t know what to do with it yet.",
 		"backgroundImage": "reception.jpg",
 		"options": 
 		[
@@ -178,7 +373,19 @@
 	},
 	{
 		"id": 11,
-		"mainText": "I go back to my room. This time, I check the nightstand again, and the same note is there.\n\nWhat do I do with the note this time?",
+		"mainText": "I go back to my room. This time, I check the nightstand again, and the same note is there.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1101
+			}
+		]
+	},
+	{
+		"id": 1101,
+		"mainText": "What do I do with the note this time?",
 		"backgroundImage": "bg.jpg",
 		"options": 
 		[
@@ -198,7 +405,19 @@
 	},
 	{
 		"id": 12,
-		"mainText": "I read the note again.\n\nIt still says: “The truth is hidden in the dark.”\n\nI can’t help but feel there’s something I’m missing. I’ll need to find something to help me understand the message.",
+		"mainText": "I read the note again.\n\nIt still says: “The truth is hidden in the dark.”",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1201
+			}
+		]
+	},
+	{
+		"id": 1201,
+		"mainText": "I can’t help but feel there’s something I’m missing. I’ll need to find something to help me understand the message.",
 		"backgroundImage": "bg.jpg",
 		"options": 
 		[
@@ -210,7 +429,31 @@
 	},
 	{
 		"id": 13,
-		"mainText": "I head out to the hallway. The symbol is still there, glowing faintly. I follow it down the same path again, leading me to the hidden door.\n\nWhat do I do with the hidden door now that I have a hint?",
+		"mainText": "I follow it down the same path again, leading me to the hidden door.",
+		"backgroundImage": "hallway.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1301
+			}
+		]
+	},
+	{
+		"id": 1301,
+		"mainText": "I follow it down the same path again, leading me to the hidden door.",
+		"backgroundImage": "hallway.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1302
+			}
+		]
+	},
+	{
+		"id": 1302,
+		"mainText": "What do I do with the hidden door now that I have a hint?",
 		"backgroundImage": "hallway.jpg",
 		"options": 
 		[
@@ -230,7 +473,19 @@
 	},
 	{
 		"id": 14,
-		"mainText": "The shadows seem to shift with the lantern’s light, revealing a hidden compartment next to the door. Inside, I find an old key. This must be it.",
+		"mainText": "The shadows seem to shift with the lantern’s light, revealing a hidden compartment next to the door.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1401
+			}
+		]
+	},
+	{
+		"id": 1401,
+		"mainText": "Inside, I find an old key. This must be it.",
 		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
@@ -242,7 +497,20 @@
 	},
 	{
 		"id": 15,
-		"mainText": "I feel a surge of hope. Could this be the key to getting out of here?\n\nI walk over to the hidden door, key in hand.\n\nWhat do I do now?",
+		"mainText": "I feel a surge of hope. Could this be the key to getting out of here?",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			
+			{
+				"optionText": "Next",
+				"leadToId": 1501
+			}
+		]
+	},
+	{
+		"id": 1501,
+		"mainText": "I walk over to the hidden door, key in hand.\n\nWhat do I do now?",
 		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
@@ -263,7 +531,43 @@
 	},
 	{
 		"id": 16,
-		"mainText": "I decide to use the key to open the door.\n\nThe door creaks open, and I step through, lantern in hand, heart pounding.\n\nI walk through the door, but I’m not sure what awaits me on the other side. The hotel seems to dissolve behind me, and I take my first real step toward freedom.",
+		"mainText": "I decide to use the key to open the door.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1601
+			}
+		]
+	},
+	{
+		"id": 1601,
+		"mainText": "The door creaks open, and I step through, lantern in hand, heart pounding.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1602
+			}
+		]
+	},
+	{
+		"id": 1602,
+		"mainText": "I walk through the door, but I’m not sure what awaits me on the other side.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1603
+			}
+		]
+	},
+	{
+		"id": 1603,
+		"mainText": "The hotel seems to dissolve behind me, and I take my first real step toward freedom.",
 		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
@@ -275,7 +579,19 @@
 	},
 	{
 		"id": 17,
-		"mainText": "I wake up again in Room 404. I can’t believe it. The loop is continuing. But now, I know what I need to do.\n\nWhat do I do when I see the receptionist?",
+		"mainText": "I wake up again in Room 404. I can’t believe it. The loop is continuing.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1701
+			}
+		]
+	},
+	{
+		"id": 1701,
+		"mainText": "But now, I know what I need to do.\n\nWhat do I do when I see the receptionist?",
 		"backgroundImage": "bg.jpg",
 		"options": 
 		[
@@ -307,7 +623,19 @@
 	},
 	{
 		"id": 18,
-		"mainText": "Receptionist: “The darkness has given you the key. Now you must step through and leave this place forever.“\n\nThe key… I have it! Now I just need to find the door.",
+		"mainText": "Receptionist: “The darkness has given you the key. Now you must step through and leave this place forever.“",
+		"backgroundImage": "reception.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1801
+			}
+		]
+	},
+	{
+		"id": 1801,
+		"mainText": "The key… I have it! Now I just need to find the door.",
 		"backgroundImage": "reception.jpg",
 		"options": 
 		[
@@ -319,7 +647,43 @@
 	},
 	{
 		"id": 19,
-		"mainText": "I return to my room, grabbing the lantern. The note still lies on the nightstand, its message unchanged: “The truth is hidden in the dark.”\n\nI head straight to the hallway and follow the symbol one last time.\n\nWhat do I do with the hidden door now that I have the key?",
+		"mainText": "I return to my room, grabbing the lantern.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1901
+			}
+		]
+	},
+	{
+		"id": 1901,
+		"mainText": "The note still lies on the nightstand, its message unchanged: “The truth is hidden in the dark.”",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1902
+			}
+		]
+	},
+	{
+		"id": 1902,
+		"mainText": "I head straight to the hallway and follow the symbol one last time.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 1903
+			}
+		]
+	},
+	{
+		"id": 1903,
+		"mainText": "What do I do with the hidden door now that I have the key?",
 		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
@@ -339,7 +703,31 @@
 	},
 	{
 		"id": 20,
-		"mainText": "I use the key and open the door one final time.\n\nThe door opens, and I step through. For the first time, I feel the weight of the hotel’s oppressive atmosphere lift. The walls around me begin to fade, and I realize: I’ve escaped.",
+		"mainText": "I use the key and open the door one final time.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2001
+			}
+		]
+	},
+	{
+		"id": 2001,
+		"mainText": "The door opens, and I step through. For the first time, I feel the weight of the hotel’s oppressive atmosphere lift.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2002
+			}
+		]
+	},
+	{
+		"id": 2002,
+		"mainText": "The walls around me begin to fade, and I realize: I’ve escaped.",
 		"backgroundImage": "creepyRoom2.jpg",
 		"options": 
 		[
