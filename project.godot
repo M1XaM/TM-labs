@@ -16,7 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-NextSceneData="*res://scripts/DataObjects/NextSceneData.cs"
+SceneManager="*res://scripts/DataObjects/SceneManager.cs"
 
 [display]
 

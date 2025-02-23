@@ -8,12 +8,26 @@ public class Screen : Node
 	private Sprite background;
 	private Label mainText;
 	private List<Button> buttons = new List<Button>();
+	
+	private Button _saveButton;
+	private Button _loadButton;
+	private Sprite _line;
+	private int _currentSceneId;
 
 	public override void _Ready()
 	{
 		// Load JSON
 		json = new ProcessJson();
 		json.Initialization();
+		
+		_saveButton = GetNode<Button>("SaveButton");
+		_loadButton = GetNode<Button>("LoadButton");
+		_line = GetNode<Sprite>("Line");
+		
+		_line.Hide();
+		_loadButton.Hide();
+		_saveButton.Connect("pressed", this, nameof(SaveScene));
+		_loadButton.Connect("pressed", this, nameof(LoadSavedScene));
 		
 		// Get references to child nodes
 		background = GetNode<Sprite>("Background");
@@ -40,7 +54,7 @@ public class Screen : Node
 		}
 		
 		AdjustBackground();
-		LoadScene(NextSceneData.Instance.nextScene);
+		LoadScene(SceneManager.Instance.nextScene);
 	}
 	
 	private void AdjustBackground()
@@ -76,11 +90,14 @@ private void LoadScene(int sceneId)
 		return;
 	}
 	
+	_currentSceneId = sceneId;
+	CheckLoadButtonAppearance();
+	
 	// Handle You got killed scene separate (because it looks more beautiful)
 	// The scene after is loaded as usual (from plot.json)
 	if (scene.MainText == "You got killed")
 	{
-		NextSceneData.Instance.nextScene = scene.Options[0].LeadToId;
+		SceneManager.Instance.nextScene = scene.Options[0].LeadToId;
 		GetTree().ChangeScene("res://scenes/Dead.tscn");
 	} 
 	else if (scene.MainText == "GoodEnd")
@@ -116,9 +133,27 @@ private void LoadScene(int sceneId)
 		}
 	}
 	
-	// Button press event handler
 	private void OnButtonPressed(int nextSceneId)
 	{
 		LoadScene(nextSceneId);
+	}
+	
+	private void CheckLoadButtonAppearance()
+	{
+		if (SceneManager.Instance.savedSceneId != null)
+		{
+			_loadButton.Show();
+			_line.Show();
+		}
+	}
+	
+	private void SaveScene()
+	{
+		SceneManager.Instance.savedSceneId = _currentSceneId;
+	}
+	
+	private void LoadSavedScene()
+	{
+		LoadScene(SceneManager.Instance.savedSceneId ?? 1);
 	}
 }

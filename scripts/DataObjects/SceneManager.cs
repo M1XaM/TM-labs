@@ -1,10 +1,12 @@
 using Godot;
 using System.Collections.Generic;
 
-public class NextSceneData : Node
+public class SceneManager : Node
 {
-	public static NextSceneData Instance { get; private set; } // Singleton Pattern
+	public static SceneManager Instance { get; private set; } // Singleton Pattern
 	public int nextScene;
+	
+	public int? savedSceneId;
 	
 	public override void _Ready()
 	{
@@ -12,6 +14,7 @@ public class NextSceneData : Node
 		{
 			Instance = this;
 			nextScene = 1;
+			savedSceneId = null;
 		}
 		else
 			QueueFree(); // Prevent duplicate instances

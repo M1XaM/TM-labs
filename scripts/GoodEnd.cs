@@ -13,7 +13,7 @@ public class GoodEnd : Node2D
 
 	private void OnWakeUpButton()
 	{
-		NextSceneData.Instance.nextScene = 1;
+		SceneManager.Instance.nextScene = 1;
 		GetTree().ChangeScene("res://scenes/Start.tscn");
 	}
 }
