@@ -59,7 +59,7 @@
 		[
 			{
 				"optionText": "Ignore her and explore the hotel",
-				"leadToId": 201
+				"leadToId": 101
 			},
 			{
 				"optionText": "Talk to the receptionist",
@@ -71,102 +71,6 @@
 			}
 		]
 	},
-
-	{
-		"id": 201,
-		"mainText": "The hallway stretches into eerie silence, the dim lights flickering like dying fireflies. As I take a hesitant step forward, the air turns heavy, thick with something unseen. ",
-		"backgroundImage": "image3.png",
-		"options":
-		[
-			{
-				"optionText": "Next",
-				"leadToId": 202
-			}
-		]
-	},
-
-	{
-		"id": 202,
-		"mainText":"Then—just at the edge of my vision—something shifts. A silhouette, impossibly tall, emerges from the shadows.  ",
-		"backgroundImage": "image2.png",
-		"options":
-		[
-			{
-				"optionText": "Save and Investigate",
-				"leadToId": 203
-			},
-			{
-				"optionText": "Return to the lobby.",
-				"leadToId": 2
-			}
-		]
-	},
-
-	{
-		"id": 203,
-		"mainText":"A low, wet breathing sound fills the space behind me. My spine stiffens as cold fingers brush against my shoulder—no, not fingers. Claws. ",
-		"backgroundImage": "image3.png",
-		"options":
-		[
-			{
-				"optionText": "Next",
-				"leadToId": 204
-			}
-		]
-	},
-
-	{
-		"id": 204,
-		"mainText":"The lights above flicker violently, revealing glimpses of something hunched and twitching, its head lolling from side to side as if studying me. My feet refuse to move.  ",
-		"backgroundImage": "image2.png",
-		"options":
-		[
-			{
-				"optionText": "Next",
-				"leadToId": 205
-			}
-		]
-	},
-
-	{
-		"id": 205,
-		"mainText":"A shriek, raw and inhuman, erupts behind me. ",
-		"backgroundImage": "image3.png",
-		"options":
-		[
-			{
-				"optionText": "Next",
-				"leadToId": 206
-			}
-		]
-	},
-
-	{
-		"id": 206,
-		"mainText":"Before I can turn, a bony hand clamps around my throat, lifting me effortlessly off the ground. ",
-		"backgroundImage": "image2.png",
-		"options":
-		[
-			{
-				"optionText": "Next",
-				"leadToId": 207
-			}
-		]
-	},
-
-	{
-		"id": 207,
-		"mainText":"The last thing I see is its gaping maw, lined with rows of jagged teeth, rushing toward my face. A flash of agony—then nothing.   ",
-		"backgroundImage": "image3.png",
-		"options":
-		[
-			{
-				"optionText": "Next",
-				"leadToId": 101
-			}
-		]
-	},
-
 	{
 		"id": 101,
 		"mainText": "You got killed", 
@@ -247,15 +151,103 @@
 		[
 			{
 				"optionText": "Leave it and ignore it",
-				"leadToId": 101
+				"leadToId": 301
 			},
 			{
 				"optionText": "Shove it in my pocket and forget about it",
-				"leadToId": 101
+				"leadToId": 301
 			},
 			{
 				"optionText": "Read it carefully",
 				"leadToId": 5
+			}
+		]
+	},
+	{
+		"id": 301,
+		"mainText": "I let the note fall back onto the nightstand, dismissing it as irrelevant. As I turn away, a gust of frigid air brushes past me.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 302
+			}
+		]
+	},
+	{
+		"id": 302,
+		"mainText": "The room groans, the floorboards shifting beneath my feet. Then, the walls begin to change—the old, peeling wallpaper bubbles as something black seeps through the cracks. The air smells of decay.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Stay and wait",
+				"leadToId": 303
+			},
+			{
+				"optionText": "Grab the note after all",
+				"leadToId": 5
+			}
+		]
+	},
+	{
+		"id": 303,
+		"mainText": "A whisper slithers through the room, curling into my ears. It repeats my name, over and over, growing louder with each repetition.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 304
+			}
+		]
+	},
+	{
+		"id": 304,
+		"mainText": "The lights flicker erratically before shutting off completely. I reach for the lamp, but my fingers touch something wet and warm. My breath hitches as a sharp, guttural growl echoes from behind the bed.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 305
+			}
+		]
+	},
+	{
+		"id": 305,
+		"mainText": "The darkness isn't empty. It's alive...",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 306
+			}
+		]
+	},
+	{
+		"id": 306,
+		"mainText": "Dozens of hands—elongated, skeletal—shoot out from the shadows, grabbing my limbs and pulling me down. I thrash, scream, but they tighten their grip, dragging me into a chasm that wasn’t there before.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 307
+			}
+		]
+	},
+	{
+		"id": 307,
+		"mainText": "My body is swallowed whole by the floor, my last breath stolen as unseen mouths whisper in delight.",
+		"backgroundImage": "bg.jpg",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 101
 			}
 		]
 	},
