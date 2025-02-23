@@ -16,6 +16,7 @@ public class Screen : Node
 
 	public override void _Ready()
 	{
+
 		// Load JSON
 		json = new ProcessJson();
 		json.Initialization();

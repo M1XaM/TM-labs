@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Screen.cs" type="Script" id=1]
 [ext_resource path="res://scripts/ProcessJson.cs" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://other_assets/save.png" type="Texture" id=5]
 [ext_resource path="res://other_assets/line.png" type="Texture" id=6]
 [ext_resource path="res://other_assets/load.png" type="Texture" id=7]
+[ext_resource path="res://sound/Ghost-Story(chosic.com).mp3" type="AudioStream" id=8]
 
 [node name="Screen" type="Node2D"]
 script = ExtResource( 1 )
@@ -73,3 +74,8 @@ margin_right = 1042.0
 margin_bottom = 1078.0
 icon = ExtResource( 7 )
 flat = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = 3.095
+autoplay = true
