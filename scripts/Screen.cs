@@ -57,6 +57,11 @@ public class Screen : Node
 		LoadScene(SceneManager.Instance.nextScene);
 	}
 	
+	public override void _Process(float delta)
+	{
+		CheckLoadButtonAppearance();
+	}
+
 	private void AdjustBackground()
 	{
 		if (background == null || background.Texture == null)
