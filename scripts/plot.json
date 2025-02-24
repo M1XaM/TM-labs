@@ -1359,14 +1359,128 @@
 			},
 			{
 				"optionText": "Ignore her completely",
-				"leadToId": 103
+				"leadToId": 17011
 			},
 			{
 				"optionText": "Leave the hotel and try to escape",
+				"leadToId": 17021
+			}
+		]
+	},
+
+	{
+		"id": 17021,
+		"mainText": "I make my way to the front entrance. The outside world is right there—I can see it through the glass doors. ",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Step forward",
+				"leadToId": 17022
+			}
+		]
+	},
+
+	{
+		"id": 17022,
+		"mainText": "But as I step forward, the air thickens, pressing against me like an invisible force. The walls begin to pulse and shift, warping the exit into something unrecognizable. The door twists out of reach, stretching into the distance no matter how fast I run.",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Keep running toward the exit",
+				"leadToId": 17013
+			},
+			{
+				"optionText": "Turn back",
+				"leadToId": 1701
+			}
+		]
+	},
+
+	{
+		"id": 17011,
+		"mainText": "I ignore the receptionist's cryptic words, convinced I can figure this out on my own. I turn away, determined to find my own way out of this place.",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 17012
+			}
+		]
+	},
+
+	{
+		"id": 17012,
+		"mainText": "But the air grows thick, heavy, as if the hotel itself is holding me in place. The walls pulse and shift as though they are alive, trapping me further within their grasp.",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Keep moving forward ",
+				"leadToId": 17013
+			},
+			{
+				"optionText": "Turn back and ask the receptionist again",
+				"leadToId": 1701
+			}
+		]
+	},
+
+	{
+		"id": 17013,
+		"mainText": "The hallway stretches on endlessly, the same sickeningly familiar corridor looping around me. I can feel something watching, following me, its presence growing more oppressive with each step. ",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 17014
+			}
+		]
+	},
+
+	{
+		"id": 17014,
+		"mainText": "A figure materializes at the end of the hall, tall and hunched, its face obscured by shadows.",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Approach the figure",
+				"leadToId": 17015
+			}
+		]
+	},
+
+	{
+		"id": 17015,
+		"mainText": "I approach the figure, but as I get closer, it turns its head sharply, revealing hollow, black eyes. It lets out an ear-piercing shriek, its form lunging toward me in an unnatural blur of motion. ",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 17016
+			}
+		]
+	},
+
+	{
+		"id": 17016,
+		"mainText": "Before I can react, it grabs me with terrifying strength, dragging me into the shadows. My body is crushed beneath its weight, and I feel my life slipping away, the last thing I hear being the sound of the hotel laughing.",
+		"backgroundImage": "bg.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
 				"leadToId": 103
 			}
 		]
 	},
+
+
 	{
 		"id": 103,
 		"mainText": "You got killed", 
@@ -1451,14 +1565,119 @@
 			},
 			{
 				"optionText": "Leave the hotel through the front entrance",
-				"leadToId": 103
+				"leadToId": 19031
 			},
 			{
 				"optionText": "Ignore the door and keep searching",
+				"leadToId": 190302
+			}
+		]
+	},
+
+	{
+		"id": 190302,
+		"mainText": "I hesitate, feeling drawn to the door but choosing to keep exploring the hotel.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 190303
+			}
+		]
+	},
+
+	{
+		"id": 190303,
+		"mainText": "I walk further down the hallway, hoping to find something that will give me a new clue. But the hallway seems to stretch on endlessly, the air growing colder with each step.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options":
+		[
+			{
+				"optionText": "Keep walking",
+				"leadToId": 190304
+			},
+			{
+				"optionText": "Turn back and go to the door",
+				"leadToId": 1903
+			}
+		]
+	},
+
+
+	{
+		"id": 190304,
+		"mainText": " The lights flicker as I move further into the hallway, the walls bending and warping in a disorienting pattern. My footsteps become muffled, and the air feels thick with dread. I turn to look behind me, but the hallway has disappeared. There is no longer an exit, just a vast, empty void.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options":
+		[
+			{
+				"optionText": "Wait and hope something changes ",
+				"leadToId": 190305
+			},
+			{
+				"optionText": "Try to find the door again",
+				"leadToId": 1903
+			}
+		]
+	},
+
+	{
+		"id": 190305,
+		"mainText": "I stand frozen, paralyzed by the sheer emptiness that surrounds me. The darkness presses in on all sides. A low rumbling sound grows, and suddenly the walls close in with crushing force. I try to scream, but no sound escapes. The last thing I feel is the cold, suffocating weight of the hotel swallowing me whole.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
 				"leadToId": 103
 			}
 		]
 	},
+
+	{
+		"id": 19031,
+		"mainText": "I step toward the front entrance, convinced that leaving is my best option.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 19032
+			}
+		]
+	},
+
+	{
+		"id": 19032,
+		"mainText": "But as I walk, the lobby seems to expand, the walls stretching impossibly far. The door is right there—yet with every step, it moves further away.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 19033
+			}
+		]
+	},
+
+	{
+		"id": 19033,
+		"mainText": " The air turns cold, my breath visible in the dim light. Something is very, very wrong.",
+		"backgroundImage": "creepyRoom2.jpg",
+		"options":
+		[
+			{
+				"optionText": "Keep pushing forward",
+				"leadToId": 17013
+			},
+			{
+				"optionText": "Turn back",
+				"leadToId": 1903
+			}
+		]
+	},
+
 	{
 		"id": 20,
 		"mainText": "I use the key and open the door one final time.",
