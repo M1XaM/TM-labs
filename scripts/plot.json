@@ -59,7 +59,7 @@
 		[
 			{
 				"optionText": "Ignore her and explore the hotel",
-				"leadToId": 101
+				"leadToId": 201
 			},
 			{
 				"optionText": "Talk to the receptionist",
@@ -71,6 +71,93 @@
 			}
 		]
 	},
+
+	{
+	"id": 201,
+	"mainText": "The hallway stretches into eerie silence, the dim lights flickering like dying fireflies. As I take a hesitant step forward, the air turns heavy, thick with something unseen.",
+	"backgroundImage": "hallway.jpg",
+	"options":
+	[
+		{
+			"optionText": "Go back to the front desk",
+			"leadToId": 2
+		},
+		{
+			"optionText": "Next",
+			"leadToId": 202
+		}
+	]
+	},
+
+	{
+		"id": 202,
+		"mainText": "Then—just at the edge of my vision—something shifts. A silhouette, impossibly tall, emerges from the shadows.  ",
+		"backgroundImage": "silhouette.png",
+		"options":
+		[
+			{
+				"optionText": "Go back to the front desk",
+				"leadToId": 2
+			},
+			{
+				"optionText": "Stay and investigate",
+				"leadToId": 203
+			}
+		]
+	},
+
+	{
+		"id": 203,
+		"mainText": "A low, wet breathing sound fills the space behind me. My spine stiffens as cold fingers brush against my shoulder—no, not fingers. Claws.",
+		"backgroundImage": "claws.png",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 204
+			}
+		]
+	},
+
+	{
+		"id": 204,
+		"mainText": "My breath catches. The lights above flicker violently, revealing glimpses of something hunched and twitching, its head lolling from side to side as if studying me. My feet refuse to move.  ",
+		"backgroundImage": "claws.png",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 205
+			}
+		]
+	},
+
+	{
+		"id": 205,
+		"mainText": "A shriek, raw and inhuman, erupts behind me. Before I can turn, a bony hand clamps around my throat, lifting me effortlessly off the ground.   ",
+		"backgroundImage": "neck.png",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 206
+			}
+		]
+	},
+
+	{
+		"id": 206,
+		"mainText": "The last thing I see is its gaping maw, lined with rows of jagged teeth, rushing toward my face. A flash of agony—then nothing.",
+		"backgroundImage": "monster.png",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 101
+			}
+		]
+	},
+
 	{
 		"id": 101,
 		"mainText": "You got killed", 
