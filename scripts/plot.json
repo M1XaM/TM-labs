@@ -155,7 +155,7 @@
 			},
 			{
 				"optionText": "Shove it in my pocket and forget about it",
-				"leadToId": 301
+				"leadToId": 311
 			},
 			{
 				"optionText": "Read it carefully",
@@ -164,9 +164,21 @@
 		]
 	},
 	{
+		"id": 311,
+		"mainText": "I shove it in my pocket, dismissing it as irrelevant. As I turn away, a gust of frigid air brushes past me.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 302
+			}
+		]
+	},
+	{
 		"id": 301,
 		"mainText": "I let the note fall back onto the nightstand, dismissing it as irrelevant. As I turn away, a gust of frigid air brushes past me.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
@@ -178,7 +190,7 @@
 	{
 		"id": 302,
 		"mainText": "The room groans, the floorboards shifting beneath my feet. Then, the walls begin to change—the old, peeling wallpaper bubbles as something black seeps through the cracks. The air smells of decay.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
@@ -194,7 +206,7 @@
 	{
 		"id": 303,
 		"mainText": "A whisper slithers through the room, curling into my ears. It repeats my name, over and over, growing louder with each repetition.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
@@ -206,7 +218,7 @@
 	{
 		"id": 304,
 		"mainText": "The lights flicker erratically before shutting off completely. I reach for the lamp, but my fingers touch something wet and warm. My breath hitches as a sharp, guttural growl echoes from behind the bed.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
@@ -218,7 +230,7 @@
 	{
 		"id": 305,
 		"mainText": "The darkness isn't empty. It's alive...",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
@@ -230,7 +242,7 @@
 	{
 		"id": 306,
 		"mainText": "Dozens of hands—elongated, skeletal—shoot out from the shadows, grabbing my limbs and pulling me down. I thrash, scream, but they tighten their grip, dragging me into a chasm that wasn’t there before.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
@@ -242,7 +254,7 @@
 	{
 		"id": 307,
 		"mainText": "My body is swallowed whole by the floor, my last breath stolen as unseen mouths whisper in delight.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options": 
 		[
 			{
@@ -311,11 +323,159 @@
 			},
 			{
 				"optionText": "Ignore it and explore the hotel ",
-				"leadToId": 101
+				"leadToId": 6001
 			},
 			{
 				"optionText": "Run back to my room",
-				"leadToId": 101
+				"leadToId": 6001
+			}
+		]
+	},
+	{
+		"id": 6001,
+		"mainText": "I turn my back on the glowing symbol, deciding I want no part in whatever it is.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6002
+			}
+		]
+	},
+	{
+		"id": 6002,
+		"mainText": "The hallway around me suddenly feels different. The air turns stagnant.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6003
+			}
+		]
+	},
+	{
+		"id": 6003,
+		"mainText": "The sound of my own footsteps fades, as if the space itself has swallowed the noise.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6004
+			}
+		]
+	},
+	{
+		"id": 6004,
+		"mainText": "When I look back, the symbol is gone. So is the door I came through.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6005
+			}
+		]
+	},
+	{
+		"id": 6005,
+		"mainText": "What do I do next?",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Stay and keep moving forward",
+				"leadToId": 6006
+			},
+			{
+				"optionText": "Turn around and try to find the symbol again",
+				"leadToId": 7
+			}
+		]
+	},
+	{
+		"id": 6006,
+		"mainText": "A deep rumbling vibrates through the walls, followed by a slow, rhythmic tapping. My breath catches in my throat. ",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6007
+			}
+		]
+	},
+	{
+		"id": 6007,
+		"mainText": "It’s not footsteps—it’s something mimicking them. The tapping grows louder, closer.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6008
+			}
+		]
+	},
+	{
+		"id": 6008,
+		"mainText": "A shadow—tall, disjointed, barely human—emerges at the far end of the hall.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6009
+			}
+		]
+	},
+	{
+		"id": 6009,
+		"mainText": "It moves in unnatural jerks, like a puppet with its strings tangled.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6010
+			}
+		]
+	},
+	{
+		"id": 6010,
+		"mainText": "I turn to run, but the hallway stretches endlessly, impossibly long.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6011
+			}
+		]
+	},
+	{
+		"id": 6011,
+		"mainText": "The creature gains on me. The last thing I feel is something cold and sharp pressing against the back of my skull—then a violent jerk.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 6012
+			}
+		]
+	},
+	{
+		"id": 6012,
+		"mainText": "A sharp snap. The world goes black.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 103
 			}
 		]
 	},
@@ -387,7 +547,7 @@
 		[
 			{
 				"optionText": "Leave the hotel",
-				"leadToId": 102
+				"leadToId": 9001
 			},
 			{
 				"optionText": "Ask for more information",
@@ -395,6 +555,114 @@
 			},
 			{
 				"optionText": "Walk away and explore the hotel",
+				"leadToId": 9101
+			}
+		]
+	},
+	{
+		"id": 9001,
+		"mainText": "I push open the front doors and step outside, desperate for fresh air.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Keep moving forward",
+				"leadToId": 9002
+			},
+			{
+				"optionText": "Hesitate and turn back",
+				"leadToId": 9
+			}
+		]
+	},
+	{
+		"id": 9101,
+		"mainText": "Instead of engaging with the receptionist, I turn my back on her and step deeper into the hotel",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Keep moving forward",
+				"leadToId": 9102
+			},
+			{
+				"optionText": "Hesitate and turn back",
+				"leadToId": 9
+			}
+		]
+	},
+	{
+		"id": 9002,
+		"mainText": "The outside world warps before my eyes, stretching into an endless void of shifting darkness.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 9003
+			}
+		]
+	},
+	{
+		"id": 9102,
+		"mainText": "The hallways seem to stretch longer than before, twisting at impossible angles",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 9003
+			}
+		]
+	},
+	{
+		"id": 9003,
+		"mainText": "The further I go, the more the walls seem to breathe. My vision distorts—black spots swimming in my eyes.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 9004
+			}
+		]
+	},
+	{
+		"id": 9004,
+		"mainText": "What do I do?",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Run back the way I came",
+				"leadToId": 9005
+			},
+			{
+				"optionText": "Press forward, ignoring the fear",
+				"leadToId": 9005
+			}
+		]
+	},
+	{
+		"id": 9005,
+		"mainText": "An ocean of darkness began to swallow everything.",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 9006
+			}
+		]
+	},
+	{
+		"id": 9006,
+		"mainText": "I can't move, I can't breathe. Then --",
+		"backgroundImage": "image1.png",
+		"options": 
+		[
+			{
+				"optionText": "Next",
 				"leadToId": 102
 			}
 		]

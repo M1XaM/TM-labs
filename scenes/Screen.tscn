@@ -18,13 +18,13 @@ script = ExtResource( 2 )
 [node name="Background" type="Sprite" parent="."]
 
 [node name="MainTextBox" type="Sprite" parent="."]
-position = Vector2( 974.5, 793 )
+position = Vector2( 974.5, 768 )
 texture = ExtResource( 3 )
 
 [node name="MainText" type="Label" parent="MainTextBox"]
-margin_left = -805.0
+margin_left = -807.5
 margin_top = -70.0
-margin_right = 800.0
+margin_right = 797.5
 margin_bottom = 72.0
 
 [node name="Button1" type="Button" parent="."]
