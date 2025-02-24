@@ -46,6 +46,7 @@ public class SceneManager : Node
 
 		// Assign the music stream to the AudioStreamPlayer
 		musicPlayer.Stream = musicStream;
+		musicPlayer.VolumeDb = -10.0f; 
 
 		// Play music if it isn't already playing
 		if (!musicPlayer.Playing)

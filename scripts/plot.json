@@ -1350,7 +1350,7 @@
 	{
 		"id": 1701,
 		"mainText": "But now, I know what I need to do.\n\nWhat do I do when I see the receptionist?",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "reception.jpg",
 		"options": 
 		[
 			{
@@ -1371,7 +1371,7 @@
 	{
 		"id": 17021,
 		"mainText": "I make my way to the front entrance. The outside world is right there—I can see it through the glass doors. ",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options":
 		[
 			{
@@ -1384,7 +1384,7 @@
 	{
 		"id": 17022,
 		"mainText": "But as I step forward, the air thickens, pressing against me like an invisible force. The walls begin to pulse and shift, warping the exit into something unrecognizable. The door twists out of reach, stretching into the distance no matter how fast I run.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options":
 		[
 			{
@@ -1401,7 +1401,7 @@
 	{
 		"id": 17011,
 		"mainText": "I ignore the receptionist's cryptic words, convinced I can figure this out on my own. I turn away, determined to find my own way out of this place.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "reception.jpg",
 		"options":
 		[
 			{
@@ -1414,7 +1414,7 @@
 	{
 		"id": 17012,
 		"mainText": "But the air grows thick, heavy, as if the hotel itself is holding me in place. The walls pulse and shift as though they are alive, trapping me further within their grasp.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options":
 		[
 			{
@@ -1431,7 +1431,7 @@
 	{
 		"id": 17013,
 		"mainText": "The hallway stretches on endlessly, the same sickeningly familiar corridor looping around me. I can feel something watching, following me, its presence growing more oppressive with each step. ",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options":
 		[
 			{
@@ -1444,7 +1444,7 @@
 	{
 		"id": 17014,
 		"mainText": "A figure materializes at the end of the hall, tall and hunched, its face obscured by shadows.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options":
 		[
 			{
@@ -1457,7 +1457,7 @@
 	{
 		"id": 17015,
 		"mainText": "I approach the figure, but as I get closer, it turns its head sharply, revealing hollow, black eyes. It lets out an ear-piercing shriek, its form lunging toward me in an unnatural blur of motion. ",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options":
 		[
 			{
@@ -1470,7 +1470,7 @@
 	{
 		"id": 17016,
 		"mainText": "Before I can react, it grabs me with terrifying strength, dragging me into the shadows. My body is crushed beneath its weight, and I feel my life slipping away, the last thing I hear being the sound of the hotel laughing.",
-		"backgroundImage": "bg.jpg",
+		"backgroundImage": "image1.png",
 		"options":
 		[
 			{
