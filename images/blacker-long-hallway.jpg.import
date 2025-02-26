@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/image4.png-92f8e4abea0ef1f6b8a9709da23dae98.stex"
+path="res://.import/blacker-long-hallway.jpg-c9e13c518464990e757dce3e18f291a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/image4.png"
-dest_files=[ "res://.import/image4.png-92f8e4abea0ef1f6b8a9709da23dae98.stex" ]
+source_file="res://images/blacker-long-hallway.jpg"
+dest_files=[ "res://.import/blacker-long-hallway.jpg-c9e13c518464990e757dce3e18f291a8.stex" ]
 
 [params]
 
