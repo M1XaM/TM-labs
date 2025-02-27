@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ROOM404.png-76070b7fb9a8d9903cb1843b004e40b6.stex"
+path="res://.import/bent-shadow.jpg-e269ea9fba877e924a92b452d404b59f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other_assets/ROOM404.png"
-dest_files=[ "res://.import/ROOM404.png-76070b7fb9a8d9903cb1843b004e40b6.stex" ]
+source_file="res://images/bent-shadow.jpg"
+dest_files=[ "res://.import/bent-shadow.jpg-e269ea9fba877e924a92b452d404b59f.stex" ]
 
 [params]
 

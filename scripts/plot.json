@@ -693,7 +693,7 @@
 	{
 		"id": 9102,
 		"mainText": "The hallways seem to stretch longer than before, twisting at impossible angles",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "stretched-hallways.jpg",
 		"options": 
 		[
 			{
@@ -704,8 +704,8 @@
 	},
 	{
 		"id": 9003,
-		"mainText": "The further I go, the more the walls seem to breathe. My vision distorts—black spots swimming in my eyes.",
-		"backgroundImage": "long-hallway.jpg",
+		"mainText": "The further I go, the more everything seems to distort. My vision worsens—black spots swimming in my eyes.",
+		"backgroundImage": "distorted-vision.jpg",
 		"options": 
 		[
 			{
@@ -717,12 +717,12 @@
 	{
 		"id": 9004,
 		"mainText": "What do I do?",
-		"backgroundImage": "long-hallway.jpg",
+		"backgroundImage": "more-distorted-vision.jpg",
 		"options": 
 		[
 			{
 				"optionText": "Run back the way I came",
-				"leadToId": 9005
+				"leadToId": 9
 			},
 			{
 				"optionText": "Press forward, ignoring the fear",
@@ -733,7 +733,7 @@
 	{
 		"id": 9005,
 		"mainText": "An ocean of darkness began to swallow everything.",
-		"backgroundImage": "blacker-long-hallway.jpg",
+		"backgroundImage": "even-more-distorted-vision.jpg",
 		"options": 
 		[
 			{
@@ -745,7 +745,7 @@
 	{
 		"id": 9006,
 		"mainText": "I can't move, I can't breathe. Then --",
-		"backgroundImage": "even-blacker-long-hallway.jpg",
+		"backgroundImage": "black.jpg",
 		"options": 
 		[
 			{
@@ -849,7 +849,7 @@
 	{
 		"id": 1102,
 		"mainText": "I leave the note on the nightstand again, dismissing it as meaningless.",
-		"backgroundImage": "note.png",
+		"backgroundImage": "note.jpg",
 		"options": 
 		[
 			{
@@ -861,7 +861,7 @@
 	{
 		"id": 1103,
 		"mainText": "The room shifts around me—walls groaning, floors creaking beneath my feet. Something stirs in the dark corners, restless and waiting.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "room-shifting.jpg",
 		"options": 
 		[
 			{
@@ -877,7 +877,7 @@
 	{
 		"id": 1104,
 		"mainText": "The temperature plummets. The air thickens with an unnatural stillness.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "room-shifting.jpg",
 		"options": 
 		[
 			{
@@ -889,7 +889,7 @@
 	{
 		"id": 1105,
 		"mainText": "A faint whisper curls around my name, repeated like a chant. It grows louder, more urgent.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "room-shifting.jpg",
 		"options": 
 		[
 			{
@@ -901,7 +901,7 @@
 	{
 		"id": 1106,
 		"mainText": "Suddenly, the lights flicker, and I feel something wet and cold brush against my ankle.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "room-altered.jpg",
 		"options": 
 		[
 			{
@@ -913,7 +913,7 @@
 	{
 		"id": 1107,
 		"mainText": "I turn, and the darkness isn't empty. Hands—cold, skeletal—reach out, grabbing my limbs.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "skeleton-hands.jpg",
 		"options": 
 		[
 			{
@@ -925,7 +925,7 @@
 	{
 		"id": 1108,
 		"mainText": "I struggle, but their grip is vice-like, pulling me into the void. I scream as I’m dragged beneath the floorboards, my body swallowed whole by a darkness that’s alive.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "skeleton-hands.jpg",
 		"options": 
 		[
 			{
@@ -937,7 +937,7 @@
 	{
 		"id": 1109,
 		"mainText": "Then, silence.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "black.jpg",
 		"options": 
 		[
 			{
@@ -1029,7 +1029,7 @@
 	{
 		"id": 1304,
 		"mainText": "Frustration builds as I slam my shoulder into it, pushing harder, but it’s no use. The door is stuck, sealed shut as if mocking my attempts.",
-		"backgroundImage": "force-door.jpg",
+		"backgroundImage": "forcing-door.jpg",
 		"options": 
 		[
 			{
@@ -1045,7 +1045,7 @@
 	{
 		"id": 1309,
 		"mainText": "I decide to leave the door for now and continue down the hallway.",
-		"backgroundImage": "image2.png",
+		"backgroundImage": "hallway.jpg",
 		"options": 
 		[
 			{
@@ -1057,7 +1057,7 @@
 	{
 		"id": 1310,
 		"mainText": "The air feels heavier, and the hotel seems to grow quieter, more oppressive. With each step, the silence becomes unbearable, as if the hotel is waiting for something—waiting for me to make a mistake.",
-		"backgroundImage": "image2.png",
+		"backgroundImage": "deeper-hallway.jpg",
 		"options": 
 		[
 			{
@@ -1073,7 +1073,7 @@
 	{
 		"id": 1305,
 		"mainText": "A deep, growling sound emerges from the darkness behind me.",
-		"backgroundImage": "image2.png",
+		"backgroundImage": "deeper-hallway.jpg",
 		"options": 
 		[
 			{
@@ -1085,7 +1085,7 @@
 	{
 		"id": 1306,
 		"mainText": "I turn just in time to see something lurch toward me—twisted, monstrous. Its form is too hard to describe, shifting and undulating like a nightmare come to life.",
-		"backgroundImage": "image2.png",
+		"backgroundImage": "bent-shadow.jpg",
 		"options": 
 		[
 			{
@@ -1097,7 +1097,7 @@
 	{
 		"id": 1307,
 		"mainText": "I try to run, but my legs are leaden, and the creature is faster. It snatches me in an instant, its cold claws digging into my flesh.",
-		"backgroundImage": "image2.png",
+		"backgroundImage": "neck.png",
 		"options": 
 		[
 			{
@@ -1109,7 +1109,7 @@
 	{
 		"id": 1308,
 		"mainText": "My body is thrown violently to the ground, my vision darkening as it closes in on me. The last thing I feel is a sharp pain in my chest before everything goes black.",
-		"backgroundImage": "image2.png",
+		"backgroundImage": "black.jpg",
 		"options": 
 		[
 			{
@@ -1179,7 +1179,7 @@
 	{
 		"id": 1508,
 		"mainText": "I turn around and head back to my room, hoping to find some clarity.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "hallway.jpg",
 		"options": 
 		[
 			
@@ -1192,7 +1192,7 @@
 	{
 		"id": 1509,
 		"mainText": " But as I walk, the hallway seems to stretch on endlessly, the door to my room growing farther and farther away. The air grows heavier, and the hotel feels like it’s shifting around me, making each step feel slower.",
-		"backgroundImage": "image3.png",
+		"backgroundImage": "stretched-hallways.jpg",
 		"options": 
 		[
 			
@@ -1227,7 +1227,7 @@
 		[
 			
 			{
-				"optionText": "Keep pulling at the door",
+				"optionText": "Run to another exit door",
 				"leadToId": 1504
 			}, {
 				"optionText": "Turn around and explore more",
@@ -1388,7 +1388,7 @@
 		"options":
 		[
 			{
-				"optionText": "Keep running toward the exit",
+				"optionText": "Run to another exit door",
 				"leadToId": 17013
 			},
 			{
@@ -1414,7 +1414,7 @@
 	{
 		"id": 17012,
 		"mainText": "But the air grows thick, heavy, as if the hotel itself is holding me in place. The walls pulse and shift as though they are alive, trapping me further within their grasp.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "deeper-hallway.jpg",
 		"options":
 		[
 			{
@@ -1431,7 +1431,7 @@
 	{
 		"id": 17013,
 		"mainText": "The hallway stretches on endlessly, the same sickeningly familiar corridor looping around me. I can feel something watching, following me, its presence growing more oppressive with each step. ",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "stretched-hallways.jpg",
 		"options":
 		[
 			{
@@ -1470,7 +1470,7 @@
 	{
 		"id": 17016,
 		"mainText": "Before I can react, it grabs me with terrifying strength, dragging me into the shadows. My body is crushed beneath its weight, and I feel my life slipping away, the last thing I hear being the sound of the hotel laughing.",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "neck.png",
 		"options":
 		[
 			{
@@ -1577,7 +1577,7 @@
 	{
 		"id": 190302,
 		"mainText": "I hesitate, feeling drawn to the door but choosing to keep exploring the hotel.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "turn-away-hallway.jpg",
 		"options":
 		[
 			{
@@ -1590,7 +1590,7 @@
 	{
 		"id": 190303,
 		"mainText": "I walk further down the hallway, hoping to find something that will give me a new clue. But the hallway seems to stretch on endlessly, the air growing colder with each step.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "stretched-hallways.jpg",
 		"options":
 		[
 			{
@@ -1608,7 +1608,7 @@
 	{
 		"id": 190304,
 		"mainText": " The lights flicker as I move further into the hallway, the walls bending and warping in a disorienting pattern. My footsteps become muffled, and the air feels thick with dread. I turn to look behind me, but the hallway has disappeared. There is no longer an exit, just a vast, empty void.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "empty-hallway.jpg",
 		"options":
 		[
 			{
@@ -1625,7 +1625,7 @@
 	{
 		"id": 190305,
 		"mainText": "I stand frozen, paralyzed by the sheer emptiness that surrounds me. The darkness presses in on all sides. A low rumbling sound grows, and suddenly the walls close in with crushing force. I try to scream, but no sound escapes. The last thing I feel is the cold, suffocating weight of the hotel swallowing me whole.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "even-blacker-long-hallway.jpg",
 		"options":
 		[
 			{
@@ -1638,7 +1638,7 @@
 	{
 		"id": 19031,
 		"mainText": "I step toward the front entrance, convinced that leaving is my best option.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "exit-door-close.jpg",
 		"options":
 		[
 			{
@@ -1651,7 +1651,7 @@
 	{
 		"id": 19032,
 		"mainText": "But as I walk, the lobby seems to expand, the walls stretching impossibly far. The door is right there—yet with every step, it moves further away.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "exit-door-closer.jpg",
 		"options":
 		[
 			{
@@ -1664,7 +1664,7 @@
 	{
 		"id": 19033,
 		"mainText": " The air turns cold, my breath visible in the dim light. Something is very, very wrong.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "blacker-long-hallway.jpg",
 		"options":
 		[
 			{
@@ -1681,7 +1681,7 @@
 	{
 		"id": 20,
 		"mainText": "I use the key and open the door one final time.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "force-door.jpg",
 		"options": 
 		[
 			{
@@ -1705,7 +1705,7 @@
 	{
 		"id": 2002,
 		"mainText": "The walls around me begin to fade, and I realize: I’ve escaped.",
-		"backgroundImage": "creepyRoom2.jpg",
+		"backgroundImage": "prelast-background.jpg",
 		"options": 
 		[
 			{
