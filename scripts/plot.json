@@ -1141,7 +1141,7 @@
 	{
 		"id": 2301,
 		"mainText": "Instead of using the lantern, I lift it high and smash it against the ground.",
-		"backgroundImage": "",
+		"backgroundImage": "2301.png",
 		"options": 
 		[
 			{
@@ -1153,7 +1153,7 @@
 	{
 		"id": 2302,
 		"mainText": "Glass shatters, flames sputter out, and for a moment, everything goes dark.",
-		"backgroundImage": "",
+		"backgroundImage": "2302.png",
 		"options": 
 		[
 			{
@@ -1165,7 +1165,7 @@
 	{
 		"id": 2303,
 		"mainText": "the hotel flickers—like a corrupted image struggling to render. The walls ripple, distorting, revealing something that wasn’t there before. ",
-		"backgroundImage": "",
+		"backgroundImage": "2303.png",
 		"options": 
 		[
 			{
@@ -1177,7 +1177,7 @@
 	{
 		"id": 2304,
 		"mainText": "A hidden passage yawns open before me.",
-		"backgroundImage": "",
+		"backgroundImage": "2304.png",
 		"options": 
 		[
 			{
@@ -1189,7 +1189,7 @@
 	{
 		"id": 2305,
 		"mainText": "Inside, dust-coated journals rest in uneven stacks. I reach for one, my fingers trembling as I flip through brittle pages.",
-		"backgroundImage": "",
+		"backgroundImage": "2305.png",
 		"options": 
 		[
 			{
@@ -1201,7 +1201,7 @@
 	{
 		"id": 2306,
 		"mainText": "Every single entry says the same thing, scrawled in desperate, uneven handwriting: “The hotel isn’t real.” ",
-		"backgroundImage": "",
+		"backgroundImage": "2306.png",
 		"options": 
 		[
 			{
@@ -1213,7 +1213,7 @@
 	{
 		"id": 2307,
 		"mainText": "The whispers, the shifting walls, the endless halls—I knew something was wrong. And now, I understand. I’m dreaming. No—not dreaming. Trapped.",
-		"backgroundImage": "",
+		"backgroundImage": "2307.png",
 		"options": 
 		[
 			{
@@ -1225,7 +1225,7 @@
 	{
 		"id": 2308,
 		"mainText": "The hotel trembles, the walls crack, and the illusion frays at the edges. I force myself to remember who I am—to reject this place.",
-		"backgroundImage": "",
+		"backgroundImage": "2308.png",
 		"options": 
 		[
 			{
@@ -1237,7 +1237,7 @@
 	{
 		"id": 2309,
 		"mainText": "A deafening roar fills my ears as the hotel collapses around me. Everything crumbles into nothingness \n Then—",
-		"backgroundImage": "",
+		"backgroundImage": "black.jpg",
 		"options": 
 		[
 			{
@@ -1249,7 +1249,7 @@
 	{
 		"id": 2310,
 		"mainText": "I wake up. My lungs burn as I gasp for air. Bright, sterile light floods my vision, and the beeping of monitors fills the room.",
-		"backgroundImage": "",
+		"backgroundImage": "2310.png",
 		"options": 
 		[
 			{
@@ -1261,7 +1261,7 @@
 	{
 		"id": 2311,
 		"mainText": "I’m in a hospital bed. \nA doctor stands beside me, relief washing over his face. “You almost didn’t make it,” he says.",
-		"backgroundImage": "",
+		"backgroundImage": "23112312.png",
 		"options": 
 		[
 			{
@@ -1273,7 +1273,7 @@
 	{
 		"id": 2312,
 		"mainText": "Congratulations, you broke the illusion.",
-		"backgroundImage": "",
+		"backgroundImage": "23112312.png",
 		"options": 
 		[
 			{
@@ -1286,7 +1286,7 @@
 	{
 		"id": 2401,
 		"mainText": "Instead of smashing the lantern or ignoring the door, I face the hotel directly",
-		"backgroundImage": "",
+		"backgroundImage": "240124022403.png",
 		"options": 
 		[
 			{
@@ -1298,7 +1298,7 @@
 	{
 		"id": 2402,
 		"mainText": "I refuse to escape or accept my fate, realizing that the hotel feeds on fear and submission.",
-		"backgroundImage": "",
+		"backgroundImage": "240124022403.png",
 		"options": 
 		[
 			{
@@ -1310,7 +1310,7 @@
 	{
 		"id": 2403,
 		"mainText": "I speak aloud:\n “You are nothing. You have no power over me.”",
-		"backgroundImage": "",
+		"backgroundImage": "240124022403.png",
 		"options": 
 		[
 			{
@@ -1322,7 +1322,7 @@
 	{
 		"id": 2404,
 		"mainText": "The hotel shakes violently, its walls cracking as the shadows scream.",
-		"backgroundImage": "",
+		"backgroundImage": "2404.png",
 		"options": 
 		[
 			{
@@ -1334,7 +1334,7 @@
 	{
 		"id": 2405,
 		"mainText": "The source of the nightmare emerges, trying to drag me back into the cycle. ",
-		"backgroundImage": "",
+		"backgroundImage": "2405.png",
 		"options": 
 		[
 			{
@@ -1346,7 +1346,7 @@
 	{
 		"id": 2406,
 		"mainText": "Instead of running or fighting, I walk through it, unafraid. The entity collapses into dust.",
-		"backgroundImage": "",
+		"backgroundImage": "2406.png",
 		"options": 
 		[
 			{
@@ -1358,7 +1358,7 @@
 	{
 		"id": 2407,
 		"mainText": "The hotel implodes, and I stand in a field, under a real sky. I have not just escaped — I have destroyed the cycle forever.",
-		"backgroundImage": "",
+		"backgroundImage": "2407.png",
 		"options": 
 		[
 			{
@@ -1370,7 +1370,7 @@
 	{
 		"id": 2408,
 		"mainText": "Congratulations, you have found true liberation.",
-		"backgroundImage": "",
+		"backgroundImage": "2408.png",
 		"options": 
 		[
 			{
@@ -1888,7 +1888,7 @@
 	{
 		"id": 2201,
 		"mainText": "Soft whispers curl through the air, weaving through the silence. They beckon, urging me to stay.\n 'Stay. You belong here..'",
-		"backgroundImage": "",
+		"backgroundImage": "2201.png",
 		"options":
 		[
 			{
@@ -1900,7 +1900,7 @@
 	{
 		"id": 2202,
 		"mainText": "The floor darkens beneath my feet. Shadows slither up my legs, creeping higher, my own body dissolving into the consuming black.",
-		"backgroundImage": "",
+		"backgroundImage": "2202.png",
 		"options":
 		[
 			{
@@ -1912,7 +1912,7 @@
 	{
 		"id": 2203,
 		"mainText": "But there is no pain—only an ache, a gnawing hunger that is not my own. The hotel does not devour me. It wants. It needs. And now, so do I.",
-		"backgroundImage": "",
+		"backgroundImage": "2203.png",
 		"options":
 		[
 			{
@@ -1924,7 +1924,7 @@
 	{
 		"id": 2204,
 		"mainText": "I look down, but the hands I see are no longer mine. My fingers stretch unnaturally, twisting, warping. My vision flickers, distorting as the walls groan around me.",
-		"backgroundImage": "",
+		"backgroundImage": "2204.png",
 		"options":
 		[
 			{
@@ -1936,7 +1936,7 @@
 	{
 		"id": 2205,
 		"mainText": "I am no longer the visitor. I am the entity that haunts the endless hallways.",
-		"backgroundImage": "",
+		"backgroundImage": "2205.png",
 		"options":
 		[
 			{
@@ -2041,7 +2041,7 @@
 	{
 		"id": -1,
 		"mainText": "End",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "endImage1.jpg",
 		"options":
 		[
 		]
@@ -2049,7 +2049,7 @@
 	{
 		"id": -2,
 		"mainText": "End",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "endImage2.jpg",
 		"options":
 		[
 		]
@@ -2057,7 +2057,7 @@
 	{
 		"id": -3,
 		"mainText": "End",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "endImage3.jpg",
 		"options":
 		[
 		]
@@ -2065,7 +2065,7 @@
 	{
 		"id": -4,
 		"mainText": "End",
-		"backgroundImage": "image1.png",
+		"backgroundImage": "endImage4.jpg",
 		"options":
 		[
 		]

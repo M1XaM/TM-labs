@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ROOM404.png-76070b7fb9a8d9903cb1843b004e40b6.stex"
+path="res://.import/2301.png-9c52703340df73af2c804ba46579e14b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://other_assets/ROOM404.png"
-dest_files=[ "res://.import/ROOM404.png-76070b7fb9a8d9903cb1843b004e40b6.stex" ]
+source_file="res://images/2301.png"
+dest_files=[ "res://.import/2301.png-9c52703340df73af2c804ba46579e14b.stex" ]
 
 [params]
 
