@@ -1272,10 +1272,14 @@
 	},
 	{
 		"id": 2312,
-		"mainText": "Congratulations, you broke the illusion. ",
+		"mainText": "Congratulations, you broke the illusion.",
 		"backgroundImage": "",
 		"options": 
 		[
+			{
+				"optionText": "End",
+				"leadToId": -3
+			}
 		]
 	},
 	
@@ -1365,10 +1369,14 @@
 	},
 	{
 		"id": 2408,
-		"mainText": "Congratulations, you have found true liberation. ",
+		"mainText": "Congratulations, you have found true liberation.",
 		"backgroundImage": "",
 		"options": 
 		[
+			{
+				"optionText": "End",
+				"leadToId": -4
+			}
 		]
 	},
 	{
@@ -1932,21 +1940,11 @@
 		"options":
 		[
 			{
-				"optionText": "Next",
-				"leadToId": 2206
+				"optionText": "End",
+				"leadToId": -2
 			}
 		]
 	},
-	{
-		"id": 2206,
-		"mainText": "Game Over",
-		"backgroundImage": "",
-		"options":
-		[
-			
-		]
-	},
-
 	{
 		"id": 19031,
 		"mainText": "I step toward the front entrance, convinced that leaving is my best option.",
@@ -2038,9 +2036,35 @@
 			}
 		]
 	},
+
+
 	{
 		"id": -1,
-		"mainText": "GoodEnd",
+		"mainText": "End",
+		"backgroundImage": "image1.png",
+		"options":
+		[
+		]
+	},
+	{
+		"id": -2,
+		"mainText": "End",
+		"backgroundImage": "image1.png",
+		"options":
+		[
+		]
+	},
+	{
+		"id": -3,
+		"mainText": "End",
+		"backgroundImage": "image1.png",
+		"options":
+		[
+		]
+	},
+	{
+		"id": -4,
+		"mainText": "End",
 		"backgroundImage": "image1.png",
 		"options":
 		[

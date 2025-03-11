@@ -106,9 +106,10 @@ private void LoadScene(int sceneId)
 		SceneManager.Instance.nextScene = scene.Options[0].LeadToId;
 		GetTree().ChangeScene("res://scenes/Dead.tscn");
 	} 
-	else if (scene.MainText == "GoodEnd")
+	else if (scene.MainText == "End")
 	{
-		GetTree().ChangeScene("res://scenes/GoodEnd.tscn");
+		SceneManager.Instance.endSceneId = scene.Id;
+		GetTree().ChangeScene("res://scenes/EndScene.tscn");
 	}
 
 	Texture texture = GD.Load<Texture>($"res://images/{scene.BackgroundImage}");
