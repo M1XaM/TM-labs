@@ -1125,9 +1125,250 @@
 		"options": 
 		[
 			{
-				"optionText": "Next",
+				"optionText": "Continue looking",
 				"leadToId": 1401
+			},
+			{
+				"optionText": "Destroy the lantern",
+				"leadToId": 2301
+			},
+			{
+				"optionText": "Confront the hotel",
+				"leadToId": 2401
 			}
+		]
+	},
+	{
+		"id": 2301,
+		"mainText": "Instead of using the lantern, I lift it high and smash it against the ground.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2302
+			}
+		]
+	},
+	{
+		"id": 2302,
+		"mainText": "Glass shatters, flames sputter out, and for a moment, everything goes dark.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2303
+			}
+		]
+	},
+	{
+		"id": 2303,
+		"mainText": "the hotel flickers—like a corrupted image struggling to render. The walls ripple, distorting, revealing something that wasn’t there before. ",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2304
+			}
+		]
+	},
+	{
+		"id": 2304,
+		"mainText": "A hidden passage yawns open before me.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2305
+			}
+		]
+	},
+	{
+		"id": 2305,
+		"mainText": "Inside, dust-coated journals rest in uneven stacks. I reach for one, my fingers trembling as I flip through brittle pages.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2306
+			}
+		]
+	},
+	{
+		"id": 2306,
+		"mainText": "Every single entry says the same thing, scrawled in desperate, uneven handwriting: “The hotel isn’t real.” ",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2307
+			}
+		]
+	},
+	{
+		"id": 2307,
+		"mainText": "The whispers, the shifting walls, the endless halls—I knew something was wrong. And now, I understand. I’m dreaming. No—not dreaming. Trapped.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2308
+			}
+		]
+	},
+	{
+		"id": 2308,
+		"mainText": "The hotel trembles, the walls crack, and the illusion frays at the edges. I force myself to remember who I am—to reject this place.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2309
+			}
+		]
+	},
+	{
+		"id": 2309,
+		"mainText": "A deafening roar fills my ears as the hotel collapses around me. Everything crumbles into nothingness \n Then—",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2310
+			}
+		]
+	},
+	{
+		"id": 2310,
+		"mainText": "I wake up. My lungs burn as I gasp for air. Bright, sterile light floods my vision, and the beeping of monitors fills the room.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2311
+			}
+		]
+	},
+	{
+		"id": 2311,
+		"mainText": "I’m in a hospital bed. \nA doctor stands beside me, relief washing over his face. “You almost didn’t make it,” he says.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2312
+			}
+		]
+	},
+	{
+		"id": 2312,
+		"mainText": "Congratulations, you broke the illusion. ",
+		"backgroundImage": "",
+		"options": 
+		[
+		]
+	},
+	
+	{
+		"id": 2401,
+		"mainText": "Instead of smashing the lantern or ignoring the door, I face the hotel directly",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2402
+			}
+		]
+	},
+	{
+		"id": 2402,
+		"mainText": "I refuse to escape or accept my fate, realizing that the hotel feeds on fear and submission.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2403
+			}
+		]
+	},
+	{
+		"id": 2403,
+		"mainText": "I speak aloud:\n “You are nothing. You have no power over me.”",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2404
+			}
+		]
+	},
+	{
+		"id": 2404,
+		"mainText": "The hotel shakes violently, its walls cracking as the shadows scream.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2405
+			}
+		]
+	},
+	{
+		"id": 2405,
+		"mainText": "The source of the nightmare emerges, trying to drag me back into the cycle. ",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2406
+			}
+		]
+	},
+	{
+		"id": 2406,
+		"mainText": "Instead of running or fighting, I walk through it, unafraid. The entity collapses into dust.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2407
+			}
+		]
+	},
+	{
+		"id": 2407,
+		"mainText": "The hotel implodes, and I stand in a field, under a real sky. I have not just escaped — I have destroyed the cycle forever.",
+		"backgroundImage": "",
+		"options": 
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2408
+			}
+		]
+	},
+	{
+		"id": 2408,
+		"mainText": "Congratulations, you have found true liberation. ",
+		"backgroundImage": "",
+		"options": 
+		[
 		]
 	},
 	{
@@ -1624,14 +1865,85 @@
 
 	{
 		"id": 190305,
-		"mainText": "I stand frozen, paralyzed by the sheer emptiness that surrounds me. The darkness presses in on all sides. A low rumbling sound grows, and suddenly the walls close in with crushing force. I try to scream, but no sound escapes. The last thing I feel is the cold, suffocating weight of the hotel swallowing me whole.",
+		"mainText": "The hotel shifts around them—hallways stretch endlessly, doors vanish, and the very walls seem to pulse, expanding and contracting like a living, breathing thing.",
 		"backgroundImage": "even-blacker-long-hallway.jpg",
 		"options":
 		[
 			{
 				"optionText": "Next",
-				"leadToId": 103
+				"leadToId": 2201
 			}
+		]
+	},
+
+	
+	{
+		"id": 2201,
+		"mainText": "Soft whispers curl through the air, weaving through the silence. They beckon, urging me to stay.\n 'Stay. You belong here..'",
+		"backgroundImage": "",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2202
+			}
+		]
+	},
+	{
+		"id": 2202,
+		"mainText": "The floor darkens beneath my feet. Shadows slither up my legs, creeping higher, my own body dissolving into the consuming black.",
+		"backgroundImage": "",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2203
+			}
+		]
+	},
+	{
+		"id": 2203,
+		"mainText": "But there is no pain—only an ache, a gnawing hunger that is not my own. The hotel does not devour me. It wants. It needs. And now, so do I.",
+		"backgroundImage": "",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2204
+			}
+		]
+	},
+	{
+		"id": 2204,
+		"mainText": "I look down, but the hands I see are no longer mine. My fingers stretch unnaturally, twisting, warping. My vision flickers, distorting as the walls groan around me.",
+		"backgroundImage": "",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2205
+			}
+		]
+	},
+	{
+		"id": 2205,
+		"mainText": "I am no longer the visitor. I am the entity that haunts the endless hallways.",
+		"backgroundImage": "",
+		"options":
+		[
+			{
+				"optionText": "Next",
+				"leadToId": 2206
+			}
+		]
+	},
+	{
+		"id": 2206,
+		"mainText": "Game Over",
+		"backgroundImage": "",
+		"options":
+		[
+			
 		]
 	},
 
