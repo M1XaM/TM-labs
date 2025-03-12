@@ -20,7 +20,7 @@ public class SceneManager : Node
  		if (Instance == null)
 		{
 			Instance = this;
-			nextScene = 2408;
+			nextScene = 1;
 			savedSceneId = null;
 		}
 		else
