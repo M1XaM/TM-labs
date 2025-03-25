@@ -7,6 +7,7 @@
 // u'll ask him later.
 // Note 5: Let's not think for now about reaching the edge of the map, another scenes for the game (only if u wanna add some cut scenes with plot at the begginig - be my guest).
 
+hey
 class GameManager:
     // Here we'll be added all necessary fields of other objects
 
