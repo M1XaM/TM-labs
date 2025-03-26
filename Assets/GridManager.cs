@@ -12,7 +12,7 @@ public class GridManager : MonoBehaviour
     private float timer;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     { 
         CreateGrid();
     }
@@ -28,7 +28,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    void CreateGrid()
+    public void CreateGrid()
     {
         grid = new Cell[gridSize, gridSize];
 
