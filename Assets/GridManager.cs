@@ -52,8 +52,9 @@ public class GridManager : MonoBehaviour
 
                 Cell cell = cellObj.AddComponent<Cell>();
                 grid[x,y] = cell;
-
-                cell.Initialize(this, x, y);
+                
+                int zone = GetZone(x, y);
+                cell.Initialize(this, x, y, zone);
 
 
                 if (grid[x, y] == null)
@@ -73,6 +74,12 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < gridSize; y++)
             {
+
+                if (grid[x, y] == null)
+            {
+                Debug.LogError($"Cell at ({x}, {y}) is null in UpdateGrid.");
+                continue; // Skip this cell
+            }
                 int aliveNeighbors = grid[x, y].GetAliveNeighbors();
                 bool isAlive = grid[x, y].isAlive;
 
@@ -104,22 +111,15 @@ public class GridManager : MonoBehaviour
         return grid[x, y];
     }   
 
+    int GetZone(int x, int y)
+    {
+        if (x < gridSize / 2 && y < gridSize / 2) return 0; // Top-left
+        if (x >= gridSize / 2 && y < gridSize / 2) return 1; // Top-right
+        if (x < gridSize / 2 && y >= gridSize / 2) return 2; // Bottom-left
+        return 3; // Bottom-right
+    }
 
-    void AddGridBorder(GameObject cellObj, int x, int y)
-{
-    // Create borders (lines) around the cells using LineRenderer or creating thin cubes
-    GameObject borderObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
-    borderObj.transform.position = new Vector3(x * cellSize, y * cellSize, 0);
-    borderObj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Small scale for the border
-
-    // Set the border color to a distinguishable color
-    Renderer borderRenderer = borderObj.GetComponent<Renderer>();
-    borderRenderer.material.color = Color.white;  // Change this to any color for the border
-
-    // Set border as a child of the cell (to keep things organized)
-    borderObj.transform.SetParent(cellObj.transform);
-}
-
+    
 
 }
 
