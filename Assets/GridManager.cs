@@ -6,7 +6,7 @@ public class GridManager : MonoBehaviour
 {
 
     public int gridSize = 100; // Grid size (100x100)
-    public int cellSize = 2; // Each cell is 10x10 pixels
+    public int cellSize = 10; // Each cell is 10x10 pixels
     private Cell[,] grid; // 2D array to store cells
     public float updateInterval = 0.5f; // Time between updates
     private float timer;
