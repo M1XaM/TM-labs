@@ -12,21 +12,34 @@ public class GridManager : MonoBehaviour
     private Cell[,] grid; // 2D array to store cells
     public float updateInterval = 0.5f; // Time between updates
     private float timer;
+    private int generations;
+    private int genCount = 0;
+
 
     // Start is called before the first frame update
     public void Start()
     { 
+        generations = PlayerPrefs.GetInt("Generations", 100);
         CreateGrid();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= updateInterval)
+        if (genCount < generations)
         {
-            timer = 0f;
-            UpdateGrid();
+            timer += Time.deltaTime;
+            if (timer >= updateInterval)
+            {
+                timer = 0f;
+                UpdateGrid();
+                genCount++; 
+            }
+        }
+        else
+        {
+            // Stop updating the grid if we've reached the maximum generations
+            Debug.Log("Maximum generations reached.");
         }
     }
 
