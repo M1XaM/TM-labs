@@ -5,7 +5,9 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
 
-    public int gridSize = 100; // Grid size (100x100)
+    public int gridSize = 1000; // Grid size (100x100)
+    public int gridWidth = 192;
+    public int gridHeight = 108;
     public int cellSize = 10; // Each cell is 10x10 pixels
     private Cell[,] grid; // 2D array to store cells
     public float updateInterval = 0.5f; // Time between updates
@@ -30,11 +32,11 @@ public class GridManager : MonoBehaviour
 
     public void CreateGrid()
     {
-        grid = new Cell[gridSize, gridSize];
+        grid = new Cell[gridWidth, gridHeight];
 
-        for(int x = 0; x < gridSize; x++)
+        for(int x = 0; x < gridWidth; x++)
         {
-            for (int y = 0; y < gridSize; y++)
+            for (int y = 0; y < gridHeight; y++)
             {
 
                 
@@ -43,7 +45,7 @@ public class GridManager : MonoBehaviour
         
                 GameObject cellObj = GameObject.CreatePrimitive(PrimitiveType.Cube); // Create a cube instead of a sprite
                 cellObj.transform.position = position;
-                cellObj.transform.localScale = new Vector3(cellSize, cellSize, 1); // Ensure the cubes are scaled correctly
+                cellObj.transform.localScale = new Vector3(cellSize, cellSize, cellSize); // Ensure the cubes are scaled correctly
 
 
 
@@ -69,10 +71,10 @@ public class GridManager : MonoBehaviour
 
     void UpdateGrid()
     {
-        bool[,] newStates = new bool[gridSize, gridSize];
-        for (int x = 0; x < gridSize; x++)
+        bool[,] newStates = new bool[gridWidth, gridHeight];
+        for (int x = 0; x < gridWidth; x++)
         {
-            for (int y = 0; y < gridSize; y++)
+            for (int y = 0; y < gridHeight; y++)
             {
 
                 if (grid[x, y] == null)
@@ -92,9 +94,9 @@ public class GridManager : MonoBehaviour
             }
         }
 
-        for (int x = 0; x < gridSize; x++)
+        for (int x = 0; x < gridWidth; x++)
         {
-            for (int y = 0; y < gridSize; y++)
+            for (int y = 0; y < gridHeight; y++)
             {
                 grid[x, y].SetState(newStates[x, y]);
             }
@@ -103,7 +105,7 @@ public class GridManager : MonoBehaviour
 
     public bool IsValidCell(int x, int y)
     {
-        return x >= 0 && x < gridSize && y >= 0 && y < gridSize;
+        return x >= 0 && x < gridWidth && y >= 0 && y < gridHeight;
     }
 
     public Cell GetCell(int x, int y)
@@ -113,9 +115,9 @@ public class GridManager : MonoBehaviour
 
     int GetZone(int x, int y)
     {
-        if (x < gridSize / 2 && y < gridSize / 2) return 0; // Top-left
-        if (x >= gridSize / 2 && y < gridSize / 2) return 1; // Top-right
-        if (x < gridSize / 2 && y >= gridSize / 2) return 2; // Bottom-left
+        if (x < gridWidth / 2 && y < gridHeight / 2) return 0; // Top-left
+        if (x >= gridWidth / 2 && y < gridHeight / 2) return 1; // Top-right
+        if (x < gridWidth / 2 && y >= gridHeight / 2) return 2; // Bottom-left
         return 3; // Bottom-right
     }
 
