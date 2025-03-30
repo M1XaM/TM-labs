@@ -95,15 +95,34 @@ public class GridManager : MonoBehaviour
                 Debug.LogError($"Cell at ({x}, {y}) is null in UpdateGrid.");
                 continue; // Skip this cell
             }
+
+                int zone = GetZone(x, y);
+
                 int aliveNeighbors = grid[x, y].GetAliveNeighbors();
                 bool isAlive = grid[x, y].isAlive;
-
-                if (isAlive && (aliveNeighbors < 2 || aliveNeighbors > 3))
-                    newStates[x, y] = false; // Cell dies
-                else if (!isAlive && aliveNeighbors == 3)
-                    newStates[x, y] = true; // Cell becomes alive
+                
+                if (zone == 1 || zone == 2)
+                {
+                    if (isAlive && (aliveNeighbors < 2 || aliveNeighbors > 3))
+                        newStates[x, y] = false; // Cell dies
+                    else if (!isAlive && aliveNeighbors == 3)
+                        newStates[x, y] = true; // Cell becomes alive
+                    else
+                        newStates[x, y] = isAlive; // Remains the same
+                }
+                else if (zone == 0)
+                {
+                    if (isAlive && (aliveNeighbors != 2))
+                        newStates[x, y] = false; // Cell dies
+                    else if (!isAlive && aliveNeighbors > 3)
+                        newStates[x, y] = true; // Cell becomes alive
+                    else
+                        newStates[x, y] = isAlive; // Remains the same
+                }
                 else
-                    newStates[x, y] = isAlive; // Remains the same
+                {
+                    //stimulation
+                }
             }
         }
 
