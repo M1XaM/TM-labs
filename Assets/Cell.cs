@@ -81,4 +81,13 @@ public class Cell : MonoBehaviour
         }
         return aliveCount;
     }
+
+    // Cell.cs
+
+public void MakeAlive()
+{
+    isAlive = true;
+    UpdateAppearance(); // Update the appearance of the cell (color change, etc.)
+}
+
 }

@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1665407513
+--- !u!1 &1469441292
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,8 +127,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1665407515}
-  - component: {fileID: 1665407514}
+  - component: {fileID: 1469441294}
+  - component: {fileID: 1469441293}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -136,28 +136,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1665407514
+--- !u!114 &1469441293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665407513}
+  m_GameObject: {fileID: 1469441292}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bd1fb8aae6cd294b95b602ad28ecf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1665407515
+  Grid: {fileID: 2129326210}
+--- !u!4 &1469441294
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665407513}
+  m_GameObject: {fileID: 1469441292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -298.24084, y: 487.6405, z: -13.016374}
+  m_LocalPosition: {x: 1082.2366, y: 356.91263, z: -0.15536644}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -249,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 1727685505}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 955, y: 535, z: -10}
+  m_LocalPosition: {x: 955, y: 535, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -285,9 +286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSize: 100
-  gridWidth: 192
-  gridHeight: 108
-  cellSize: 10
+  gridWidth: 96
+  gridHeight: 54
+  cellSize: 20
   updateInterval: 0.5
 --- !u!4 &2129326211
 Transform:
@@ -310,4 +311,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1727685508}
   - {fileID: 2129326211}
-  - {fileID: 1665407515}
+  - {fileID: 1469441294}
