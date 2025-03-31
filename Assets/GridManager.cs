@@ -10,7 +10,7 @@ public class GridManager : MonoBehaviour
     public int gridHeight = 54;
     public int cellSize = 20; // Each cell is 10x10 pixels
     private Cell[,] grid; // 2D array to store cells
-    public float updateInterval = 0.5f; // Time between updates
+    public float updateInterval = 2.0f; // Time between updates
     private float timer;
     private int generations;
     private int genCount = 0;
@@ -31,7 +31,7 @@ public class GridManager : MonoBehaviour
     // Start is called before the first frame update
     public void Initiate()
     { 
-        generations = PlayerPrefs.GetInt("Generations", 100);
+        generations = 1000;
         CreateGrid();
     }
 
@@ -165,28 +165,23 @@ public class GridManager : MonoBehaviour
         return 3; // Bottom-right
     }
 
-public void ActivateCellsAtMousePosition(Vector3 mousePosition)
-{
-    // Convert world position to grid position
-    Vector2 worldPoint = new Vector2(mousePosition.x, mousePosition.y);
-    
-    // Convert world coordinates to grid cell coordinates
-    int x = Mathf.FloorToInt(worldPoint.x / cellSize);
-    int y = Mathf.FloorToInt(worldPoint.y / cellSize);
-    
-    // Ensure we're within the grid bounds
-    if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight)
+    public void ActivateCellsAtMousePosition(Vector3 mousePosition)
     {
-        Cell cell = grid[x, y];
-        if (cell != null)
+        // Convert world position to grid position
+        Vector2 worldPoint = new Vector2(mousePosition.x, mousePosition.y);
+        
+        // Convert world coordinates to grid cell coordinates
+        int x = Mathf.FloorToInt(worldPoint.x / cellSize);
+        int y = Mathf.FloorToInt(worldPoint.y / cellSize);
+        
+        // Ensure we're within the grid bounds
+        if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight)
         {
-            cell.MakeAlive(); // Activate the cell
+            Cell cell = grid[x, y];
+            if (cell != null)
+            {
+                cell.MakeAlive(); // Activate the cell
+            }
         }
     }
 }
-
-
-    
-
-}
-

@@ -9,8 +9,6 @@ public class Cell : MonoBehaviour
     private GridManager gridManager;
     private int x, y; // Cell position in the grid
     private int zone;
-    
-
 
     public void Initialize(GridManager manager, int x, int y, int zone)
     {
@@ -27,7 +25,6 @@ public class Cell : MonoBehaviour
         isAlive = Random.value > 0.5f; // 50% chance to be alive
     }
 
-
     public void SetState(bool state)
     {
         isAlive = state;
@@ -37,7 +34,6 @@ public class Cell : MonoBehaviour
     // Update is called once per frame
     void UpdateAppearance()
     {
-
         switch (zone)
         {
             case 0: // Top-left
@@ -82,12 +78,9 @@ public class Cell : MonoBehaviour
         return aliveCount;
     }
 
-    // Cell.cs
-
-public void MakeAlive()
-{
-    isAlive = true;
-    UpdateAppearance(); // Update the appearance of the cell (color change, etc.)
-}
-
+    public void MakeAlive()
+    {
+        isAlive = true;
+        UpdateAppearance(); // Update the appearance of the cell (color change, etc.)
+    }
 }
