@@ -133,7 +133,14 @@ public class GridManager : MonoBehaviour
                 }
                 else
                 {
-                    //stimulation
+                    //sensory cortex zone
+                    if (isAlive && aliveNeighbors == 2) {
+                        newStates[x, y] = false; // dies
+                    } else if (!isAlive && aliveNeighbors > 1 && aliveNeighbors < 4){
+                        newStates[x, y] = true; // becomes alive
+                    } else {
+                        newStates[x, y] = isAlive;
+                    }
                 }
             }
         }
