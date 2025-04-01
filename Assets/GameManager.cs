@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-     public static GameManager Instance;
+    public static GameManager Instance;
     public GridManager Grid;
     // public List<Button> buttonList;
     // public Button InfoButton, PauseButton, StartButton, InfiniteButton;
@@ -65,19 +65,16 @@ public class GameManager : MonoBehaviour
     }
 
     private void HandleMouseInput() {
-        if (Mouse.current.rightButton.wasPressedThisFrame) {
+        if (Mouse.current.rightButton.isPressed){
             ActivateCellsAtMousePosition();
         }
     }
 
     private void ActivateCellsAtMousePosition()
-{
-    Vector3 mouseScreenPosition = Mouse.current.position.ReadValue(); // Get mouse position in screen coordinates
-    Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, Camera.main.nearClipPlane)); // Convert to world position
-    
-    GridManager.Instance.ActivateCellsAtMousePosition(mouseWorldPosition);
-}
-
-
-
+    {
+        Vector3 mouseScreenPosition = Mouse.current.position.ReadValue(); // Get mouse position in screen coordinates
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, Camera.main.nearClipPlane)); // Convert to world position
+        
+        GridManager.Instance.ActivateCellsAtMousePosition(mouseWorldPosition);
+    }
 }
