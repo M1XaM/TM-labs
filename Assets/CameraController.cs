@@ -6,87 +6,95 @@ public class CameraController : MonoBehaviour
     public float zoomAmount = 18f; 
     public float minZoom = 30f;
     public float maxZoom = 540f;
-    public float panSpeed = 50f;  // Panning (dragging) sensitivity
+    public float panSpeed = 50f;
 
-    private GridManager gridManager;  // Reference to GridManager
+    private GridManager gridManager;
+    private Vector3 dragOrigin;
+    private float minX, maxX, minY, maxY;
 
-    
-
-    private void Start ()
+    private void Start()
     {
-        cam = this.GetComponent<Camera>();
+        cam = GetComponent<Camera>();
         gridManager = GridManager.Instance;
         cam.orthographic = true;
+        CalculateCameraBounds();
     }
 
-    private void Update(){
-        if (gridManager != null && gridManager.isRunning) // Only allow zoom when the game is running
+    private void Update()
+    {
+        if (gridManager != null && gridManager.isRunning)
         {
             MoveCamera();
+            ClampCameraPosition();
         }
     }
-   
-    private void MoveCamera ()
+
+    private void MoveCamera()
     {
-
-     if (Input.GetMouseButtonDown(0) && cam.orthographicSize <= 540) // Left click to zoom out
+        // Handle mouse drag panning
+        if (Input.GetMouseButtonDown(0))
         {
-            ZoomToPoint(zoomAmount);
-        }
-    if (Input.GetMouseButtonDown(1) && cam.orthographicSize >= 30) // Left click to zoom in
-        {
-            ZoomToPoint(-zoomAmount);
+            dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
         }
 
-
-    float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-        if (scrollInput != 0)
+        if (Input.GetMouseButton(0))
         {
-            float zoomChange = -scrollInput * 160f; // Negative to match trackpad behavior
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize + zoomChange, minZoom, maxZoom);
-
-        }
-    
-    Vector3 move = Vector3.zero;
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            move.y += panSpeed *Time.deltaTime ; // Move camera up
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            move.y -= panSpeed *Time.deltaTime ; // Move camera down
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            move.x -= panSpeed*Time.deltaTime ; // Move camera left
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            move.x += panSpeed*Time.deltaTime ; // Move camera right
+            Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
+            cam.transform.position += difference;
         }
 
-        // Apply movement to camera position
-        cam.transform.position += move;
-    
+        // Handle zoom with scroll wheel
+        HandleZoom();
     }
 
-
-void ZoomToPoint(float zoomAmount)
+    private void HandleZoom()
     {
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        if (scrollInput == 0) return;
 
-       Vector3 click = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane);
-        // Get mouse position in world space
-        Vector3 mouseWorldPos = cam.ScreenToWorldPoint(click);
+        // Store original zoom and mouse position
+        float originalSize = cam.orthographicSize;
+        Vector3 mouseScreenPos = Input.mousePosition;
+        mouseScreenPos.z = cam.nearClipPlane;
+        Vector3 mouseWorldPosBefore = cam.ScreenToWorldPoint(mouseScreenPos);
 
-         // Apply incremental zoom
-        cam.orthographicSize += zoomAmount ;
+        // Apply zoom
+        float zoomChange = -scrollInput * 160f;
+        cam.orthographicSize = Mathf.Clamp(originalSize + zoomChange, minZoom, maxZoom);
 
-        // Calculate direction to move camera
-        Vector3 direction = (mouseWorldPos - cam.transform.position) * 0.2f;
+        // Get mouse position after zoom
+        Vector3 mouseWorldPosAfter = cam.ScreenToWorldPoint(mouseScreenPos);
 
-        // Move camera slightly towards the zoom point
-        cam.transform.position += direction;
+        // Adjust camera position to maintain mouse position
+        cam.transform.position += mouseWorldPosBefore - mouseWorldPosAfter;
+
+        // Update bounds and clamp
+        CalculateCameraBounds();
+        ClampCameraPosition();
     }
 
+    private void CalculateCameraBounds()
+    {
+        float gridWidthTotal = gridManager.gridWidth * gridManager.cellSize;
+        float gridHeightTotal = gridManager.gridHeight * gridManager.cellSize;
+
+        float cameraHalfHeight = cam.orthographicSize;
+        float cameraHalfWidth = cameraHalfHeight * cam.aspect;
+
+        minX = cameraHalfWidth;
+        maxX = gridWidthTotal - cameraHalfWidth;
+        minY = cameraHalfHeight;
+        maxY = gridHeightTotal - cameraHalfHeight;
+
+        if (minX > maxX) minX = maxX = gridWidthTotal / 2;
+        if (minY > maxY) minY = maxY = gridHeightTotal / 2;
+    }
+
+    private void ClampCameraPosition()
+    {
+        Vector3 clampedPosition = transform.position;
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, minX, maxX);
+        clampedPosition.y = Mathf.Clamp(clampedPosition.y, minY, maxY);
+        transform.position = clampedPosition;
+    }
 }

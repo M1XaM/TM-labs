@@ -106,7 +106,16 @@ public class GridManager : MonoBehaviour
         grid = new Cell[gridWidth, gridHeight];
 
         // Add camera setup
-        Camera.main.orthographicSize = (gridHeight * cellSize) / 2;
+        float gridWidthTotal = gridWidth * cellSize;
+        float gridHeightTotal = gridHeight * cellSize;
+
+        // Set camera to center of grid
+        Camera.main.orthographicSize = gridHeightTotal / 2;
+        Camera.main.transform.position = new Vector3(
+            gridWidthTotal / 2,
+            gridHeightTotal / 2,
+            Camera.main.transform.position.z
+        );
         
         for(int x = 0; x < gridWidth; x++)
         {
