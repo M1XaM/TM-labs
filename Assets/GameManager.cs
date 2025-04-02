@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Start() {
-        Grid = FindObjectOfType<GridManager>(); // Ensure Grid is assigned
+        Grid = FindFirstObjectByType<GridManager>(); // Ensure Grid is assigned
         if (Grid == null) {
             Debug.LogError("GridManager not found!");
             return;
