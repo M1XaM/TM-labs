@@ -9,7 +9,7 @@ public class GridManager : MonoBehaviour
     public int gridSize = 1000; // Grid size (100x100)
     public int gridWidth = 96;
     public int gridHeight = 54;
-    public int cellSize = 20; // Each cell is 10x10 pixels
+    public int cellSize = 10; // Each cell is 10x10 pixels
     private Cell[,] grid; // 2D array to store cells
     public float updateInterval = 2.0f; // Time between updates
     private float timer;
@@ -19,10 +19,12 @@ public class GridManager : MonoBehaviour
     public Button PlayButton;
     public Button PauseButton;
     private bool isRunning = false;
-
     public Slider GenerationsSlider;
     public Text GenerationText; 
     public Text currentGen; 
+
+    public Sprite[] cellSprites; // [0-3] = Zone alive sprites, [4] = Dead sprite
+    public float pixelsPerUnit = 100f; // Match this with your sprite's PPU setting
     
     private int minGenerations = 1;
     private int maxGenerations = 1000;
@@ -102,38 +104,32 @@ public class GridManager : MonoBehaviour
     {
         grid = new Cell[gridWidth, gridHeight];
 
+        // Add camera setup
+        Camera.main.orthographicSize = (gridHeight * cellSize) / 2;
+        
         for(int x = 0; x < gridWidth; x++)
         {
             for (int y = 0; y < gridHeight; y++)
             {
-
-                
                 Vector3 position = new Vector3(x * cellSize, y * cellSize, 0);
-                Debug.Log($"Creating cell at position: {position}");
-        
-                GameObject cellObj = GameObject.CreatePrimitive(PrimitiveType.Cube); // Create a cube instead of a sprite
+                GameObject cellObj = new GameObject("Cell");
                 cellObj.transform.position = position;
-                cellObj.transform.localScale = new Vector3(cellSize, cellSize, cellSize); // Ensure the cubes are scaled correctly
-
-
-
-                cellObj.transform.SetParent(transform); // Ensure the parent is set correctly
-
+                
+                // Add SpriteRenderer component
+                SpriteRenderer renderer = cellObj.AddComponent<SpriteRenderer>();
+                renderer.sprite = cellSprites[4]; // Default dead sprite
+                
+                // Set scale based on PPU
+                float scale = cellSize / (renderer.sprite.rect.width / pixelsPerUnit);
+                cellObj.transform.localScale = new Vector3(scale, scale, 1);
 
                 Cell cell = cellObj.AddComponent<Cell>();
                 grid[x,y] = cell;
                 
                 int zone = GetZone(x, y);
                 cell.Initialize(this, x, y, zone);
-
-
-                if (grid[x, y] == null)
-            {
-                Debug.LogError($"Cell at ({x},{y}) is null.");
-                continue;
+                cellObj.transform.SetParent(transform);
             }
-            }
-
         }
     }
 
