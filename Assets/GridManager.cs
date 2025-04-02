@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class GridManager : MonoBehaviour
     private float timer;
     private int generations;
     private int genCount = 0;
+
+    public Button PlayButton;
+    public Button PauseButton;
+    private bool isRunning = false;
 
     private void Awake() {
         if (Instance == null)
@@ -33,25 +38,41 @@ public class GridManager : MonoBehaviour
     { 
         generations = 1000;
         CreateGrid();
+
+        PlayButton.onClick.AddListener(PlayGame);
+        PauseButton.onClick.AddListener(PauseGame);
+    }
+
+    public void PlayGame()
+    {
+        isRunning = true;
+    }
+
+    public void PauseGame()
+    {
+        isRunning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (genCount < generations)
+        if (isRunning)
         {
-            timer += Time.deltaTime;
-            if (timer >= updateInterval)
+            if (genCount < generations)
             {
-                timer = 0f;
-                UpdateGrid();
-                genCount++; 
+                timer += Time.deltaTime;
+                if (timer >= updateInterval)
+                {
+                    timer = 0f;
+                    UpdateGrid();
+                    genCount++; 
+                }
             }
-        }
-        else
-        {
-            // Stop updating the grid if we've reached the maximum generations
-            Debug.Log("Maximum generations reached.");
+            else
+            {
+                // Stop updating the grid if we've reached the maximum generations
+                Debug.Log("Maximum generations reached.");
+            }
         }
     }
 
