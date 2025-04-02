@@ -2340,6 +2340,13 @@ MonoBehaviour:
   GenerationsSlider: {fileID: 505347312}
   GenerationText: {fileID: 103080735}
   currentGen: {fileID: 2075527829}
+  cellSprites:
+  - {fileID: -2615874204119335, guid: 89872dda7e97c2edf99877ad6d9a0b33, type: 3}
+  - {fileID: -8425141836431729757, guid: a850a2030057b82ebb9c0952dbdcdeb8, type: 3}
+  - {fileID: 8166710274925509176, guid: 4a8988daa855fd8269cceb137abee89d, type: 3}
+  - {fileID: -6099873399732076034, guid: 081089d0592a6c0b3acf996df3101d06, type: 3}
+  - {fileID: 2063826154672905881, guid: 31d045ac43136745b9d6dbfd53234422, type: 3}
+  pixelsPerUnit: 100
 --- !u!4 &2129326211
 Transform:
   m_ObjectHideFlags: 0
