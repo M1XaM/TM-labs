@@ -20,6 +20,13 @@ public class GridManager : MonoBehaviour
     public Button PauseButton;
     private bool isRunning = false;
 
+    public Slider GenerationsSlider;
+    public Text GenerationText; 
+    public Text currentGen; 
+    
+    private int minGenerations = 1;
+    private int maxGenerations = 1000;
+
     private void Awake() {
         if (Instance == null)
         {
@@ -36,11 +43,25 @@ public class GridManager : MonoBehaviour
     // Start is called before the first frame update
     public void Initiate()
     { 
-        generations = 1000;
         CreateGrid();
 
         PlayButton.onClick.AddListener(PlayGame);
         PauseButton.onClick.AddListener(PauseGame);
+
+        GenerationsSlider.onValueChanged.AddListener(UpdateGenerations);
+
+        // Set initial slider value to max
+        GenerationsSlider.value = 0.0f; 
+        UpdateGenerations(GenerationsSlider.value);
+    }
+
+    public void UpdateGenerations(float value)
+    {
+        // Convert scrollbar value (0 to 1) into a range (1 to 1000)
+        generations = Mathf.RoundToInt(Mathf.Lerp(minGenerations, maxGenerations, value));
+        
+        // Update text with the selected value
+        GenerationText.text = $"Number of Generations: {generations}";
     }
 
     public void PlayGame()
@@ -66,6 +87,7 @@ public class GridManager : MonoBehaviour
                     timer = 0f;
                     UpdateGrid();
                     genCount++; 
+                    currentGen.text = $"Current Generation: {genCount}";
                 }
             }
             else
