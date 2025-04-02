@@ -18,7 +18,7 @@ public class GridManager : MonoBehaviour
 
     public Button PlayButton;
     public Button PauseButton;
-    private bool isRunning = false;
+    public bool isRunning = false;
 
     public Slider GenerationsSlider;
     public Text GenerationText; 
