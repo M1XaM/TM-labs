@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
     public float zoomAmount = 18f; 
     public float minZoom = 30f;
     public float maxZoom = 540f;
-    public float panSpeed = 200f;  // Panning (dragging) sensitivity
+    public float panSpeed = 50f;  // Panning (dragging) sensitivity
 
     private GridManager gridManager;  // Reference to GridManager
 
@@ -51,23 +51,23 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            move.y += panSpeed ; // Move camera up
+            move.y += panSpeed *Time.deltaTime ; // Move camera up
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            move.y -= panSpeed ; // Move camera down
+            move.y -= panSpeed *Time.deltaTime ; // Move camera down
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            move.x -= panSpeed; // Move camera left
+            move.x -= panSpeed*Time.deltaTime ; // Move camera left
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            move.x += panSpeed; // Move camera right
+            move.x += panSpeed*Time.deltaTime ; // Move camera right
         }
 
         // Apply movement to camera position
-        cam.transform.position += move*40;
+        cam.transform.position += move;
     
     }
 
