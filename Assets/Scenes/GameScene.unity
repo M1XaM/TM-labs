@@ -2672,11 +2672,11 @@ MonoBehaviour:
   GenerationText: {fileID: 103080735}
   currentGen: {fileID: 2075527829}
   cellSprites:
-  - {fileID: -2615874204119335, guid: 89872dda7e97c2edf99877ad6d9a0b33, type: 3}
-  - {fileID: -8425141836431729757, guid: a850a2030057b82ebb9c0952dbdcdeb8, type: 3}
-  - {fileID: 8166710274925509176, guid: 4a8988daa855fd8269cceb137abee89d, type: 3}
-  - {fileID: -6099873399732076034, guid: 081089d0592a6c0b3acf996df3101d06, type: 3}
-  - {fileID: 2063826154672905881, guid: 31d045ac43136745b9d6dbfd53234422, type: 3}
+  - {fileID: -7105049217667542417, guid: 836821f5c9ef38d4585b10c8f083472a, type: 3}
+  - {fileID: -6372875032264576015, guid: 018b15e29ec582643811f68e087165be, type: 3}
+  - {fileID: -6920274672158514710, guid: 1d61aa36254d4df4283f323c31debc20, type: 3}
+  - {fileID: -4544095981392678990, guid: 66434f42035b69f4685104e6d192c925, type: 3}
+  - {fileID: 1250766342393553535, guid: 7f65681af17f1d04f81e1701f7f06db1, type: 3}
   pixelsPerUnit: 100
   InfinityButton: {fileID: 1950428061}
   SpeedSlider: {fileID: 265699955}
