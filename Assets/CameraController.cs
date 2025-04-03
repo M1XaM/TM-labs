@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (gridManager != null && gridManager.isRunning)
+        if (gridManager != null)
         {
             MoveCamera();
             ClampCameraPosition();
@@ -75,8 +75,8 @@ public class CameraController : MonoBehaviour
 
     private void CalculateCameraBounds()
     {
-        float gridWidthTotal = gridManager.gridWidth * gridManager.cellSize;
-        float gridHeightTotal = gridManager.gridHeight * gridManager.cellSize;
+        float gridWidthTotal = gridManager.gridWidth * gridManager.cellSize - 15;
+        float gridHeightTotal = gridManager.gridHeight * gridManager.cellSize - 15;
 
         float cameraHalfHeight = cam.orthographicSize;
         float cameraHalfWidth = cameraHalfHeight * cam.aspect;
