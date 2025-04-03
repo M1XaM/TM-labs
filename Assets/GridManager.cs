@@ -7,9 +7,9 @@ public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
     public int gridSize = 1000; // Grid size (100x100)
-    public int gridWidth = 96;
-    public int gridHeight = 54;
-    public int cellSize = 10; // Each cell is 10x10 pixels
+    public int gridWidth = 95;
+    public int gridHeight = 53;
+    public int cellSize = 20; // Each cell is 10x10 pixels
     private Cell[,] grid; // 2D array to store cells
     float updateInterval;
     private float timer;
@@ -160,8 +160,8 @@ public class GridManager : MonoBehaviour
         grid = new Cell[gridWidth, gridHeight];
 
         // Add camera setup
-        float gridWidthTotal = gridWidth * cellSize;
-        float gridHeightTotal = gridHeight * cellSize;
+        float gridWidthTotal = gridWidth * cellSize - 10;
+        float gridHeightTotal = gridHeight * cellSize - 10;
 
         // Set camera to center of grid
         Camera.main.orthographicSize = gridHeightTotal / 2;
