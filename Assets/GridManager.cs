@@ -84,9 +84,9 @@ public class GridManager : MonoBehaviour
     {
         generations = Mathf.RoundToInt(Mathf.Lerp(minGenerations, maxGenerations, value));
         
-        GenerationText.text = $"Number of Generations: {generations}";
+        GenerationText.text = $"Number of generations: {generations}";
         genCount = 0;
-        currentGen.text = "Current Generation: 0";
+        currentGen.text = "Current generation: 0";
 
         ResetGrid();
         CreateGrid();
@@ -97,12 +97,13 @@ public class GridManager : MonoBehaviour
         PauseGame();
         generations = int.MaxValue;
         
-        GenerationText.text = "Number of Generations is unlimited";
+        GenerationText.text = "Number of generations is infinite";
         genCount = 0;
         currentGen.text = "Current Generation: 0";
 
         ResetGrid();
         CreateGrid();
+        PlayGame();
     }
 
     void ResetGrid()
@@ -142,7 +143,7 @@ public class GridManager : MonoBehaviour
                     timer = 0f;
                     UpdateGrid();
                     genCount++; 
-                    currentGen.text = $"Current Generation: {genCount}";
+                    currentGen.text = $"Current generation: {genCount}";
                 }
             }
             else
