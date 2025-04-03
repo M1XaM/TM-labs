@@ -10,7 +10,7 @@ public class GridManager : MonoBehaviour
     public int gridWidth = 96;
     public int gridHeight = 54;
     public int cellSize = 10; // Each cell is 10x10 pixels
-    private Cell[,] grid; // 2D array to store cells
+    private Cell[,] grid;
     float updateInterval;
     private float timer;
     private int generations;
@@ -29,11 +29,9 @@ public class GridManager : MonoBehaviour
     
     private int minGenerations = 1;
     private int maxGenerations = 5000;
-
     
     private float maxSpeed = 0.01f;
     private float minSpeed = 1.5f;
-
 
     public Button InfinityButton;
     public Slider SpeedSlider;
@@ -50,9 +48,6 @@ public class GridManager : MonoBehaviour
         }
     }
 
-
-
-    // Start is called before the first frame update
     public void Initiate()
     { 
         CreateGrid();
@@ -77,19 +72,37 @@ public class GridManager : MonoBehaviour
         updateInterval = Mathf.Lerp(minSpeed, maxSpeed, value); 
     }
 
-
-
-
     public void UpdateGenerations(float value)
     {
         generations = Mathf.RoundToInt(Mathf.Lerp(minGenerations, maxGenerations, value));
-        
         GenerationText.text = $"Number of generations: {generations}";
         genCount = 0;
         currentGen.text = "Current generation: 0";
 
-        ResetGrid();
-        CreateGrid();
+        ResetCells();
+    }
+
+    void ResetCells()
+    {
+        if (grid == null) return;
+
+        for (int x = 0; x < gridWidth; x++)
+        {
+            for (int y = 0; y < gridHeight; y++)
+            {
+                if (grid[x, y] != null)
+                {
+                    grid[x, y].SetState(false); // Reset cell to dead
+                    grid[x, y].Initialize(this, x, y, GetZone(x, y));
+                }
+            }
+        }
+    }
+
+    void ResetGrid()
+    {
+        PauseGame();
+        ResetCells();
     }
 
     public void UnlimitedGenerations()
@@ -101,23 +114,9 @@ public class GridManager : MonoBehaviour
         genCount = 0;
         currentGen.text = "Current Generation: 0";
 
-        ResetGrid();
-        CreateGrid();
+        ResetCells();
         PlayGame();
     }
-
-    void ResetGrid()
-    {
-        PauseGame();
-
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
-
-        grid = new Cell[gridWidth, gridHeight];
-    }
-
 
     public void PlayGame()
     {
@@ -130,7 +129,6 @@ public class GridManager : MonoBehaviour
         timer = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isRunning)
