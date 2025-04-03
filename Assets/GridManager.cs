@@ -11,7 +11,7 @@ public class GridManager : MonoBehaviour
     public int gridHeight = 54;
     public int cellSize = 10; // Each cell is 10x10 pixels
     private Cell[,] grid; // 2D array to store cells
-    public float updateInterval = 2.0f; // Time between updates
+    float updateInterval;
     private float timer;
     private int generations;
     private int genCount = 0;
@@ -28,7 +28,16 @@ public class GridManager : MonoBehaviour
     public float pixelsPerUnit = 100f; // Match this with your sprite's PPU setting
     
     private int minGenerations = 1;
-    private int maxGenerations = 1000;
+    private int maxGenerations = 5000;
+
+    
+    private float maxSpeed = 0.01f;
+    private float minSpeed = 1.5f;
+
+
+    public Button InfinityButton;
+    public Slider SpeedSlider;
+
 
     private void Awake() {
         if (Instance == null)
@@ -53,19 +62,61 @@ public class GridManager : MonoBehaviour
 
         GenerationsSlider.onValueChanged.AddListener(UpdateGenerations);
 
-        // Set initial slider value to max
         GenerationsSlider.value = 0.0f; 
         UpdateGenerations(GenerationsSlider.value);
+
+        InfinityButton.onClick.AddListener(UnlimitedGenerations);
+
+        SpeedSlider.onValueChanged.AddListener(UpdateSpeed);
+        SpeedSlider.value = 0.5f; 
+        UpdateSpeed(SpeedSlider.value); 
     }
+
+    public void UpdateSpeed(float value)
+    {
+        updateInterval = Mathf.Lerp(minSpeed, maxSpeed, value); 
+    }
+
+
+
 
     public void UpdateGenerations(float value)
     {
-        // Convert scrollbar value (0 to 1) into a range (1 to 1000)
         generations = Mathf.RoundToInt(Mathf.Lerp(minGenerations, maxGenerations, value));
         
-        // Update text with the selected value
         GenerationText.text = $"Number of Generations: {generations}";
+        genCount = 0;
+        currentGen.text = "Current Generation: 0";
+
+        ResetGrid();
+        CreateGrid();
     }
+
+    public void UnlimitedGenerations()
+    {
+        PauseGame();
+        generations = int.MaxValue;
+        
+        GenerationText.text = "Number of Generations is unlimited";
+        genCount = 0;
+        currentGen.text = "Current Generation: 0";
+
+        ResetGrid();
+        CreateGrid();
+    }
+
+    void ResetGrid()
+    {
+        PauseGame();
+
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        grid = new Cell[gridWidth, gridHeight];
+    }
+
 
     public void PlayGame()
     {
@@ -75,6 +126,7 @@ public class GridManager : MonoBehaviour
     public void PauseGame()
     {
         isRunning = false;
+        timer = 0f;
     }
 
     // Update is called once per frame
@@ -95,6 +147,7 @@ public class GridManager : MonoBehaviour
             }
             else
             {
+                PauseGame();
                 // Stop updating the grid if we've reached the maximum generations
                 Debug.Log("Maximum generations reached.");
             }
