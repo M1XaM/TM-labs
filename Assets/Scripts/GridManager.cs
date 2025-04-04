@@ -346,8 +346,9 @@ public class GridManager : MonoBehaviour
         Vector2 worldPoint = new Vector2(mousePosition.x, mousePosition.y);
         
         // Convert world coordinates to grid cell coordinates
-        int x = Mathf.FloorToInt(worldPoint.x / cellSize);
-        int y = Mathf.FloorToInt(worldPoint.y / cellSize);
+        int x = Mathf.FloorToInt((worldPoint.x + cellSize / 2f) / cellSize);
+        int y = Mathf.FloorToInt((worldPoint.y + cellSize / 2f) / cellSize);
+
         
         // Ensure we're within the grid bounds
         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight)
