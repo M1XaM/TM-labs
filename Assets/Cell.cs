@@ -9,6 +9,9 @@ public class Cell : MonoBehaviour
     private int x, y;
     private int zone;
     private SpriteRenderer spriteRenderer;
+    public int damageCounter = 1; // how many updates it can survive
+    public const int maxDamageCounter = 2;
+
 
     public void Initialize(GridManager manager, int x, int y, int zone)
     {

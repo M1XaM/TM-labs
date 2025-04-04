@@ -227,12 +227,31 @@ public class GridManager : MonoBehaviour
                 }
                 else if (zone == 0)
                 {
-                    if (isAlive && (aliveNeighbors != 2))
-                        newStates[x, y] = false; // Cell dies
+                    //damage zone
+                    if (isAlive && aliveNeighbors != 2)
+                    {
+                        // Decrease damage counter
+                        grid[x, y].damageCounter--;
+
+                        if (grid[x, y].damageCounter <= 0)
+                            newStates[x, y] = false; // Finally dies
+                        else
+                            newStates[x, y] = true; // Still alive
+                    }
                     else if (!isAlive && aliveNeighbors > 3)
-                        newStates[x, y] = true; // Cell becomes alive
+                    {
+                        newStates[x, y] = true; // Becomes alive
+                        grid[x, y].damageCounter = Cell.maxDamageCounter; // Reset counter
+                    }
                     else
-                        newStates[x, y] = isAlive; // Remains the same
+                    {
+                        newStates[x, y] = isAlive;
+
+                        // Reset counter if stable
+                        if (isAlive)
+                            grid[x, y].damageCounter = Cell.maxDamageCounter;
+                    }
+
                 }
                 else
                 {
