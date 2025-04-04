@@ -264,6 +264,29 @@ public class GridManager : MonoBehaviour
                         newStates[x, y] = isAlive;
                     }
                 }
+
+
+            }
+        }
+
+        for (int x = 0; x < gridWidth; x++)
+        {
+            for (int y = 0; y < gridHeight; y++)
+            {
+                // Check if cell is dead and triggers the 0.3% chance
+                if (!newStates[x, y] && Random.value < 0.003f)
+                {
+                    newStates[x, y] = true; // Revive center cell
+                    
+                    // Reset damage counter for center cell if in zone 0
+                    if (GetZone(x, y) == 0)
+                    {
+                        grid[x, y].damageCounter = Cell.maxDamageCounter;
+                    }
+
+                    // Revive cross-shaped neighbors
+                    ReviveCrossNeighbors(x, y, newStates);
+                }
             }
         }
 
@@ -272,6 +295,29 @@ public class GridManager : MonoBehaviour
             for (int y = 0; y < gridHeight; y++)
             {
                 grid[x, y].SetState(newStates[x, y]);
+            }
+        }
+    }
+
+    private void ReviveCrossNeighbors(int x, int y, bool[,] newStates)
+    {
+        int[] dx = { 0, 0, -1, 1 }; // Left, Right
+        int[] dy = { 1, -1, 0, 0 }; // Up, Down
+
+        for (int i = 0; i < 4; i++)
+        {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (IsValidCell(nx, ny))
+            {
+                newStates[nx, ny] = true; // Revive neighbor
+                
+                // Reset damage counter if neighbor is in zone 0
+                if (GetZone(nx, ny) == 0)
+                {
+                    grid[nx, ny].damageCounter = Cell.maxDamageCounter;
+                }
             }
         }
     }    
