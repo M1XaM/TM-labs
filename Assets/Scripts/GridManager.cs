@@ -288,10 +288,10 @@ public class GridManager : MonoBehaviour
 
     int GetZone(int x, int y)
     {
-        if (x < gridWidth / 2 && y < gridHeight / 2) return 0; // Top-left
-        if (x >= gridWidth / 2 && y < gridHeight / 2) return 1; // Top-right
-        if (x < gridWidth / 2 && y >= gridHeight / 2) return 2; // Bottom-left
-        return 3; // Bottom-right
+        if (x < gridWidth / 2 && y < gridHeight / 2) return 0; // Bottom-left
+        if (x >= gridWidth / 2 && y < gridHeight / 2) return 1; // Bottom-right
+        if (x < gridWidth / 2 && y >= gridHeight / 2) return 2; // Top-left
+        return 3; // Top-right
     }
 
     public void ActivateCellsAtMousePosition(Vector3 mousePosition)
