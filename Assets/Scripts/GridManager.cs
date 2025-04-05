@@ -35,7 +35,7 @@ public class GridManager : MonoBehaviour
     private float maxSpeed = 0.01f;
     private float minSpeed = 1.5f;
 
-    public Button InfinityButton;
+    public Button ClearButton;
     public Slider SpeedSlider;
 
 
@@ -62,11 +62,30 @@ public class GridManager : MonoBehaviour
         GenerationsSlider.value = 0.0f; 
         UpdateGenerations(GenerationsSlider.value);
 
-        InfinityButton.onClick.AddListener(UnlimitedGenerations);
+        ClearButton.onClick.AddListener(ClearGrid);
 
         SpeedSlider.onValueChanged.AddListener(UpdateSpeed);
         SpeedSlider.value = 0.5f; 
         UpdateSpeed(SpeedSlider.value); 
+    }
+
+    public void ClearGrid()
+    {
+        if (grid == null) return;
+
+        for (int x = 0; x < gridWidth; x++)
+        {
+            for (int y = 0; y < gridHeight; y++)
+            {
+                if (grid[x, y] != null)
+                {
+                    grid[x, y].SetState(false); // Reset cell to dead
+                }
+            }
+        }
+
+        PauseGame();
+        genCount = 0;
     }
 
     public void UpdateSpeed(float value)
@@ -77,7 +96,16 @@ public class GridManager : MonoBehaviour
     public void UpdateGenerations(float value)
     {
         generations = Mathf.RoundToInt(Mathf.Lerp(minGenerations, maxGenerations, value));
-        GenerationText.text = $"Number of generations: {generations}";
+        if (generations == maxGenerations) 
+        {
+            generations = int.MaxValue;
+            GenerationText.text = "Number of generations is infinite";
+        }
+        else 
+        {
+            GenerationText.text = $"Number of generations: {generations}";
+        }
+        
         genCount = 0;
         currentGen.text = "Current generation: 0";
 
@@ -105,19 +133,6 @@ public class GridManager : MonoBehaviour
     {
         PauseGame();
         ResetCells();
-    }
-
-    public void UnlimitedGenerations()
-    {
-        PauseGame();
-        generations = int.MaxValue;
-        
-        GenerationText.text = "Number of generations is infinite";
-        genCount = 0;
-        currentGen.text = "Current Generation: 0";
-
-        ResetCells();
-        PlayGame();
     }
 
     public void PlayGame()
@@ -246,10 +261,6 @@ public class GridManager : MonoBehaviour
                     else
                     {
                         newStates[x, y] = isAlive;
-
-                        // Reset counter if stable
-                        if (isAlive)
-                            grid[x, y].damageCounter = Cell.maxDamageCounter;
                     }
 
                 }
