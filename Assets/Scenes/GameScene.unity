@@ -2273,6 +2273,7 @@ MonoBehaviour:
   minZoom: 30
   maxZoom: 540
   panSpeed: 50
+  controlPanel: {fileID: 4788633}
 --- !u!1 &1766552992
 GameObject:
   m_ObjectHideFlags: 0

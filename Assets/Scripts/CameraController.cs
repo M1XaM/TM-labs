@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
@@ -7,10 +8,14 @@ public class CameraController : MonoBehaviour
     public float minZoom = 30f;
     public float maxZoom = 540f;
     public float panSpeed = 50f;
+    
+    // Reference to your control panel GameObject
+    public GameObject controlPanel;
 
     private GridManager gridManager;
     private Vector3 dragOrigin;
     private float minX, maxX, minY, maxY;
+    private bool isDragging = false;
 
     private void Start()
     {
@@ -29,18 +34,59 @@ public class CameraController : MonoBehaviour
         }
     }
 
+    private bool IsPointerOverControlPanel()
+    {
+        // First check if pointer is over any UI element
+        if (EventSystem.current && EventSystem.current.IsPointerOverGameObject())
+            return true;
+            
+        // If you have a specific control panel that's not a UI element
+        if (controlPanel != null)
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            
+            if (Physics.Raycast(ray, out hit))
+            {
+                // Check if the hit object is the control panel or a child of it
+                if (hit.transform.gameObject == controlPanel || 
+                    hit.transform.IsChildOf(controlPanel.transform))
+                {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+
     private void MoveCamera()
     {
-        // Handle mouse drag panning
+        // Start drag only if not over control panel
         if (Input.GetMouseButtonDown(0))
         {
-            dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
+            if (!IsPointerOverControlPanel())
+            {
+                isDragging = true;
+                dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
+            }
+            else
+            {
+                isDragging = false;
+            }
         }
 
-        if (Input.GetMouseButton(0))
+        // Continue drag only if we started a valid drag
+        if (Input.GetMouseButton(0) && isDragging)
         {
             Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
             cam.transform.position += difference;
+        }
+
+        // Reset dragging state
+        if (Input.GetMouseButtonUp(0))
+        {
+            isDragging = false;
         }
 
         // Handle zoom with scroll wheel
@@ -51,6 +97,10 @@ public class CameraController : MonoBehaviour
     {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
         if (scrollInput == 0) return;
+
+        // Don't zoom if over control panel
+        if (IsPointerOverControlPanel())
+            return;
 
         // Store original zoom and mouse position
         float originalSize = cam.orthographicSize;
