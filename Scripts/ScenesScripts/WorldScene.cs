@@ -7,11 +7,12 @@ public partial class WorldScene : Node2D
 
 	public override void _Ready()
 	{
-		fpsLabel = GetNode<Label>("MainCharacter/Camera/FPSLabel");
+		fpsLabel = GetNode<Label>("MainCharacter/Camera/UICanvas/FPSLabel");
+		Spawn.Instance.StartSpawning();
 	}
 
 	public override void _Process(double delta)
 	{
-a		fpsLabel.Text = "FPS: " + Engine.GetFramesPerSecond();
+		fpsLabel.Text = "FPS: " + Engine.GetFramesPerSecond();
 	}
 }

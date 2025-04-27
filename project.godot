@@ -17,7 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-QuestManager="*res://Scripts/QuestManager.cs"
+QuestManager="*res://Scripts/Managers/QuestManager.cs"
+Spawn="*res://Scripts/Managers/Spawn.cs"
+GameManager="*res://Scripts/Managers/GameManager.cs"
 
 [display]
 
@@ -28,6 +30,12 @@ window/size/resizable=false
 [dotnet]
 
 project/assembly_name="TheIsland"
+
+[file_customization]
+
+folder_colors={
+"res://Scripts/Managers/": "yellow"
+}
 
 [input]
 
