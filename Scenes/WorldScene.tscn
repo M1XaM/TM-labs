@@ -1,8 +1,8 @@
 [gd_scene load_steps=26 format=4 uid="uid://dx5wqjmlihni3"]
 
 [ext_resource type="Texture2D" uid="uid://cyc2aklqf7817" path="res://Assets/world/world_tileset.png" id="1_i4kms"]
-[ext_resource type="Script" uid="uid://btpgiij2t3tqv" path="res://Scripts/ScenesScripts/WorldScene.cs" id="1_qlydk"]
-[ext_resource type="Script" uid="uid://bp2e8dcx5pw6t" path="res://Scripts/CharacterScripts/MainCharacter.cs" id="2_ovpwc"]
+[ext_resource type="Script" path="res://Scripts/ScenesScripts/WorldScene.cs" id="1_qlydk"]
+[ext_resource type="Script" path="res://Scripts/CharacterScripts/MainCharacter.cs" id="2_ovpwc"]
 [ext_resource type="Texture2D" uid="uid://bu6wo8obrxm30" path="res://Assets/main-character/animations/idle/Character1M_1_idle_0.png" id="3_h3y8s"]
 [ext_resource type="Texture2D" uid="uid://bhyrn3adnlwgj" path="res://Assets/main-character/animations/idle/Character1M_1_idle_1.png" id="4_qlydk"]
 [ext_resource type="Texture2D" uid="uid://dtp22gw4jiosb" path="res://Assets/main-character/animations/idle/Character1M_1_idle_2.png" id="5_a0or0"]
