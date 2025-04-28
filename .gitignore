@@ -26,3 +26,5 @@ obj/
 .idea/
 .vscode/
 .vs/
+
+*.old*
