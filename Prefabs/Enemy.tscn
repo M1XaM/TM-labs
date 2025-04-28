@@ -1,7 +1,7 @@
 [gd_scene load_steps=54 format=3 uid="uid://3we1d1grsdaw"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterScripts/Enemy.cs" id="1_gti1y"]
-[ext_resource type="Texture2D" uid="uid://bklw3j5r7iy3x" path="res://Assets/enemy.png" id="2_yfbri"]
+[ext_resource type="Texture2D" uid="uid://bjwfyte2i8d6j" path="res://Assets/enemy.png" id="2_yfbri"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nh6j"]
 atlas = ExtResource("2_yfbri")
@@ -394,6 +394,8 @@ radius = 7.07107
 radius = 64.0078
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
 script = ExtResource("1_gti1y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
