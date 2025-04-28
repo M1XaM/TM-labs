@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 QuestManager="*res://Scripts/Managers/QuestManager.cs"
 Spawn="*res://Scripts/Managers/Spawn.cs"
 GameManager="*res://Scripts/Managers/GameManager.cs"
+TimeManager="*res://Scripts/Managers/TimeManager.cs"
 
 [display]
 
