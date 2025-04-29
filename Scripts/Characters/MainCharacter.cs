@@ -5,11 +5,16 @@ public partial class MainCharacter : CharacterBody2D
 {
 	[Export]
 	public float Speed = 200.0f; // movement speed in pixels per second
+
 	private AnimatedSprite2D _animatedSprite;
+	private Label _fpsLabel;
+	private Label _timeLabel;
 
 	public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		_fpsLabel = GetNode<Label>("Camera/UICanvas/FPSLabel");
+		_timeLabel = GetNode<Label>("Camera/UICanvas/TimeLabel");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -28,8 +33,6 @@ public partial class MainCharacter : CharacterBody2D
 
 		// Normalize velocity and apply speed
 		velocity = velocity.Normalized() * Speed;
-
-		// Update the character's velocity
 		Velocity = velocity;
 
 		if (velocity.X != 0)
@@ -48,5 +51,9 @@ public partial class MainCharacter : CharacterBody2D
 		{
 			_animatedSprite.Play("idle");
 		}
+
+
+		_fpsLabel.Text = $"FPS: {Engine.GetFramesPerSecond()}";
+		_timeLabel.Text = TimeManager.Instance.CurrentTimeString;
 	}
 }
