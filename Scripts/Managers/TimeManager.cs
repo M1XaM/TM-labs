@@ -5,36 +5,18 @@ public partial class TimeManager : Node
 	// Singleton instance
 	public static TimeManager Instance { get; private set; }
 
-	// Time tracking
+	// Time tracking - these are now your primary time attributes
 	public int Minutes { get; private set; }
 	public int Hours { get; private set; }
 	public int Days { get; private set; }
 
-	// Pre-formatted string property
+	// Time Accessing (string format remains unchanged)
 	public string CurrentTimeString => $"Day {Days} - {Hours:D2}:{Minutes:D2}";
-	
-	// Structured time property
-	public GameTime CurrentTime => new GameTime(Days, Hours, Minutes);
 
 	// Configuration
-	[Export] public double RealTimePerGameDay = 10f;
+	[Export] public double RealTimePerGameDay = 10f;  // real seconds = game day
 	private double _timePerMinute;
 	private double _accumulatedTime;
-
-	// Simple struct for time data
-	public struct GameTime
-	{
-		public int Days { get; }
-		public int Hours { get; }
-		public int Minutes { get; }
-
-		public GameTime(int days, int hours, int minutes)
-		{
-			Days = days;
-			Hours = hours;
-			Minutes = minutes;
-		}
-	}
 
 	public override void _Ready()
 	{

@@ -27,6 +27,7 @@ TimeManager="*res://Scripts/Managers/TimeManager.cs"
 window/size/viewport_width=1000
 window/size/viewport_height=600
 window/size/resizable=false
+mouse_cursor/custom_image="res://Assets/world/UI/cursor_03.png"
 
 [dotnet]
 
