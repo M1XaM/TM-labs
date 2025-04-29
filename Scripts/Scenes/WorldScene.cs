@@ -7,6 +7,7 @@ public partial class WorldScene : Node2D
 
 	public override void _Ready()
 	{
+		ShowAllNodes(this);
 		fpsLabel = GetNode<Label>("MainCharacter/Camera/UICanvas/FPSLabel");
 		
 		Spawn.Instance.StartSpawning();
@@ -21,5 +22,18 @@ public partial class WorldScene : Node2D
 	public override void _ExitTree()
 	{
 		TimeManager.Instance.StopTimeSystem();
+	}
+
+	private void ShowAllNodes(Node node)
+	{
+		if (node is CanvasItem canvasItem && !canvasItem.Visible)
+		{
+			canvasItem.Visible = true;
+		}
+
+		foreach (Node child in node.GetChildren())
+		{
+			ShowAllNodes(child);
+		}
 	}
 }
