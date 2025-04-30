@@ -2,8 +2,5 @@ using Godot;
 
 public partial class Mary : Neighbors
 {
-	protected override void Interact()
-	{
-		GD.Print("Hello! I'm Neighbor 1, nice to meet you!");
-	}
+	protected override string DialogFilePath => "res://Assets/dialogs/mary.json";
 }

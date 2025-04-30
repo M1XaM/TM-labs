@@ -1,0 +1,20 @@
+[
+	{
+		"Question": "Hi",
+		"Response": "Hi there, u must be new, welcome!",
+		"CanRepeat": false,
+		"Passed": false
+	},
+	{
+		"Question": "So, how we are entertain here?",
+		"Response": "Farming, haunting, hiking...",
+		"CanRepeat": true,
+		"Passed": false
+	},
+	{
+		"Question": "Can u tell me more about island's history?",
+		"Response": "I think it's none of your business!",
+		"CanRepeat": false,
+		"Passed": false
+	}
+]
