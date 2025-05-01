@@ -1,147 +1,165 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 
-public partial class Neighbors: CharacterBody2D {
+public partial class Neighbors : CharacterBody2D
+{
 	public Area2D DetectionArea;
 	public AnimatedSprite2D AnimatedSprite;
 
 	protected bool _playerInRange;
-	private bool _isDialogLoaded = false; // New flag to track if dialog was loaded
-
-	// Inherited class should override this path
+	private bool _isDialogLoaded = false;
 	protected virtual string DialogFilePath => "res://dialogs/default.json";
-
-	private List < DialogEntry > _dialogEntries = new();
+	private List<DialogEntry> _dialogEntries = new();
 	private bool _isDialogActive = false;
-	private List < int > _currentOptionIndices = new();
+	private List<int> _currentOptionIndices = new();
 
-	private bool _key1WasPressed = false;
-	private bool _key2WasPressed = false;
-	private bool _key3WasPressed = false;
+	// Key handling refactored to use collections
+	private readonly List<Key> _dialogKeys = new() { Key.Key1, Key.Key2, Key.Key3 };
+	private Dictionary<Key, bool> _previousKeyStates = new();
 
-	public override void _Ready() {
-		DetectionArea = GetNode < Area2D > ("Area2D");
-		AnimatedSprite = GetNode < AnimatedSprite2D > ("AnimatedSprite2D");
+	public override void _Ready()
+	{
+		DetectionArea = GetNode<Area2D>("Area2D");
+		AnimatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 
 		DetectionArea.BodyEntered += OnBodyEntered;
 		DetectionArea.BodyExited += OnBodyExited;
 
-		if (AnimatedSprite != null && AnimatedSprite.SpriteFrames.HasAnimation("idle")) {
-			AnimatedSprite.Play("idle");
+		// Initialize key states
+		foreach (var key in _dialogKeys)
+		{
+			_previousKeyStates[key] = false;
 		}
-	}
 
-	private void OnBodyEntered(Node body) {
-		if (body.IsInGroup("Player")) {
+		if (AnimatedSprite?.SpriteFrames?.HasAnimation("idle") == true)
+			AnimatedSprite.Play("idle");
+	}
+	
+	private void OnBodyEntered(Node body)
+	{
+		if (body.IsInGroup("Player"))
+		{
 			_playerInRange = true;
 			AnimatedSprite.Modulate = Colors.Green;
 		}
 	}
 
-	private void OnBodyExited(Node body) {
-		if (body.IsInGroup("Player")) {
+	private void OnBodyExited(Node body)
+	{
+		if (body.IsInGroup("Player"))
+		{
 			_playerInRange = false;
 			AnimatedSprite.Modulate = Colors.White;
-			_isDialogActive = false;
-			GD.Print("\n[You moved away from the character. Conversation ended.]");
+			if (_isDialogActive)
+			{
+				_isDialogActive = false;
+				GD.Print("\n[You moved away from the character. Conversation ended.]");
+			}
 		}
 	}
 
-	public override void _Process(double delta) {
-		if (_playerInRange && Input.IsActionJustPressed("e") && !_isDialogActive) {
-			Interact();
+	// Existing BodyEntered/Exited methods remain the same...
+
+	public override void _Process(double delta)
+	{
+		if (_playerInRange && Input.IsActionJustPressed("e") && !_isDialogActive)
+		{
+			StartDialog();
 		}
 
-		if (_isDialogActive) {
-			// Get current key states
-			bool key1Now = Input.IsKeyPressed(Key.Key1);
-			bool key2Now = Input.IsKeyPressed(Key.Key2);
-			bool key3Now = Input.IsKeyPressed(Key.Key3);
-
-			// Check for new presses (current true + previous false)
-			if (key1Now && !_key1WasPressed) HandleDialogChoice(0);
-			if (key2Now && !_key2WasPressed) HandleDialogChoice(1);
-			if (key3Now && !_key3WasPressed) HandleDialogChoice(2);
-
-			// Update previous states
-			_key1WasPressed = key1Now;
-			_key2WasPressed = key2Now;
-			_key3WasPressed = key3Now;
+		if (_isDialogActive)
+		{
+			HandleKeyInputs();
 		}
 
-		if (AnimatedSprite != null && !AnimatedSprite.IsPlaying()) {
+		HandleIdleAnimation();
+	}
+
+	private void HandleKeyInputs()
+	{
+		for (int i = 0; i < _dialogKeys.Count; i++)
+		{
+			var key = _dialogKeys[i];
+			var currentState = Input.IsKeyPressed(key);
+			
+			if (currentState && !_previousKeyStates[key])
+			{
+				HandleDialogChoice(i);
+			}
+			_previousKeyStates[key] = currentState;
+		}
+	}
+
+	private void HandleIdleAnimation()
+	{
+		if (AnimatedSprite != null && !AnimatedSprite.IsPlaying())
+		{
 			AnimatedSprite.Play("idle");
 		}
 	}
 
-	protected void Interact() {
-		StartDialog();
-	}
-
-	protected virtual void StartDialog() {
-		// Reset key states when starting dialog
-		_key1WasPressed = Input.IsKeyPressed(Key.Key1);
-		_key2WasPressed = Input.IsKeyPressed(Key.Key2);
-		_key3WasPressed = Input.IsKeyPressed(Key.Key3);
-
-		// Load dialog file only ONCE when first interacting
-		if (!_isDialogLoaded) {
-			var file = FileAccess.Open(DialogFilePath, FileAccess.ModeFlags.Read);
-			if (file == null) {
-				GD.PrintErr("Failed to open dialog file: ", DialogFilePath);
-				return;
-			}
-
-			string jsonText = file.GetAsText();
-			file.Close();
-
-			try {
-				_dialogEntries = JsonSerializer.Deserialize < List < DialogEntry >> (jsonText);
-				_isDialogLoaded = true;
-			} catch (Exception e) {
-				GD.PrintErr("Failed to parse dialog JSON: ", e.Message);
-				return;
-			}
+	protected virtual void StartDialog()
+	{
+		// Reset key states using collection
+		foreach (var key in _dialogKeys)
+		{
+			_previousKeyStates[key] = Input.IsKeyPressed(key);
 		}
 
-		// Reset dialog state
+		if (!_isDialogLoaded) LoadDialogFile();
+
 		_isDialogActive = true;
 		_currentOptionIndices.Clear();
 		GD.Print("\nChoose a question:");
 
-		// Show available questions
-		int shownOptions = 0;
-		int availableQuestions = 0;
-
-		// First count available questions
-		foreach(var entry in _dialogEntries) {
-			if (!entry.Passed || entry.CanRepeat) availableQuestions++;
-		}
-
-		// Show questions + exit option
-		for (int i = 0; i < _dialogEntries.Count; i++) {
-			var entry = _dialogEntries[i];
-
-			if (entry.Passed && !entry.CanRepeat) continue;
-
-			_currentOptionIndices.Add(i);
-			shownOptions++;
-			GD.Print($"{shownOptions}. {entry.Question}");
-
-			// Show max 2 questions + 1 exit option
-			if (shownOptions >= 2 || _currentOptionIndices.Count >= 3) break;
-		}
-
-		// Always add exit as last option
-		if (shownOptions < 3) {
-			_currentOptionIndices.Add(-1); // -1 marks exit
-			GD.Print($"{shownOptions + 1}. Exit conversation");
-		}
-
-		_isDialogActive = true;
+		ShowDialogOptions();
 	}
+
+	private void LoadDialogFile()
+	{
+		using var file = FileAccess.Open(DialogFilePath, FileAccess.ModeFlags.Read);
+		if (file == null)
+		{
+			GD.PrintErr("Failed to open dialog file: ", DialogFilePath);
+			return;
+		}
+
+		try
+		{
+			_dialogEntries = JsonSerializer.Deserialize<List<DialogEntry>>(file.GetAsText());
+			_isDialogLoaded = true;
+		}
+		catch (Exception e)
+		{
+			GD.PrintErr("Failed to parse dialog JSON: ", e.Message);
+		}
+	}
+
+	private void ShowDialogOptions()
+	{
+		var eligibleIndices = _dialogEntries
+			.Select((entry, index) => new { entry, index })
+			.Where(x => !x.entry.Passed || x.entry.CanRepeat)
+			.Select(x => x.index)
+			.ToList();
+
+		// Show up to 2 questions
+		foreach (var index in eligibleIndices.Take(2))
+		{
+			_currentOptionIndices.Add(index);
+			GD.Print($"{_currentOptionIndices.Count}. {_dialogEntries[index].Question}");
+		}
+
+		// Add exit option
+		_currentOptionIndices.Add(-1);
+		GD.Print($"{_currentOptionIndices.Count}. Exit conversation");
+	}
+
+	// Existing HandleDialogChoice and DialogEntry class remain the same...
+
 
 	private void HandleDialogChoice(int index) {
 		if (index >= _currentOptionIndices.Count) return;
