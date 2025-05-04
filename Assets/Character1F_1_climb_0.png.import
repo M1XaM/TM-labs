@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://baaq1xxpech5q"
-path="res://.godot/imported/Character1F_1_climb_0.png-a2e472c724b203511bdc74c980c0de6b.ctex"
+path="res://.godot/imported/Character1F_1_climb_0.png-95d164b4958dfb17cf73277342ac6cc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/characters/main-character/Female/Character 1/Clothes 1/Character1F_1_climb_0.png"
-dest_files=["res://.godot/imported/Character1F_1_climb_0.png-a2e472c724b203511bdc74c980c0de6b.ctex"]
+source_file="res://Assets/Character1F_1_climb_0.png"
+dest_files=["res://.godot/imported/Character1F_1_climb_0.png-95d164b4958dfb17cf73277342ac6cc6.ctex"]
 
 [params]
 

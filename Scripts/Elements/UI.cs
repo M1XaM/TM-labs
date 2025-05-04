@@ -11,10 +11,13 @@ public partial class UI : Node2D
 		_fpsLabel = GetNode<Label>("FPSLabel");
 		_timeLabel = GetNode<Label>("TimeLabel");
 	}
-	
 	public override void _PhysicsProcess(double delta)
 	{
 		_fpsLabel.Text = $"FPS: {Engine.GetFramesPerSecond()}";
 		_timeLabel.Text = TimeManager.Instance.CurrentTimeString;
 	}
-}
+	
+		
+		}
+		
+		
