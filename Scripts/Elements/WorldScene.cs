@@ -9,6 +9,8 @@ public partial class WorldScene : Node2D
 
 	public override void _Ready()
 	{
+		GameManager.Instance.CurrentWorld = this;
+		
 		ShowAllNodes(this);
 		Spawn.Instance.StartSpawning();
 		TimeManager.Instance.StartTimeSystem();
@@ -21,32 +23,40 @@ public partial class WorldScene : Node2D
 	
 	private void OnPausePressed()
 	{
-		 if (_isPaused)
-		{
-			// Unpause the game: restart necessary systems
-			_isPaused = false;
-			_pauseButton.Text = "Pause";  // Change the text to "Pause"
-
-			// Restart systems that should be active when unpaused
-			TimeManager.Instance.StartTimeSystem();
-			Spawn.Instance.StartSpawning();
-
-			GD.Print("Game resumed");
-		}
-		else
+		if(!_isPaused)
 		{
 			_isPaused = true;
-			_pauseButton.Text = "Resume";  // Change the text to "Resume"
-
+			
 			// Stop systems that should be paused
 			TimeManager.Instance.StopTimeSystem();
 			Spawn.Instance.StopSpawning();
+			
+			var pauseScene = GD.Load<PackedScene>("res://Scenes/Pause.tscn");
+			var pauseInstance = pauseScene.Instantiate<Control>();
+			pauseInstance.Name = "PauseMenu";
+			GetTree().Root.AddChild(pauseInstance); // Add it as a child of the root (or you can add it under any node)
 
 			GD.Print("Game paused");
 		}
 	}
 	
+	public void ResumeGame()
+	{
+		// Resume systems and remove the pause menu
+		_isPaused = false;
+		TimeManager.Instance.StartTimeSystem();
+		Spawn.Instance.StartSpawning();
 
+		// Find and remove the pause menu overlay
+		var pauseMenu = GetTree().Root.GetNodeOrNull<Control>("PauseMenu");
+		if (pauseMenu != null)
+		{
+			pauseMenu.QueueFree(); // Remove the pause menu from the scene
+		}
+
+		GD.Print("Game resumed");
+	}
+	
 	public override void _Process(double delta)
 	{
 	}
@@ -67,6 +77,11 @@ public partial class WorldScene : Node2D
 		{
 			ShowAllNodes(child);
 		}
+	}
+	
+	public void SetPaused(bool value)
+	{
+		_isPaused = value;
 	}
 	
 	 public bool IsPaused => _isPaused;

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi7h7nbvwjaml"]
+
+[ext_resource type="Script" path="res://Scripts/Scenes/PauseMenu.cs" id="1_3wx6o"]
+
+[sub_resource type="Theme" id="Theme_66ppv"]
+default_base_scale = 0.05
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_66ppv")
+script = ExtResource("1_3wx6o")
+metadata/_edit_use_anchors_ = true
+
+[node name="ResumeBtn" type="Button" parent="."]
+layout_mode = 2
+offset_right = 70.0
+offset_bottom = 31.0
+text = "Resume"
+
+[node name="QuitBtn" type="Button" parent="."]
+layout_mode = 2
+offset_left = 14.0
+offset_top = 17.0
+offset_right = 56.0
+offset_bottom = 48.0
+text = "Quit"

@@ -3,8 +3,13 @@ using System;
 
 public partial class GameManager : Node
 {
+	
+	
 	private static GameManager _instance;
 	public static GameManager Instance => _instance;
+	
+	public WorldScene CurrentWorld { get; set; }
+
 	
 	public bool bossKilled = false;
 	

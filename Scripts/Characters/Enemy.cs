@@ -40,14 +40,11 @@ public partial class Enemy : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		
-		var worldScene = GetTree().Root.GetNode<WorldScene>("WorldScene");
-
-		// Skip movement processing if the game is paused
-		if (worldScene != null && worldScene.IsPaused)
+		if (GameManager.Instance.CurrentWorld?.IsPaused == true)
+	
 		{
-			_animationPlayer.Stop(); // Stop animation if game is paused
-			return; // Prevent movement and logic updates while paused
+			 _animationPlayer.Stop();
+			return; // Prevent movement and physics updates when paused
 		}
 		
 		

@@ -5520,6 +5520,7 @@ shape = SubResource("CapsuleShape2D_a0ex8")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseBtn" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(100, 30)
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Pause"
