@@ -15,12 +15,6 @@ public partial class MainCharacter : CharacterBody2D
 	{
 		var worldScene = GetTree().Root.GetNode<WorldScene>("WorldScene");
 
-		// Skip movement processing if the game is paused
-		if (worldScene != null && worldScene.IsPaused)
-		{
-			 _animatedSprite.Stop();
-			return; // Prevent movement and physics updates when paused
-		}
 		
 		Vector2 velocity = Vector2.Zero;
 

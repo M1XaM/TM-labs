@@ -40,12 +40,6 @@ public partial class Enemy : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		if (GameManager.Instance.CurrentWorld?.IsPaused == true)
-	
-		{
-			 _animationPlayer.Stop();
-			return; // Prevent movement and physics updates when paused
-		}
 		
 		
 		if (_player != null)

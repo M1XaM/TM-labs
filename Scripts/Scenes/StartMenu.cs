@@ -7,14 +7,23 @@ public partial class StartMenu : Control
 	
 		public override void _Ready()
 	{
+		// Ensure the button is correctly retrieved from the scene
 		_startButton = GetNode<Button>("StartBtn");
-		_startButton.Pressed += OnStartPressed;
-		
+
+		if (_startButton != null)
+		{
+			GD.Print("Start button found!");
+			_startButton.Pressed += OnStartPressed;
+		}
+		else
+		{
+			GD.PrintErr("Start button not found!");
+		}
 	}
 
-	
 	private void OnStartPressed()
 	{
+			GD.Print("start pressed");
 
 		if (GameManager.Instance != null)
 		{

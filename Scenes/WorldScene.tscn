@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://dx5wqjmlihni3"]
+[gd_scene load_steps=45 format=4 uid="uid://dx5wqjmlihni3"]
 
 [ext_resource type="Texture2D" uid="uid://cyc2aklqf7817" path="res://Assets/world/world_tileset.png" id="1_i4kms"]
 [ext_resource type="Script" path="res://Scripts/Scenes/WorldScene.cs" id="1_qlydk"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://cibjvv2fhirj6" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_5.png" id="28_07o3o"]
 [ext_resource type="Texture2D" uid="uid://06s7janwtkhr" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_6.png" id="29_uoc54"]
 [ext_resource type="Texture2D" uid="uid://c4acnqbftlqt2" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_7.png" id="30_7jy0g"]
+[ext_resource type="PackedScene" uid="uid://bi7h7nbvwjaml" path="res://Scenes/Pause.tscn" id="33_pjj3n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0or0"]
 texture = ExtResource("1_i4kms")
@@ -5519,8 +5520,4 @@ shape = SubResource("CapsuleShape2D_a0ex8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseBtn" type="Button" parent="CanvasLayer"]
-custom_minimum_size = Vector2(100, 30)
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Pause"
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("33_pjj3n")]

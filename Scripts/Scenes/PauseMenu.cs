@@ -3,63 +3,62 @@ using System;
 
 public partial class PauseMenu : Control
 {
-	private Button _resumeButton;
-	private Button _quitButton;
 	
-	
+	private AnimationPlayer _animationPlayer;
+
 	public override void _Ready()
 	{
-		_resumeButton = GetNode<Button>("ResumeBtn");
-		_resumeButton.Pressed += OnResumePressed;
-		
-		_quitButton = GetNode<Button>("QuitBtn");
-		_quitButton.Pressed += OnQuitPressed;
-		
-				
+		_animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+		_animationPlayer.Play("RESET");
 	}
-
+	
+	public override void _Process(double delta)
+{
+	TestEsc();
+}
+	
+	  private void Resume()
+		{
+		GetTree().Paused = false;
+		_animationPlayer.PlayBackwards("blur");
+		}
+		
+		private void Pause()
+	{
+		GetTree().Paused = true;
+		_animationPlayer.Play("blur");
+	}
+	
+	private void TestEsc()
+	{
+		if (Input.IsActionJustPressed("escape"))
+		{
+			if (GetTree().Paused)
+				Resume();
+			else
+				Pause();
+		}
+	}
 	
 	private void OnResumePressed()
 	{
-	GD.Print("Resume Button Pressed");
-
-		if (GameManager.Instance != null)
-		{
-			// Call the ResumeGame method from the WorldScene
-			if (GameManager.Instance.CurrentWorld is WorldScene worldScene)
-			{
-				worldScene.ResumeGame();
-			}
-			else
-			{
-				GD.PrintErr("CurrentWorld is not a WorldScene.");
-			}
-		}
-		else
-		{
-			GD.PrintErr("GameManager is not initialized.");
-		}
+		Resume();
 	}
-	
+
 	private void OnQuitPressed()
 	{
-	if (GameManager.Instance != null)
+		if (GameManager.Instance.CurrentWorld != null)
 		{
-			var pauseMenu = GetTree().Root.GetNodeOrNull("PauseMenu");
-		if (pauseMenu != null)
-		{
-			pauseMenu.QueueFree();
-		}
-
-		// Optional: clear the reference to the current world
-		GameManager.Instance.CurrentWorld = null;
-
-		// Switch to the Start scene
+			GameManager.Instance.CurrentWorld._ExitTree(); // Call cleanup logic of the current world scene
+			// Transition to the start scene
 		GetTree().ChangeSceneToFile("res://Scenes/Start.tscn");
+		GD.Print("Game quit and reset.");
 		}
-		else
-		{
-			GD.PrintErr("GameManager is not initialized.");
-		}
+
+		
 	}
+	
+	
+	
+	
 }

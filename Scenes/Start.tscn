@@ -30,5 +30,4 @@ offset_right = 98.0
 offset_bottom = 88.0
 text = "Start Game"
 
-[connection signal="pressed" from="StartBtn" to="." method="OnStartButtonPressed"]
-[connection signal="pressed" from="StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="StartBtn" to="." method="OnStartPressed"]
