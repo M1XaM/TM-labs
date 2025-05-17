@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public partial class Farm : TileMapLayer
 {
-	private Dictionary<Vector2I, int> _cellTimes = new Dictionary<Vector2I, int>();
+	public Dictionary<Vector2I, int> _cellTimes = new Dictionary<Vector2I, int>();
 	
 	public override void _Ready()
 	{
@@ -73,8 +73,10 @@ public partial class Farm : TileMapLayer
 	
 	public void PlantSeedAtCell(Vector2I cellPosition)
 	{
-		// Change from empty soil (63,11) to first growth phase (51,12)
-		if (GetCellAtlasCoords(cellPosition) == new Vector2I(63, 11))
+		Vector2I currentCoords = GetCellAtlasCoords(cellPosition);
+		
+		// Only plant if cell is empty soil
+		if (currentCoords == new Vector2I(63, 11))
 		{
 			SetCell(cellPosition, GetCellSourceId(cellPosition), new Vector2I(51, 12));
 			_cellTimes[cellPosition] = TimeManager.Instance.Days;
