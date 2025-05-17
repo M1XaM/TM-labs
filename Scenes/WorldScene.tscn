@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://cibjvv2fhirj6" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_5.png" id="28_07o3o"]
 [ext_resource type="Texture2D" uid="uid://06s7janwtkhr" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_6.png" id="29_uoc54"]
 [ext_resource type="Texture2D" uid="uid://c4acnqbftlqt2" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_7.png" id="30_7jy0g"]
-[ext_resource type="PackedScene" uid="uid://bi7h7nbvwjaml" path="res://Scenes/Pause.tscn" id="33_pjj3n"]
+[ext_resource type="PackedScene" uid="uid://bi7h7nbvwjaml" path="res://Scenes/PauseScene.tscn" id="33_pjj3n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0or0"]
 texture = ExtResource("1_i4kms")

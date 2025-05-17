@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqdeqatj8vxlm"]
 
-[ext_resource type="Script" path="res://Scripts/Scenes/StartMenu.cs" id="1_dva35"]
+[ext_resource type="Script" path="res://Scripts/Scenes/StartScene.cs" id="1_1vbcy"]
 
 [sub_resource type="Theme" id="Theme_vxtxu"]
 
-[node name="Start" type="Control"]
+[node name="StartScene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_vxtxu")
-script = ExtResource("1_dva35")
+script = ExtResource("1_1vbcy")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -22,7 +22,7 @@ text = "The Island"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StartBtn" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 57.0
@@ -30,4 +30,4 @@ offset_right = 98.0
 offset_bottom = 88.0
 text = "Start Game"
 
-[connection signal="pressed" from="StartBtn" to="." method="OnStartPressed"]
+[connection signal="pressed" from="StartButton" to="." method="OnStartPressed"]
