@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://b3kfxi65nvamy"
+path="res://.godot/imported/51_giantgummybear_dish.png-aa58d1ff430383639886f74564780ae4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/51_giantgummybear_dish.png"
+dest_files=["res://.godot/imported/51_giantgummybear_dish.png-aa58d1ff430383639886f74564780ae4.ctex"]
 
 [params]
 

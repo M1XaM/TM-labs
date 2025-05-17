@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://djlulhewct14i"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_bvg6g"]
+[ext_resource type="Texture2D" uid="uid://ck2n4n7kapguc" path="res://Assets/farm/carrot/carrot_05.png" id="2_rj7nt"]
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_bvg6g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 36.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("2_rj7nt")

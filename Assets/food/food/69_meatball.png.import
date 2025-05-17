@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://deh5wjmsc0ul7"
+path="res://.godot/imported/69_meatball.png-87a0c4c5dfaa7ca8927b874f101e9a2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/69_meatball.png"
+dest_files=["res://.godot/imported/69_meatball.png-87a0c4c5dfaa7ca8927b874f101e9a2b.ctex"]
 
 [params]
 

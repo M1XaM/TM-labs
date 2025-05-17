@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://b3wxe3b5u4yxj"
+path="res://.godot/imported/100_taco_dish.png-9b10d3c066dc85a913c25ca2b977f555.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/100_taco_dish.png"
+dest_files=["res://.godot/imported/100_taco_dish.png-9b10d3c066dc85a913c25ca2b977f555.ctex"]
 
 [params]
 

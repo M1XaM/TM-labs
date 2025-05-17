@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://dqyuslm1k83c2"
+path="res://.godot/imported/90_strawberrycake.png-97392139e325cc2efdd6c92bb396cf35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/90_strawberrycake.png"
+dest_files=["res://.godot/imported/90_strawberrycake.png-97392139e325cc2efdd6c92bb396cf35.ctex"]
 
 [params]
 

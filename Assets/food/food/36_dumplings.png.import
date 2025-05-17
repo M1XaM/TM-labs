@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://tqyxhruxu1q0"
+path="res://.godot/imported/36_dumplings.png-ca68a3fda4342da56d7efee859d076c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/36_dumplings.png"
+dest_files=["res://.godot/imported/36_dumplings.png-ca68a3fda4342da56d7efee859d076c9.ctex"]
 
 [params]
 

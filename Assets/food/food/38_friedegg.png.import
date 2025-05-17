@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://bnrdyncedq6o1"
+path="res://.godot/imported/38_friedegg.png-4d03e88b249e3f6b7f828224404968b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/38_friedegg.png"
+dest_files=["res://.godot/imported/38_friedegg.png-4d03e88b249e3f6b7f828224404968b4.ctex"]
 
 [params]
 

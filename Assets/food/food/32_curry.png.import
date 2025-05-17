@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://nrjamv3jx70d"
+path="res://.godot/imported/32_curry.png-6b1238f9e39d4f69fb745c29b8adee16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/32_curry.png"
+dest_files=["res://.godot/imported/32_curry.png-6b1238f9e39d4f69fb745c29b8adee16.ctex"]
 
 [params]
 

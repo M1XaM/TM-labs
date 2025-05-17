@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfhjldd7sqf5"
-path="res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"
+uid="uid://batmg75j2p75e"
+path="res://.godot/imported/05_apple_pie.png-83a753fa2ea277e2728407a44fb59c77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/food/01_dish.png"
-dest_files=["res://.godot/imported/01_dish.png-fb957ab468a9e782f65d19b80521ea70.ctex"]
+source_file="res://Assets/food/food/05_apple_pie.png"
+dest_files=["res://.godot/imported/05_apple_pie.png-83a753fa2ea277e2728407a44fb59c77.ctex"]
 
 [params]
 
