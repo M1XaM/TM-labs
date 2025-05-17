@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://bi7h7nbvwjaml"]
 
-[ext_resource type="Script" path="res://Scripts/Scenes/PauseMenu.cs" id="1_3wx6o"]
-[ext_resource type="Shader" path="res://Scenes/Pause.gdshader" id="2_vivgy"]
+[ext_resource type="Script" path="res://Scripts/Scenes/PauseScene.cs" id="1_vfl0t"]
+[ext_resource type="Shader" path="res://Scenes/Pause.gdshader" id="2_4pj6l"]
 
 [sub_resource type="Theme" id="Theme_66ppv"]
 default_base_scale = 0.05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cy1cj"]
-shader = ExtResource("2_vivgy")
+shader = ExtResource("2_4pj6l")
 shader_parameter/lod = 0.0
 
 [sub_resource type="Animation" id="Animation_ln4w1"]
@@ -71,7 +71,7 @@ _data = {
 "blur": SubResource("Animation_yr55y")
 }
 
-[node name="Pause" type="Control"]
+[node name="PauseScene" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -84,7 +84,7 @@ offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_66ppv")
-script = ExtResource("1_3wx6o")
+script = ExtResource("1_vfl0t")
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
