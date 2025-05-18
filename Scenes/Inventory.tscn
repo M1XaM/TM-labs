@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwd0ud45h7xbx"]
+[gd_scene load_steps=6 format=3 uid="uid://dwd0ud45h7xbx"]
 
 [ext_resource type="Texture2D" uid="uid://be2mub54q5esk" path="res://Assets/inventory/1 Sprites/Book Desk/6.png" id="1_8of1w"]
+[ext_resource type="Script" path="res://Scripts/Scenes/Inventory.gd" id="1_vk147"]
 [ext_resource type="Texture2D" uid="uid://dcdr8ijobqys1" path="res://Assets/inventory/1 Sprites/Content/5 Holders/7.png" id="2_6uvn3"]
 [ext_resource type="Script" path="res://Scripts/Scenes/Slot.gd" id="3_6fdwi"]
 
@@ -8,20 +9,29 @@
 texture = ExtResource("2_6uvn3")
 
 [node name="Inventory" type="Node2D"]
+script = ExtResource("1_vk147")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 205.0
-offset_top = 200.0
-offset_right = 789.0
-offset_bottom = 548.0
+offset_left = 49.0
+offset_top = 126.0
+offset_right = 309.0
+offset_bottom = 474.0
 texture = ExtResource("1_8of1w")
 expand_mode = 1
 
+[node name="Label" type="Label" parent="TextureRect"]
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 105.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.493837, 0.0268977, 0.165059, 1)
+text = "Inventory 🎒"
+
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 234.0
-offset_top = 284.0
-offset_right = 468.0
-offset_bottom = 462.0
+offset_left = 83.0
+offset_top = 200.0
+offset_right = 317.0
+offset_bottom = 381.0
 theme_override_constants/h_separation = 7
 theme_override_constants/v_separation = 7
 columns = 4

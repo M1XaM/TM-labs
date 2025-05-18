@@ -3,8 +3,8 @@ extends Panel
 var ItemClass = preload("res://Scenes/Item.tscn")
 var item = null
 
-var default_tex = preload("res://Assets/inventory/1 Sprites/Book Desk/3.png")
-var empty_tex = preload("res://Assets/inventory/1 Sprites/Book Desk/2.png")
+var default_tex = preload("res://Assets/inventory/1 Sprites/Book Desk/5.png")
+var empty_tex = preload("res://Assets/inventory/1 Sprites/Book Desk/7.png")
 
 var default_style: StyleBoxTexture = null
 var empty_style: StyleBoxTexture = null
@@ -16,8 +16,6 @@ func _ready():
 	empty_style = StyleBoxTexture.new()
 	default_style.texture = default_tex
 	empty_style.texture = empty_tex
-
-	default_style
 	
 	if randi() % 2 == 0:
 		item = ItemClass.instantiate()
