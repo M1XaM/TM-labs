@@ -19,6 +19,8 @@ public partial class Enemy : CharacterBody2D
 	private Node2D _player;
 	private Timer _attackCooldown;
 	private bool _canAttack = true;
+	
+	private AudioStreamPlayer2D _slashSound;
 
 	public override void _Ready()
 	{
@@ -36,6 +38,14 @@ public partial class Enemy : CharacterBody2D
 		// Connect area signals
 		_detectionArea.BodyEntered += OnBodyEnteredDetectionArea;
 		_detectionArea.BodyExited += OnBodyExitedDetectionArea;
+		_attackCooldown.Timeout += OnAttackCooldownTimeout;
+
+		_rayCast.Enabled = true;
+		
+		_slashSound = GetNode<AudioStreamPlayer2D>("/root/Enemy/SlashSound");
+		if (_slashSound != null){
+			GD.Pdrint("sound found.");
+		}
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -64,10 +74,26 @@ public partial class Enemy : CharacterBody2D
 
 	private bool CanSeePlayer()
 	{
-		if (_rayCast.IsColliding())
+		 if (_player == null) return false;
+
+		Vector2 toPlayer = (_player.GlobalPosition - GlobalPosition).Normalized();
+		Vector2 rayDirection = (_rayCast.TargetPosition).Normalized();
+
+		// Check if player is inside vision angle
+		float angleToPlayer = rayDirection.AngleTo(toPlayer);
+		if (Mathf.Abs(angleToPlayer) > Mathf.DegToRad(VisionAngle))
 		{
-			return _rayCast.GetCollider() == _player;
+			// Player outside vision cone
+			return false;
 		}
+		
+		
+		// Check if raycast hits player (line of sight)
+		if (_rayCast.IsColliding() && _rayCast.GetCollider() == _player)
+		{
+			return true;
+		}
+
 		return false;
 	}
 
@@ -78,13 +104,14 @@ public partial class Enemy : CharacterBody2D
 
 	private void ChasePlayer(double delta)
 	{
-		var direction = (_player.GlobalPosition - GlobalPosition).Normalized();
+		Vector2 direction = (_player.GlobalPosition - GlobalPosition).Normalized();
 		Velocity = direction * ChaseSpeed;
 		MoveAndSlide();
 		
 		// Update animation
 		_animationPlayer.Play("run");
 		UpdateSpriteDirection(direction);
+		GD.Print($"{Name}: Chasing player.");
 	}
 
 	private void UpdateSpriteDirection(Vector2 direction)
@@ -100,8 +127,14 @@ public partial class Enemy : CharacterBody2D
 		if (!_canAttack) return;
 		
 		_animationPlayer.Play("attack");
+		  _slashSound?.Play();
 		// Add your attack logic here (damage application, etc.)
 		
+		if (_player is MainCharacter player)
+	{
+		player.TakeDamage(10); // deal 10 damage on each attack
+	}
+	
 		_canAttack = false;
 		_attackCooldown.Start();
 	}
@@ -111,6 +144,8 @@ public partial class Enemy : CharacterBody2D
 		if (body.IsInGroup("Player"))
 		{
 			_player = body;
+			GD.Print($"{Name}: Player entered detection area.");
+
 		}
 	}
 
@@ -127,5 +162,7 @@ public partial class Enemy : CharacterBody2D
 	private void OnAttackCooldownTimeout()
 	{
 		_canAttack = true;
+		GD.Print($"{Name}: Attack cooldown reset.");
+
 	}
 }
