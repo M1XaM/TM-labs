@@ -43,9 +43,9 @@ public partial class Enemy : CharacterBody2D
 		_rayCast.Enabled = true;
 		
 		_slashSound = GetNode<AudioStreamPlayer2D>("/root/Enemy/SlashSound");
-		if (_slashSound != null){
-			GD.Pdrint("sound found.");
-		}
+		// if (_slashSound != null){
+		// 	GD.Print("sound found.");
+		// }
 	}
 
 	public override void _PhysicsProcess(double delta)
