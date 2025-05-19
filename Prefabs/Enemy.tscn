@@ -1,7 +1,8 @@
-[gd_scene load_steps=54 format=3 uid="uid://3we1d1grsdaw"]
+[gd_scene load_steps=55 format=3 uid="uid://3we1d1grsdaw"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Enemy.cs" id="1_gti1y"]
 [ext_resource type="Texture2D" uid="uid://bklw3j5r7iy3x" path="res://Assets/characters/enemy.png" id="2_yfbri"]
+[ext_resource type="AudioStream" uid="uid://st4jqhb24xbw" path="res://Scripts/Elements/audio/slashkut-108175.mp3" id="3_31tlf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nh6j"]
 atlas = ExtResource("2_yfbri")
@@ -417,3 +418,7 @@ shape = SubResource("CircleShape2D_gti1y")
 
 [node name="AttackCooldown" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="SlashSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_31tlf")
+volume_db = 4.667
