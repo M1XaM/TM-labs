@@ -20,6 +20,7 @@ texture = ExtResource("1_8of1w")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
 offset_left = 30.0
 offset_top = 20.0
 offset_right = 105.0

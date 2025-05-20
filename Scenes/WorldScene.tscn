@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://dx5wqjmlihni3"]
+[gd_scene load_steps=61 format=4 uid="uid://dx5wqjmlihni3"]
 
 [ext_resource type="Texture2D" uid="uid://cyc2aklqf7817" path="res://Assets/world/world_tileset.png" id="1_i4kms"]
 [ext_resource type="Script" path="res://Scripts/Scenes/WorldScene.cs" id="1_qlydk"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://dbfq3w8tpg7vs" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_1.png" id="24_qyenq"]
 [ext_resource type="Texture2D" uid="uid://ocgkwjatvgog" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_2.png" id="25_uvgqd"]
 [ext_resource type="Texture2D" uid="uid://cv6ilhji61ew4" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_3.png" id="26_4ec70"]
+[ext_resource type="Script" path="res://Scripts/Scenes/PickupZone.cs" id="26_cj5w7"]
 [ext_resource type="Texture2D" uid="uid://dwruwtdvcv6hn" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_4.png" id="27_hugda"]
 [ext_resource type="Texture2D" uid="uid://cibjvv2fhirj6" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_5.png" id="28_07o3o"]
 [ext_resource type="Texture2D" uid="uid://06s7janwtkhr" path="res://Assets/characters/neighbor1/idle/Character2F_2_idle_6.png" id="29_uoc54"]
@@ -37,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://bi7h7nbvwjaml" path="res://Scenes/PauseScene.tscn" id="33_pjj3n"]
 [ext_resource type="Script" path="res://Scenes/InventoryScene.gd" id="36_gwi3v"]
 [ext_resource type="PackedScene" uid="uid://dwd0ud45h7xbx" path="res://Scenes/Inventory.tscn" id="36_p7yjq"]
+[ext_resource type="PackedScene" uid="uid://c17ygj5tjqww4" path="res://Scenes/ItemDrop.tscn" id="38_f6txx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0or0"]
 texture = ExtResource("1_i4kms")
@@ -8881,6 +8883,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8chik"]
+size = Vector2(45, 41)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_lse56"]
 animations = [{
 "frames": [{
@@ -9030,6 +9035,13 @@ sprite_frames = SubResource("SpriteFrames_dtqq3")
 animation = &"idle"
 speed_scale = 2.0
 
+[node name="PickupZone" type="Area2D" parent="MainCharacter"]
+script = ExtResource("26_cj5w7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter/PickupZone"]
+position = Vector2(1.5, -1.5)
+shape = SubResource("RectangleShape2D_8chik")
+
 [node name="Neighbors" type="Node2D" parent="."]
 light_mask = 7
 visibility_layer = 7
@@ -9065,3 +9077,9 @@ script = ExtResource("36_gwi3v")
 
 [node name="Inventory" parent="InventoryScene" instance=ExtResource("36_p7yjq")]
 visible = false
+
+[node name="ItemDrop" parent="." instance=ExtResource("38_f6txx")]
+position = Vector2(-142, 128)
+
+[connection signal="body_entered" from="MainCharacter/PickupZone" to="MainCharacter/PickupZone" method="OnBodyEntered"]
+[connection signal="body_exited" from="MainCharacter/PickupZone" to="MainCharacter/PickupZone" method="OnBodyExited"]
