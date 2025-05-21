@@ -1,4 +1,6 @@
 using Godot;
+using Godot.Collections;
+using System.Collections.Generic;
 
 public partial class MainCharacter : CharacterBody2D
 {
@@ -23,33 +25,86 @@ public partial class MainCharacter : CharacterBody2D
 	}
 
 	private ProgressBar _healthBar;
+	
+	private System.Collections.Generic.Dictionary<string, int> _inventory = new System.Collections.Generic.Dictionary<string, int>();
 
+
+	private Area2D _pickupArea;
+	private List<ItemDrop> _itemsInRange = new();
 
 	public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		_farm = GetNode<Farm>("/root/WorldScene/Map/Farm2");
 
-		
+
 		_healthBar = GetNode<ProgressBar>("../CanvasLayer/HealthBar");
 
 		if (_healthBar != null)
 		{
-			 GD.Print("HealthBar found!");
+			GD.Print("HealthBar found!");
 			_healthBar.MinValue = 0;
 			_healthBar.MaxValue = MaxHealth;
 			CurrentHealth = MaxHealth;  // set health AFTER setting up bar
 			_healthBar.Value = CurrentHealth;
 		}
-		else{
-			 GD.Print("Not found health found!");}
+		else
+		{
+			GD.Print("Not found health found!");
+		}
+
+		_pickupArea = GetNode<Area2D>("PickupArea");
+		_pickupArea.BodyEntered += OnPickupAreaBodyEntered;
+		_pickupArea.BodyExited += OnPickupAreaBodyExited;
 	}
 
 	public override void _PhysicsProcess(double delta)
 	{
 		HandleMovement();
 		HandleInteraction();
+		if (Input.IsActionJustPressed("pickup") && _itemsInRange.Count > 0)
+		{
+			GD.Print($"Pickup");
+			
+			var item = _itemsInRange[0]; // pick the first item in range
+			AddItemToInventory(item.ItemName, item.Quantity);
+			item.OnPickup();
+			_itemsInRange.RemoveAt(0);
+			GD.Print($"Picked up {item.ItemName}");
+		}
 	}
+	
+	private void OnPickupAreaBodyEntered(Node body)
+	{
+		GD.Print($"Item entered pickup area");
+		
+		if (body is ItemDrop item)
+		{
+			_itemsInRange.Add(item);
+			GD.Print($"Item entered pickup area: {item.ItemName}");
+		}
+	}
+
+	private void OnPickupAreaBodyExited(Node body)
+	{
+		if (body is ItemDrop item)
+		{
+			_itemsInRange.Remove(item);
+			GD.Print($"Item left pickup area: {item.ItemName}");
+		}
+	}
+
+
+	public void AddItemToInventory(string itemName, int quantity = 1)
+	{
+		if (_inventory.ContainsKey(itemName))
+			_inventory[itemName] += quantity;
+		else
+			_inventory[itemName] = quantity;
+
+		GD.Print($"Picked up {quantity}x {itemName}. Total: {_inventory[itemName]}");
+	}
+
 
 	private void HandleMovement()
 	{

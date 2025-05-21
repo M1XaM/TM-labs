@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://djlulhewct14i"]
 
-[ext_resource type="Script" path="res://item.gd" id="1_bvg6g"]
+[ext_resource type="Script" path="res://Scenes/Item.gd" id="1_bd84j"]
 [ext_resource type="Texture2D" uid="uid://cgf8i3tf75jem" path="res://Scripts/InventoryData/items/carrot.png" id="2_tik4k"]
 
 [node name="Item" type="Node2D"]
-script = ExtResource("1_bvg6g")
+script = ExtResource("1_bd84j")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 5.0
